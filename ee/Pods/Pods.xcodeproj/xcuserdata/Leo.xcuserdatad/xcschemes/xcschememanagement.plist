@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Firebase.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-IOSLinkedInAPI.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>205F7A01730673882D862AE0</key>
+		<key>7A1588E87D2991F1F7C816D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69B3DBEDA082D86DBD164BBF</key>
+		<key>C0A676E54C16C25C7CFA383A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BB2FADB7073276155DB8D6EB</key>
+		<key>CD04006E44B239380FC02A10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E4C69CAA1136A7478DEF32BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

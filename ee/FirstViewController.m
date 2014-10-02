@@ -10,6 +10,9 @@
 #import "AFHTTPRequestOperation.h"
 #import "LIALinkedInHttpClient.h"
 #import "LIALinkedInApplication.h"
+#import <Firebase/Firebase.h>
+
+
 
 
 
@@ -24,6 +27,10 @@ LIALinkedInHttpClient *_client;
 - (void)viewDidLoad {
     [super viewDidLoad];
     _client = [self client];
+    [self usersLinkedIn];
+    [self showusersLinkedIn];
+
+
 }
 
 
@@ -42,6 +49,20 @@ LIALinkedInHttpClient *_client;
     }];
 }
 
+- (void)usersLinkedIn{
+    // Create a reference to a Firebase location
+    Firebase* myRootRef = [[Firebase alloc] initWithUrl:@"https://incandescent-inferno-9409.firebaseio.com"];
+    // Write data to Firebase
+    [myRootRef setValue:@"Do you have data? You'll love Firebase."];
+}
+- (void)showusersLinkedIn{
+    Firebase* myRootRef = [[Firebase alloc] initWithUrl:@"https://incandescent-inferno-9409.firebaseio.com"];
+
+    [myRootRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
+    }];
+}
+
 
 - (void)requestMeWithToken:(NSString *)accessToken {
     [self.client GET:[NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~?oauth2_access_token=%@&format=json", accessToken] parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {
@@ -52,7 +73,7 @@ LIALinkedInHttpClient *_client;
 }
 
 - (LIALinkedInHttpClient *)client {
-    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"http://www.ancientprogramming.com/liaexample"
+    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"https://dizzolve.herokuapp.com"
                                                                                     clientId:@"77ayafcrxmygv3"
                                                                                 clientSecret:@"TRgPPRLgnsWtwBiL"
                                                                                        state:@"DCEEFWF45453sdffef424"

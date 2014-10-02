@@ -20,14 +20,17 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Firebase (1.1.12)
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
 
 DEPENDENCIES:
+  - Firebase (>= 1.1.12)
   - IOSLinkedInAPI
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  Firebase: 26ca966dea982f29a4685f7fa8f596d56e5487ad
   IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
 
 COCOAPODS: 0.34.1
