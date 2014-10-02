@@ -20,9 +20,13 @@
 
 @end
 
+
 @implementation FirstViewController{
 LIALinkedInHttpClient *_client;
+
 }
+@synthesize textview;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -75,6 +79,12 @@ LIALinkedInHttpClient *_client;
         Firebase* myRootRef = [[Firebase alloc] initWithUrl:@"https://incandescent-inferno-9409.firebaseio.com"];
         // Write data to Firebase
         [myRootRef setValue:result];
+        for(NSString *data in [result allKeys]) {
+            NSLog(@"%@",[result objectForKey:data]);
+            [textview setText:data];
+
+        }
+
         
         NSLog(@"current user %@", result);
     }        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
