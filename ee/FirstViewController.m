@@ -48,6 +48,10 @@ LIALinkedInHttpClient *_client;
         NSLog(@"Authorization failed %@", error);
     }];
 }
+- (IBAction)getDataButtonClicked:(id)sender {
+    
+    [self showusersLinkedIn];
+}
 
 - (void)usersLinkedIn{
     // Create a reference to a Firebase location
@@ -65,7 +69,13 @@ LIALinkedInHttpClient *_client;
 
 
 - (void)requestMeWithToken:(NSString *)accessToken {
-    [self.client GET:[NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~?oauth2_access_token=%@&format=json", accessToken] parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {
+    [self.client GET:[NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url)?oauth2_access_token=%@&format=json", accessToken] parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {
+        
+        // Create a reference to a Firebase location
+        Firebase* myRootRef = [[Firebase alloc] initWithUrl:@"https://incandescent-inferno-9409.firebaseio.com"];
+        // Write data to Firebase
+        [myRootRef setValue:result];
+        
         NSLog(@"current user %@", result);
     }        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
@@ -77,8 +87,10 @@ LIALinkedInHttpClient *_client;
                                                                                     clientId:@"77ayafcrxmygv3"
                                                                                 clientSecret:@"TRgPPRLgnsWtwBiL"
                                                                                        state:@"DCEEFWF45453sdffef424"
-                                                                               grantedAccess:@[@"r_fullprofile", @"r_network"]];
+                                                                               grantedAccess:@[@"r_fullprofile", @"r_network",@"r_emailaddress",@"rw_company_admin",@"r_contactinfo",@"rw_nus",]];
     return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
 }
+
+
 
 @end

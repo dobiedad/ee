@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *getDataButton;
 
 @end
 
