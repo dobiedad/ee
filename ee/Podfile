@@ -1,0 +1,2 @@
+pod 'IOSLinkedInAPI'
+xcodeproj '../ee.xcodeproj'
