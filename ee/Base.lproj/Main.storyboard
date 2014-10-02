@@ -33,11 +33,12 @@
                                 <rect key="frame" x="90" y="75" width="372" height="424"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x44-BZ-ul1">
-                                        <rect key="frame" x="187" y="150" width="38" height="30"/>
+                                        <rect key="frame" x="181" y="150" width="38" height="30"/>
                                         <state key="normal" title="log in">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="didTapConnectWithLinkedIn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="091-cq-rKT"/>
                                             <action selector="signinButtonClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Xo8-OC-Haq"/>
                                         </connections>
                                     </button>
