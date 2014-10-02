@@ -17,9 +17,9 @@
 
 @end
 
-@implementation FirstViewController
+@implementation FirstViewController{
 LIALinkedInHttpClient *_client;
-
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
