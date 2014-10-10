@@ -27,6 +27,8 @@ LIALinkedInHttpClient *_client;
 
 }
 @synthesize textview;
+@synthesize profilePicImageView;
+
 
 
 - (void)viewDidLoad {
@@ -38,7 +40,6 @@ LIALinkedInHttpClient *_client;
         self.locationManager.delegate = self;
         [self.locationManager startUpdatingLocation];
         NSLog(@"Location services enabled!");
-        
         
     } else {
         NSLog(@"Location services are not enabled");
@@ -118,26 +119,32 @@ LIALinkedInHttpClient *_client;
 - (void)requestMeWithToken:(NSString *)accessToken {
     NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url,id)?oauth2_access_token=%@&format=json", accessToken];
     
-    [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *result) {
+    [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInData) {
         
-        NSString *linkedInUserId = [result objectForKey:@"id"];
+        NSString *linkedInUserId = [linkedInData objectForKey:@"id"];
+        NSString *profilePicURL = [linkedInData objectForKey:@"pictureUrl"];
+
         
         NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/%@/profiles", linkedInUserId];
         
+        profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
+
+
+        
         Firebase* myRootRef = [[Firebase alloc] initWithUrl:profileUrl];
-        [myRootRef setValue:result];
+        [myRootRef setValue:linkedInData];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:linkedInUserId forKey:@"linkedInUserId"];
         [defaults synchronize];
         
         
-        for(NSString *data in [result allKeys]) {
-            NSLog(@"%@",[result objectForKey:data]);
+        for(NSString *data in [linkedInData allKeys]) {
+            NSLog(@"%@",[linkedInData objectForKey:data]);
             [textview setText:data];
         }
         
-        NSLog(@"current user %@", result);
+        NSLog(@"current user %@", linkedInData);
     }        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
     }];
