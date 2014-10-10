@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 
 @interface FirstViewController : UIViewController
@@ -14,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *getDataButton;
+@property (nonatomic,strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UITextView *textview;
 
 @end
