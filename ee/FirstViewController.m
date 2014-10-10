@@ -64,9 +64,9 @@ LIALinkedInHttpClient *_client;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *linkedInUserId = [defaults objectForKey:@"linkedInUserId"];
 
-    NSDate *now =[NSDate date];
+    NSDate *timeNow =[NSDate date];
     
-    NSString *latlongURL = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/locations/%@/%@",  linkedInUserId,now];
+    NSString *latlongURL = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/%@/locations/%@",  linkedInUserId,timeNow];
     
     Firebase* myRootRef = [[Firebase alloc] initWithUrl:latlongURL];
     
@@ -122,7 +122,7 @@ LIALinkedInHttpClient *_client;
         
         NSString *linkedInUserId = [result objectForKey:@"id"];
         
-        NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/profiles/%@", linkedInUserId];
+        NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/%@/profiles", linkedInUserId];
         
         Firebase* myRootRef = [[Firebase alloc] initWithUrl:profileUrl];
         [myRootRef setValue:result];
