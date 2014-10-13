@@ -10,6 +10,7 @@
 
 @implementation FirstViewController {
     LIALinkedInHttpClient *_client;
+    GFCircleQuery *_geoQuery;
 }
 @synthesize profilePicImageView;
 @synthesize signinButton;
@@ -21,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self startLocationManager];
     NSString *accessToken = [self getSavedAccessToken];
     if (accessToken != nil) {
         [self requestMeWithToken:accessToken];
@@ -53,35 +53,45 @@
     [defaults synchronize];
 }
 
-
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = [locations lastObject];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *linkedInUserId = [defaults objectForKey:@"linkedInUserId"];
+    
+    NSString *usersRootUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/locations"];
 
-//    NSDate *timeNow =[NSDate date];
-//    NSString *latLongUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/%@/locations/%@",  linkedInUserId,timeNow];
-//    Firebase* myRootRef = [[Firebase alloc] initWithUrl:latLongUrl];
-//    NSNumber *lat = [NSNumber numberWithDouble:location.coordinate.latitude];
-//    NSNumber *lng = [NSNumber numberWithDouble:location.coordinate.longitude];
-//    NSDictionary *LatLongDictionary = [NSDictionary dictionaryWithObjects:@[lat,lng] forKeys:@[@"lat",@"long"]];
-//    [myRootRef setValue:LatLongDictionary];
-
-    Firebase* firebase = [[Firebase alloc] initWithUrl:@"https://incandescent-inferno-9409.firebaseio.com"];
+    Firebase* firebase = [[Firebase alloc] initWithUrl:usersRootUrl];
     GeoFire *geoFire = [[GeoFire alloc] initWithFirebaseRef:firebase];
-    [geoFire setLocation:[[CLLocation alloc] initWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude]
-                  forKey:@"levan-is-here"];
+    
+    [geoFire setLocation:location forKey:linkedInUserId];
 
-//    CLLocation *center = [[CLLocation alloc] initWithLatitude:37.7832889 longitude:-122.4056973];
-//    // Query locations at [37.7832889, -122.4056973] with a radius of 600 meters
-//    GFCircleQuery *circleQuery = [geoFire queryAtLocation:center withRadius:0.6];
-//
-//    FirebaseHandle queryHandle = [circleQuery observeEventType:GFEventTypeKeyEntered withBlock:^(NSString *key, CLLocation *location) {
-//        NSLog(@"Key '%@' entered the search area and is at location '%@'", key, location);
-//    }];
+    CLLocation *center = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
+    
+    [_geoQuery removeAllObservers];
+    
+    _geoQuery = [geoFire queryAtLocation:center withRadius:0.1];
+
+    [_geoQuery observeEventType:GFEventTypeKeyEntered withBlock:^(NSString *theirLinkedInUserId, CLLocation *location) {
+        
+        if (linkedInUserId != theirLinkedInUserId) {
+            
+            NSNumber *timeNow = [NSNumber numberWithDouble: [[NSDate date] timeIntervalSince1970]];
+            NSNumber *lat = [NSNumber numberWithDouble:location.coordinate.latitude];
+            NSNumber *lng = [NSNumber numberWithDouble:location.coordinate.longitude];
+            
+            NSDictionary *match = [NSDictionary dictionaryWithObjects: @[lat, lng, timeNow ] forKeys: @[@"lat", @"long", @"time"]];
+            
+            [self saveMatch:match withUser:linkedInUserId andUser:theirLinkedInUserId];
+            [self saveMatch:match withUser:theirLinkedInUserId andUser:linkedInUserId];
+        }
+    }];
+}
+
+- (void)saveMatch: (NSDictionary*) match withUser:(NSString*) userA andUser:(NSString*) userB {
+    Firebase *matchesFirebase = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/matches/%@/%@", userA, userB]];
+    [matchesFirebase setValue:match];
 }
 
 - (IBAction)didTapConnectWithLinkedIn:(id)sender {
@@ -107,19 +117,15 @@
     [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInData) {
 
         [self updateViewFromLinkedInData:linkedInData];
-
+        
         NSString *linkedInUserId = [linkedInData objectForKey:@"id"];
-
-        NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/%@/profiles", linkedInUserId];
-        Firebase* myRootRef = [[Firebase alloc] initWithUrl:profileUrl];
-        [myRootRef setValue:linkedInData];
+        NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", linkedInUserId];
+        Firebase* firebase = [[Firebase alloc] initWithUrl:profileUrl];
+        [firebase setValue:linkedInData];
 
         [self saveLinkedInId:linkedInUserId];
+        [self startLocationManager];
 
-        for(NSString *data in [linkedInData allKeys]) {
-//            NSLog(@"%@",[linkedInData objectForKey:data]);
-        }
-        
         NSLog(@"current user %@", linkedInData);
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
