@@ -23,17 +23,14 @@ PODS:
   - Firebase (1.1.12)
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
-  - JSONModel (1.0.1)
 
 DEPENDENCIES:
   - Firebase (>= 1.1.12)
   - IOSLinkedInAPI
-  - JSONModel
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   Firebase: 26ca966dea982f29a4685f7fa8f596d56e5487ad
   IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
-  JSONModel: 634100aaacbd89811bc8a03da209356e5989c569
 
 COCOAPODS: 0.34.1

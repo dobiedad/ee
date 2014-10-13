@@ -71,8 +71,8 @@ LIALinkedInHttpClient *_client;
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *location = [locations lastObject];
-    NSLog(@"%f", location.coordinate.latitude);
-    NSLog(@"%f", location.coordinate.longitude);
+//    NSLog(@"%f", location.coordinate.latitude);
+//    NSLog(@"%f", location.coordinate.longitude);
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *linkedInUserId = [defaults objectForKey:@"linkedInUserId"];
@@ -123,7 +123,7 @@ LIALinkedInHttpClient *_client;
     Firebase* myRootRef = [[Firebase alloc] initWithUrl:@"https://incandescent-inferno-9409.firebaseio.com"];
 
     [myRootRef observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
-        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
+//        NSLog(@"%@ -> %@", snapshot.name, snapshot.value);
     }];
 }
 
@@ -173,7 +173,7 @@ LIALinkedInHttpClient *_client;
 //            NSLog(@"%@",[linkedInData objectForKey:data]);
         }
         
-//        NSLog(@"current user %@", linkedInData);
+        NSLog(@"current user %@", linkedInData);
     }        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
     }];
