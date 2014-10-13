@@ -26,8 +26,9 @@
 LIALinkedInHttpClient *_client;
 
 }
-@synthesize textview;
 @synthesize profilePicImageView;
+@synthesize signinButton;
+
 
 
 
@@ -49,6 +50,8 @@ LIALinkedInHttpClient *_client;
     NSString *accessToken = [defaults objectForKey:@"accessToken"];
     if (accessToken != nil) {
         [self requestMeWithToken:accessToken];
+        signinButton.hidden=true;
+        
     }
 
 
@@ -141,7 +144,6 @@ LIALinkedInHttpClient *_client;
         
         for(NSString *data in [linkedInData allKeys]) {
             NSLog(@"%@",[linkedInData objectForKey:data]);
-            [textview setText:data];
         }
         
         NSLog(@"current user %@", linkedInData);
