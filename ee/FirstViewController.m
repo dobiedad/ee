@@ -174,6 +174,20 @@ LIALinkedInHttpClient *_client;
         }
         
         NSLog(@"current user %@", linkedInData);
+        
+        GeoFire *geoFire = [[GeoFire alloc] initWithFirebaseRef:myRootRef];
+        [geoFire setLocation:[[CLLocation alloc] initWithLatitude:37.7853889 longitude:-122.4056973]
+                      forKey:@"just-messing"];
+        
+        CLLocation *center = [[CLLocation alloc] initWithLatitude:37.7832889 longitude:-122.4056973];
+        // Query locations at [37.7832889, -122.4056973] with a radius of 600 meters
+        GFCircleQuery *circleQuery = [geoFire queryAtLocation:center withRadius:0.6];
+        
+        FirebaseHandle queryHandle = [circleQuery observeEventType:GFEventTypeKeyEntered withBlock:^(NSString *key, CLLocation *location) {
+            NSLog(@"Key '%@' entered the search area and is at location '%@'", key, location);
+        }];
+        
+        
     }        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
     }];
