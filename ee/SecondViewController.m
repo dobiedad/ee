@@ -6,6 +6,7 @@
 @end
 
 @implementation SecondViewController
+@synthesize profilePicImageView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +28,18 @@
         //NSLog(@"%@ %@", snapshot.name, snapshot.value);
     }];
 }
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 50;
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"coloredCell" forIndexPath:indexPath];
+    profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
