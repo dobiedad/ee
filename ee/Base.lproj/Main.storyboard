@@ -18,9 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImageView">
-                                <rect key="frame" x="253" y="96" width="100" height="100"/>
-                            </imageView>
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5q4-ia-RTe" userLabel="navBar">
                                 <rect key="frame" x="0.0" y="20" width="600" height="54"/>
                                 <subviews>
@@ -37,17 +34,60 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.52000000000000002" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImageView">
+                                <rect key="frame" x="250" y="82" width="100" height="100"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Information Technology" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
+                                <rect key="frame" x="210" y="341" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
+                                <rect key="frame" x="281" y="268" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Featurist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
+                                <rect key="frame" x="267" y="305" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Economics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
+                                <rect key="frame" x="250" y="382" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oxford" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
+                                <rect key="frame" x="274" y="411" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="JnT-D2-cW2" secondAttribute="centerX" id="6Ih-ly-5wb"/>
                             <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="Py7-YU-Qlk"/>
+                            <constraint firstAttribute="centerX" secondItem="apk-HL-rjw" secondAttribute="centerX" id="SpB-yK-K1E"/>
+                            <constraint firstAttribute="centerX" secondItem="E2O-qZ-7vn" secondAttribute="centerX" id="ULS-y2-jZ1"/>
                             <constraint firstItem="5q4-ia-RTe" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="bdD-3r-9QI"/>
+                            <constraint firstAttribute="centerX" secondItem="lsL-iR-9uf" secondAttribute="centerX" id="fU9-rx-1fT"/>
+                            <constraint firstAttribute="centerX" secondItem="yLt-OB-uwr" secondAttribute="centerX" id="mg0-9V-xq8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="firstNameLabel" destination="apk-HL-rjw" id="xHc-OT-OUP"/>
+                        <outlet property="industryLabel" destination="E2O-qZ-7vn" id="tnQ-vc-PWb"/>
+                        <outlet property="jobLabel" destination="JnT-D2-cW2" id="rHp-cR-Iyb"/>
                         <outlet property="profilePicImageView" destination="bfF-XQ-GiU" id="K9H-XK-G7A"/>
                         <outlet property="signinButton" destination="x44-BZ-ul1" id="pgy-Iw-sQ7"/>
+                        <outlet property="uniCourseLabel" destination="yLt-OB-uwr" id="47F-yy-me6"/>
+                        <outlet property="uniNameLabel" destination="lsL-iR-9uf" id="FYa-Pp-avA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

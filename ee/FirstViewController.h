@@ -17,6 +17,11 @@
 
 @property (nonatomic,strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
+@property (weak, nonatomic) IBOutlet UILabel *industryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *jobLabel;
+@property (weak, nonatomic) IBOutlet UILabel *uniNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *uniCourseLabel;
 
 @end
 

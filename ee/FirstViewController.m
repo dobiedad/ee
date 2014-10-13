@@ -28,6 +28,15 @@ LIALinkedInHttpClient *_client;
 }
 @synthesize profilePicImageView;
 @synthesize signinButton;
+@synthesize industryLabel;
+@synthesize jobLabel;
+@synthesize uniCourseLabel;
+@synthesize uniNameLabel;
+
+
+@synthesize firstNameLabel;
+
+
 
 
 
@@ -120,15 +129,33 @@ LIALinkedInHttpClient *_client;
 
 
 - (void)requestMeWithToken:(NSString *)accessToken {
-    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url,id)?oauth2_access_token=%@&format=json", accessToken];
+    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url::(original),id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
     
     [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInData) {
         
         NSString *linkedInUserId = [linkedInData objectForKey:@"id"];
         NSString *profilePicURL = [linkedInData objectForKey:@"pictureUrl"];
-
+        NSString *companyName = linkedInData[@"positions"][@"values"][0][@"company"][@"name"];
+         NSString *lastschoolName = linkedInData[@"educations"][@"values"][0][@"schoolName"];
+        NSString *lastschoolCourse = linkedInData[@"educations"][@"values"][0][@"fieldOfStudy"];
+        
         
         NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/%@/profiles", linkedInUserId];
+        NSString *industry = [linkedInData objectForKey:@"industry"];
+        NSString *firstName = [linkedInData objectForKey:@"firstName"];
+        
+
+        
+        industryLabel.text=industry;
+        firstNameLabel.text=firstName;
+        jobLabel.text=companyName;
+        uniNameLabel.text=lastschoolName;
+        uniCourseLabel.text=lastschoolCourse;
+
+        
+
+        
+        
         
         profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
 
@@ -143,10 +170,10 @@ LIALinkedInHttpClient *_client;
         
         
         for(NSString *data in [linkedInData allKeys]) {
-            NSLog(@"%@",[linkedInData objectForKey:data]);
+//            NSLog(@"%@",[linkedInData objectForKey:data]);
         }
         
-        NSLog(@"current user %@", linkedInData);
+//        NSLog(@"current user %@", linkedInData);
     }        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
     }];
