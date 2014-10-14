@@ -5,7 +5,6 @@
 @interface FirstViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *signinButton;
-
 @property (nonatomic,strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
 @property (weak, nonatomic) IBOutlet UILabel *industryLabel;

@@ -4,12 +4,11 @@
 
 @interface SecondViewController () <UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *MatchesCollectionView;
-@property (strong, nonatomic) UIImage *usersProfileImage;
-
 @end
 
 @implementation SecondViewController
-@synthesize profilePicImageView;
+
+NSMutableArray *_profiles;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,49 +19,46 @@
     
     FQuery* matchesQuery = [ref queryLimitedToNumberOfChildren:10];
     
-
-    
-
+    _profiles = [[NSMutableArray alloc] init];
     
     [matchesQuery observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         
         Firebase *theirProfile = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", snapshot.name]];
         
-        [theirProfile observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
-
-            NSLog(@"%@", theirProfileSnapshot.value);
-            NSString *usersProfilePicURL = [theirProfileSnapshot.value objectForKey:@"pictureUrl"];
-            self.profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:usersProfilePicURL]]];
-
-
-        }];
+        unsigned long matchCount = (unsigned long)[snapshot childrenCount] - 1;
         
-        //NSLog(@"%@ %@", snapshot.name, snapshot.value);
+        [theirProfile observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
+            
+            [_profiles addObject:theirProfileSnapshot.value];
+            if (_profiles.count == matchCount) {
+                [self.MatchesCollectionView reloadData];
+            }
+        }];
     }];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 50;
+    return _profiles.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MatchesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.MatchesImageView.image = self.usersProfileImage;
-    
+    MatchesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"profileView" forIndexPath:indexPath];
+    NSDictionary *profileData = [_profiles objectAtIndex:indexPath.row];
+    NSString *pictureUrl = [profileData objectForKey:@"pictureUrl"];
+    cell.MatchesImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pictureUrl]]];
     return cell;
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (NSString *)getSavedLinkedInUserId {
