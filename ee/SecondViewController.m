@@ -1,7 +1,10 @@
 #import "SecondViewController.h"
 #import <Firebase/Firebase.h>
+#import "MatchesCollectionViewCell.h"
 
-@interface SecondViewController ()
+@interface SecondViewController () <UICollectionViewDataSource>
+@property (strong, nonatomic) IBOutlet UICollectionView *MatchesCollectionView;
+@property (strong, nonatomic) UIImage *usersProfileImage;
 
 @end
 
@@ -17,6 +20,10 @@
     
     FQuery* matchesQuery = [ref queryLimitedToNumberOfChildren:10];
     
+
+    
+
+    
     [matchesQuery observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
         
         Firebase *theirProfile = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", snapshot.name]];
@@ -24,20 +31,31 @@
         [theirProfile observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
 
             NSLog(@"%@", theirProfileSnapshot.value);
+            NSString *usersProfilePicURL = [theirProfileSnapshot.value objectForKey:@"pictureUrl"];
+            self.profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:usersProfilePicURL]]];
+
+
         }];
         
         //NSLog(@"%@ %@", snapshot.name, snapshot.value);
     }];
 }
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 50;
 }
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"coloredCell" forIndexPath:indexPath];
-    profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
-
+    MatchesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.MatchesImageView.image = self.usersProfileImage;
+    
     return cell;
 }
 
