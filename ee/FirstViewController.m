@@ -13,7 +13,6 @@
     GFCircleQuery *_geoQuery;
 }
 @synthesize profilePicImageView;
-@synthesize signinButton;
 @synthesize industryLabel;
 @synthesize jobLabel;
 @synthesize uniCourseLabel;
@@ -25,7 +24,6 @@
     NSString *accessToken = [self getSavedAccessToken];
     if (accessToken != nil) {
         [self requestMeWithToken:accessToken];
-        signinButton.hidden=true;
     }
 }
 
