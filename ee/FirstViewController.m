@@ -1,15 +1,10 @@
 #import "FirstViewController.h"
-#import "AFHTTPRequestOperation.h"
-#import "LIALinkedInHttpClient.h"
-#import "LIALinkedInApplication.h"
-#import <Firebase/Firebase.h>
 
 @interface FirstViewController () <CLLocationManagerDelegate>
 @end
 
 
 @implementation FirstViewController {
-    LIALinkedInHttpClient *_client;
     GFCircleQuery *_geoQuery;
 }
 @synthesize profilePicImageView;
@@ -21,10 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *accessToken = [self getSavedAccessToken];
-    if (accessToken != nil) {
-        [self requestMeWithToken:accessToken];
-    }
 }
 
 
@@ -37,18 +28,6 @@
     } else {
         NSLog(@"Location services are not enabled");
     }
-}
-
-- (NSString *)getSavedAccessToken {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString *accessToken = [defaults objectForKey:@"accessToken"];
-    return accessToken;
-}
-
-- (void)saveAccessToken:(NSString *)accessToken {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:accessToken forKey:@"accessToken"];
-    [defaults synchronize];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
@@ -92,44 +71,6 @@
     [matchesFirebase setValue:match];
 }
 
-- (IBAction)didTapConnectWithLinkedIn:(id)sender {
-    [self.client getAuthorizationCode:^(NSString *code) {
-        [self.client getAccessToken:code success:^(NSDictionary *accessTokenData) {
-            NSString *accessToken = [accessTokenData objectForKey:@"access_token"];
-            [self saveAccessToken: accessToken];
-            [self requestMeWithToken:accessToken];
-            
-        }                   failure:^(NSError *error) {
-            NSLog(@"Quering accessToken failed %@", error);
-        }];
-    }                      cancel:^{
-        NSLog(@"Authorization was cancelled by user");
-    }                     failure:^(NSError *error) {
-        NSLog(@"Authorization failed %@", error);
-    }];
-}
-
-- (void)requestMeWithToken:(NSString *)accessToken {
-    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url::(original),id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
-    
-    [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInData) {
-
-        [self updateViewFromLinkedInData:linkedInData];
-        
-        NSString *linkedInUserId = [linkedInData objectForKey:@"id"];
-        NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", linkedInUserId];
-        Firebase* firebase = [[Firebase alloc] initWithUrl:profileUrl];
-        [firebase setValue:linkedInData];
-
-        [self saveLinkedInId:linkedInUserId];
-        [self startLocationManager];
-
-        NSLog(@"current user %@", linkedInData);
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"failed to fetch current user %@", error);
-    }];
-}
 
 - (void)updateViewFromLinkedInData:(NSDictionary *)linkedInData {
     NSString *profilePicURL = [linkedInData objectForKey:@"pictureUrl"];
@@ -149,20 +90,7 @@
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
 }
 
-- (void)saveLinkedInId:(NSString *)linkedInUserId {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:linkedInUserId forKey:@"linkedInUserId"];
-    [defaults synchronize];
-}
 
-- (LIALinkedInHttpClient *)client {
-    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"https://dizzolve.herokuapp.com"
-                                                                                    clientId:@"77ayafcrxmygv3"
-                                                                                clientSecret:@"TRgPPRLgnsWtwBiL"
-                                                                                       state:@"DCEEFWF45453sdffef424"
-                                                                               grantedAccess:@[@"r_fullprofile", @"r_network",@"r_emailaddress",@"rw_company_admin",@"r_contactinfo",@"rw_nus",]];
-    return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
-}
 
 
 

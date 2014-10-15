@@ -14,15 +14,6 @@
     }
 }
 
-- (LIALinkedInHttpClient *)client {
-    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"https://dizzolve.herokuapp.com"
-        clientId:@"77ayafcrxmygv3"
-        clientSecret:@"TRgPPRLgnsWtwBiL"
-        state:@"DCEEFWF45453sdffef424"
-        grantedAccess:@[@"r_fullprofile", @"r_network",@"r_emailaddress",@"rw_company_admin",@"r_contactinfo",@"rw_nus",]];
-    return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
-}
-
 - (NSString *)getSavedAccessToken {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString *accessToken = [defaults objectForKey:@"accessToken"];
@@ -36,7 +27,57 @@
 }
 
 - (void)getLinkedInProfileWithAccessToken:(NSString *)accessToken withSuccess:(void (^)(NSDictionary *linkedInProfile))profileBlock {
-
+    [self requestMeWithToken:accessToken andCallBlockWithProfile:profileBlock];
 }
+
+- (void)showLinkedInSignIn:(void (^)(NSDictionary *linkedInProfile))signedInBlock {
+    [self.client getAuthorizationCode:^(NSString *code) {
+        [self.client getAccessToken:code success:^(NSDictionary *accessTokenData) {
+            NSString *accessToken = [accessTokenData objectForKey:@"access_token"];
+            [self saveAccessToken: accessToken];
+            [self requestMeWithToken:accessToken andCallBlockWithProfile:signedInBlock];
+            
+        }                   failure:^(NSError *error) {
+            NSLog(@"Quering accessToken failed %@", error);
+        }];
+    }                      cancel:^{
+        NSLog(@"Authorization was cancelled by user");
+    }                     failure:^(NSError *error) {
+        NSLog(@"Authorization failed %@", error);
+    }];
+}
+
+- (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(NSDictionary *linkedInProfile))profileBlock {
+    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url::(original),id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
+    
+    [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInData) {
+        
+        NSString *linkedInUserId = [linkedInData objectForKey:@"id"];
+        [self saveLinkedInId:linkedInUserId];
+        
+        NSLog(@"current user %@", linkedInData);
+        
+        profileBlock(linkedInData);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed to fetch current user %@", error);
+    }];
+}
+
+- (void)saveLinkedInId:(NSString *)linkedInUserId {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:linkedInUserId forKey:@"linkedInUserId"];
+    [defaults synchronize];
+}
+
+- (LIALinkedInHttpClient *)client {
+    LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:@"https://dizzolve.herokuapp.com"
+        clientId:@"77ayafcrxmygv3"
+    clientSecret:@"TRgPPRLgnsWtwBiL"
+           state:@"DCEEFWF45453sdffef424"
+   grantedAccess:@[@"r_fullprofile", @"r_network",@"r_emailaddress",@"rw_company_admin",@"r_contactinfo",@"rw_nus",]];
+    return [LIALinkedInHttpClient clientForApplication:application presentingViewController:nil];
+}
+
 
 @end
