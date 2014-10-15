@@ -1,12 +1,12 @@
-#import "SecondViewController.h"
+#import "MatchesController.h"
 #import <Firebase/Firebase.h>
 #import "MatchesCollectionViewCell.h"
 
-@interface SecondViewController () <UICollectionViewDataSource>
+@interface MatchesController () <UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *MatchesCollectionView;
 @end
 
-@implementation SecondViewController
+@implementation MatchesController
 
 NSMutableArray *_profiles;
 

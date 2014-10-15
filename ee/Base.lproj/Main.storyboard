@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-43" y="25"/>
         </scene>
-        <!--Item-->
+        <!--Matches Controller-->
         <scene sceneID="nAz-AH-LsN">
             <objects>
-                <collectionViewController id="UaJ-wp-5O8" customClass="SecondViewController" sceneMemberID="viewController">
+                <collectionViewController id="UaJ-wp-5O8" userLabel="Matches Controller" customClass="MatchesController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9XG-rf-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
