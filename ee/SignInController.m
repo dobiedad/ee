@@ -1,6 +1,7 @@
 #import "SignInController.h"
 #import "LinkedInClient.h"
 #import "FirebaseClient.h"
+#import "MainController.h"
 
 @interface SignInController ()
 @end
@@ -8,6 +9,7 @@
 @implementation SignInController {
     LinkedInClient *_linkedIn;
     FirebaseClient *_firebase;
+    LinkedInProfile *_profile;
 }
 
 @synthesize signInButton;
@@ -20,7 +22,7 @@
     _linkedIn = [[LinkedInClient alloc] init];
     _firebase = [[FirebaseClient alloc] init];
     
-    [_linkedIn attemptToSignInFromSavedTokenWithSuccess:^(NSDictionary *linkedInProfile) {
+    [_linkedIn attemptToSignInFromSavedTokenWithSuccess:^(LinkedInProfile *linkedInProfile) {
         [self transitionToProfileControllerWithProfile: linkedInProfile];
     } andNoSavedToken:^{
         [self enableSignInButton];
@@ -36,14 +38,23 @@
 }
 
 - (IBAction)didTapSignInButton:(id)sender {
-    [_linkedIn showLinkedInSignIn:^(NSDictionary *linkedInProfile) {
+    [_linkedIn showLinkedInSignIn:^(LinkedInProfile *linkedInProfile) {
         [self transitionToProfileControllerWithProfile: linkedInProfile];
     }];
 }
 
-- (void)transitionToProfileControllerWithProfile: (NSDictionary *) profile {
+- (void)transitionToProfileControllerWithProfile: (LinkedInProfile *) profile {
     [_firebase saveLinkedInProfile:profile];
-    [self performSegueWithIdentifier:@"profile" sender:self];
+    _profile = profile;
+    [self performSegueWithIdentifier:@"signedIn" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"signedIn"]) {
+        MainController *mainController = [segue destinationViewController];
+        [mainController setProfile:_profile];
+    }
 }
 
 @end

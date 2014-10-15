@@ -5,7 +5,7 @@
 
 @implementation LinkedInClient
 
-- (void)attemptToSignInFromSavedTokenWithSuccess:(void (^)(NSDictionary *linkedInProfile))signedInBlock andNoSavedToken:(void (^)())noSavedTokenBlock {
+- (void)attemptToSignInFromSavedTokenWithSuccess:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock andNoSavedToken:(void (^)())noSavedTokenBlock {
     NSString *savedAccessToken = [self getSavedAccessToken];
     if (savedAccessToken == nil) {
         noSavedTokenBlock();
@@ -26,11 +26,11 @@
     [defaults synchronize];
 }
 
-- (void)getLinkedInProfileWithAccessToken:(NSString *)accessToken withSuccess:(void (^)(NSDictionary *linkedInProfile))profileBlock {
+- (void)getLinkedInProfileWithAccessToken:(NSString *)accessToken withSuccess:(void (^)(LinkedInProfile *linkedInProfile))profileBlock {
     [self requestMeWithToken:accessToken andCallBlockWithProfile:profileBlock];
 }
 
-- (void)showLinkedInSignIn:(void (^)(NSDictionary *linkedInProfile))signedInBlock {
+- (void)showLinkedInSignIn:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock {
     [self.client getAuthorizationCode:^(NSString *code) {
         [self.client getAccessToken:code success:^(NSDictionary *accessTokenData) {
             NSString *accessToken = [accessTokenData objectForKey:@"access_token"];
@@ -47,17 +47,17 @@
     }];
 }
 
-- (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(NSDictionary *linkedInProfile))profileBlock {
+- (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(LinkedInProfile *linkedInProfile))profileBlock {
     NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-url::(original),id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
     
-    [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInData) {
+    [self.client GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, LinkedInProfile *linkedInProfile) {
         
-        NSString *linkedInUserId = [linkedInData objectForKey:@"id"];
+        NSString *linkedInUserId = [linkedInProfile objectForKey:@"id"];
         [self saveLinkedInId:linkedInUserId];
         
-        NSLog(@"current user %@", linkedInData);
+        NSLog(@"current user %@", linkedInProfile);
         
-        profileBlock(linkedInData);
+        profileBlock(linkedInProfile);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);

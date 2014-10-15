@@ -107,17 +107,17 @@
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="nCe-PK-pgF" id="kHd-yP-laQ"/>
-                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="profile" id="tQW-bM-pPS"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="signedIn" id="tQW-bM-pPS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eq-ZP-yie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-840" y="25"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="MainController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

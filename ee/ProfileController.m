@@ -6,6 +6,7 @@
 
 @implementation ProfileController {
     GFCircleQuery *_geoQuery;
+    LinkedInProfile *_profile;
 }
 @synthesize profilePicImageView;
 @synthesize industryLabel;
@@ -16,7 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateProfileDetails];
+
 }
+
 
 
 - (void)startLocationManager {
@@ -71,27 +75,28 @@
     [matchesFirebase setValue:match];
 }
 
-
-- (void)updateViewFromLinkedInData:(NSDictionary *)linkedInData {
-    NSString *profilePicURL = [linkedInData objectForKey:@"pictureUrl"];
-    NSString *companyName = linkedInData[@"positions"][@"values"][0][@"company"][@"name"];
-    NSString *lastSchoolName = linkedInData[@"educations"][@"values"][0][@"schoolName"];
-    NSString *lastSchoolCourse = linkedInData[@"educations"][@"values"][0][@"fieldOfStudy"];
-
-    NSString *industry = [linkedInData objectForKey:@"industry"];
-    NSString *firstName = [linkedInData objectForKey:@"firstName"];
-
+- (void)setProfile:(LinkedInProfile *)profile {
+    _profile = profile;
+}
+- (void)updateProfileDetails {
+    
+    NSString *profilePicURL = [_profile objectForKey:@"pictureUrl"];
+    NSString *companyName = _profile[@"positions"][@"values"][0][@"company"][@"name"];
+    NSString *lastSchoolName = _profile[@"educations"][@"values"][0][@"schoolName"];
+    NSString *lastSchoolCourse = _profile[@"educations"][@"values"][0][@"fieldOfStudy"];
+    
+    NSString *industry = [_profile objectForKey:@"industry"];
+    NSString *firstName = [_profile objectForKey:@"firstName"];
+    
     industryLabel.text=industry;
     firstNameLabel.text=firstName;
     jobLabel.text=companyName;
     uniNameLabel.text= lastSchoolName;
     uniCourseLabel.text= lastSchoolCourse;
-
+    
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
+    
 }
-
-
-
 
 
 @end
