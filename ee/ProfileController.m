@@ -1,10 +1,10 @@
-#import "FirstViewController.h"
+#import "ProfileController.h"
 
-@interface FirstViewController () <CLLocationManagerDelegate>
+@interface ProfileController () <CLLocationManagerDelegate>
 @end
 
 
-@implementation FirstViewController {
+@implementation ProfileController {
     GFCircleQuery *_geoQuery;
 }
 @synthesize profilePicImageView;

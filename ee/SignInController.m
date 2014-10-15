@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    signInButton.enabled = false;
+    signInButton.hidden = true;
     
     _linkedIn = [[LinkedInClient alloc] init];
     _firebase = [[FirebaseClient alloc] init];
@@ -32,7 +32,7 @@
 }
 
 - (void)enableSignInButton {
-    signInButton.enabled = true;
+    signInButton.hidden = false;
 }
 
 - (IBAction)didTapSignInButton:(id)sender {

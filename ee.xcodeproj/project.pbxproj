@@ -15,7 +15,7 @@
 		B32D69BC19EBF0EC00140565 /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D69BB19EBF0EC00140565 /* GeoFire.framework */; };
 		B3B7806519DD8912007ED955 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806419DD8912007ED955 /* main.m */; };
 		B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806719DD8912007ED955 /* AppDelegate.m */; };
-		B3B7806B19DD8912007ED955 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806A19DD8912007ED955 /* FirstViewController.m */; };
+		B3B7806B19DD8912007ED955 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806A19DD8912007ED955 /* ProfileController.m */; };
 		B3B7806E19DD8913007ED955 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806D19DD8913007ED955 /* SecondViewController.m */; };
 		B3B7807119DD8913007ED955 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B7806F19DD8913007ED955 /* Main.storyboard */; };
 		B3B7807319DD8913007ED955 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B7807219DD8913007ED955 /* Images.xcassets */; };
@@ -57,8 +57,8 @@
 		B3B7806419DD8912007ED955 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B3B7806619DD8912007ED955 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3B7806719DD8912007ED955 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B3B7806919DD8912007ED955 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		B3B7806A19DD8912007ED955 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		B3B7806919DD8912007ED955 /* ProfileController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
+		B3B7806A19DD8912007ED955 /* ProfileController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
 		B3B7806C19DD8912007ED955 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		B3B7806D19DD8913007ED955 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		B3B7807019DD8913007ED955 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 				B3B7806719DD8912007ED955 /* AppDelegate.m */,
 				035E843119ED836900A34C9E /* SignInController.h */,
 				035E843219ED836900A34C9E /* SignInController.m */,
-				B3B7806919DD8912007ED955 /* FirstViewController.h */,
-				B3B7806A19DD8912007ED955 /* FirstViewController.m */,
+				B3B7806919DD8912007ED955 /* ProfileController.h */,
+				B3B7806A19DD8912007ED955 /* ProfileController.m */,
 				B3B7806C19DD8912007ED955 /* SecondViewController.h */,
 				B3B7806D19DD8913007ED955 /* SecondViewController.m */,
 				035E842E19ED759900A34C9E /* MatchesCollectionViewCell.h */,
@@ -341,7 +341,7 @@
 				035E843719ED855A00A34C9E /* LinkedInClient.m in Sources */,
 				035E843A19EEB9F000A34C9E /* FirebaseClient.m in Sources */,
 				B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */,
-				B3B7806B19DD8912007ED955 /* FirstViewController.m in Sources */,
+				B3B7806B19DD8912007ED955 /* ProfileController.m in Sources */,
 				B3B7806519DD8912007ED955 /* main.m in Sources */,
 				035E843319ED836900A34C9E /* SignInController.m in Sources */,
 			);

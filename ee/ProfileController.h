@@ -2,7 +2,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <GeoFire/GeoFire.h>
 
-@interface FirstViewController : UIViewController
+@interface ProfileController : UIViewController
 
 @property (nonatomic,strong) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
