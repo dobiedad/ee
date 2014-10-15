@@ -1,10 +1,10 @@
 #import "MatchesController.h"
 #import <Firebase/Firebase.h>
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "MatchesCollectionViewCell.h"
+#import "LinkedInProfile.h"
 
 @interface MatchesController () <UICollectionViewDataSource>
-@property (strong, nonatomic) IBOutlet UICollectionView *MatchesCollectionView;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation MatchesController
@@ -32,7 +32,7 @@ NSMutableArray *_profiles;
             
             [_profiles addObject:theirProfileSnapshot.value];
             if (_profiles.count == matchCount) {
-                [self.MatchesCollectionView reloadData];
+                [self.collectionView reloadData];
             }
         }];
     }];
@@ -51,16 +51,16 @@ NSMutableArray *_profiles;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MatchesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"profileView" forIndexPath:indexPath];
-    NSDictionary *profileData = [_profiles objectAtIndex:indexPath.row];
-    NSString *pictureUrl = [profileData objectForKey:@"pictureUrl"];
-    // cell.MatchesImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pictureUrl]]];
-    // cell.MatchesImageView.contentMode = UIViewContentModeScaleAspectFit;
-    
-    [cell.MatchesImageView sd_setImageWithURL:[NSURL URLWithString:pictureUrl] placeholderImage:nil];
-    
-    NSLog(@"added cell with image: %@", pictureUrl);
-    
+    LinkedInProfile *profileData = _profiles[(NSUInteger) indexPath.row];
+    [cell loadProfile: profileData];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MatchesCollectionViewCell *cell = (MatchesCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
+
+    NSLog(@"touched cell %@ at indexPath %@", cell, indexPath);
 }
 
 

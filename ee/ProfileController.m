@@ -51,15 +51,15 @@
     
     _geoQuery = [geoFire queryAtLocation:center withRadius:0.1];
 
-    [_geoQuery observeEventType:GFEventTypeKeyEntered withBlock:^(NSString *theirLinkedInUserId, CLLocation *location) {
+    [_geoQuery observeEventType:GFEventTypeKeyEntered withBlock:^(NSString *theirLinkedInUserId, CLLocation *theirLocation) {
         
         if (linkedInUserId != theirLinkedInUserId) {
             
-            NSNumber *timeNow = [NSNumber numberWithDouble: [[NSDate date] timeIntervalSince1970]];
-            NSNumber *lat = [NSNumber numberWithDouble:location.coordinate.latitude];
-            NSNumber *lng = [NSNumber numberWithDouble:location.coordinate.longitude];
+            NSNumber *timeNow = @([[NSDate date] timeIntervalSince1970]);
+            NSNumber *lat = @(theirLocation.coordinate.latitude);
+            NSNumber *lng = @(theirLocation.coordinate.longitude);
             
-            NSDictionary *match = [NSDictionary dictionaryWithObjects: @[lat, lng, timeNow ] forKeys: @[@"lat", @"long", @"time"]];
+            NSDictionary *match = @{@"lat" : lat, @"long" : lng, @"time" : timeNow};
             
             [self saveMatch:match withUser:linkedInUserId andUser:theirLinkedInUserId];
             [self saveMatch:match withUser:theirLinkedInUserId andUser:linkedInUserId];
