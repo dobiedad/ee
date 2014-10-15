@@ -1,3 +1,4 @@
 pod 'IOSLinkedInAPI'
 pod 'Firebase', '>= 1.1.12'
+pod 'SDWebImage', '~>3.6'
 xcodeproj '../ee.xcodeproj'

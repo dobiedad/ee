@@ -1,5 +1,6 @@
 #import "MatchesController.h"
 #import <Firebase/Firebase.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "MatchesCollectionViewCell.h"
 
 @interface MatchesController () <UICollectionViewDataSource>
@@ -52,7 +53,13 @@ NSMutableArray *_profiles;
     MatchesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"profileView" forIndexPath:indexPath];
     NSDictionary *profileData = [_profiles objectAtIndex:indexPath.row];
     NSString *pictureUrl = [profileData objectForKey:@"pictureUrl"];
-    cell.MatchesImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pictureUrl]]];
+    // cell.MatchesImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:pictureUrl]]];
+    // cell.MatchesImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    [cell.MatchesImageView sd_setImageWithURL:[NSURL URLWithString:pictureUrl] placeholderImage:nil];
+    
+    NSLog(@"added cell with image: %@", pictureUrl);
+    
     return cell;
 }
 

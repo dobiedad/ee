@@ -18,10 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateProfileDetails];
-
 }
-
-
 
 - (void)startLocationManager {
     if ([CLLocationManager locationServicesEnabled]) {
@@ -78,9 +75,10 @@
 - (void)setProfile:(LinkedInProfile *)profile {
     _profile = profile;
 }
+
 - (void)updateProfileDetails {
     
-    NSString *profilePicURL = [_profile objectForKey:@"pictureUrl"];
+    NSString *profilePicURL = [_profile objectForKey:@"pictureUrls"][@"values"][0];
     NSString *companyName = _profile[@"positions"][@"values"][0][@"company"][@"name"];
     NSString *lastSchoolName = _profile[@"educations"][@"values"][0][@"schoolName"];
     NSString *lastSchoolCourse = _profile[@"educations"][@"values"][0][@"fieldOfStudy"];
@@ -95,7 +93,6 @@
     uniCourseLabel.text= lastSchoolCourse;
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
-    
 }
 
 
