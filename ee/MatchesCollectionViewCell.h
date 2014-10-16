@@ -6,4 +6,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (void)loadProfile:(LinkedInProfile *)profile;
+
+- (LinkedInProfile *)profile;
 @end

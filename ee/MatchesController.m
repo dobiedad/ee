@@ -2,6 +2,7 @@
 #import <Firebase/Firebase.h>
 #import "MatchesCollectionViewCell.h"
 #import "LinkedInProfile.h"
+#import "FirebaseClient.h"
 
 @interface MatchesController () <UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -9,32 +10,17 @@
 
 @implementation MatchesController
 
-NSMutableArray *_profiles;
+NSArray *_profiles;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     NSString *userId = [self getSavedLinkedInUserId];
-    
-    Firebase *ref = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/matches/%@", userId]];
-    
-    FQuery* matchesQuery = [ref queryLimitedToNumberOfChildren:10];
-    
-    _profiles = [[NSMutableArray alloc] init];
-    
-    [matchesQuery observeEventType:FEventTypeChildAdded withBlock:^(FDataSnapshot *snapshot) {
-        
-        Firebase *theirProfile = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", snapshot.name]];
-        
-        unsigned long matchCount = (unsigned long)[snapshot childrenCount] - 1;
-        
-        [theirProfile observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
-            LinkedInProfile *theirLinkedInProfile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:theirProfileSnapshot.value];
-            [_profiles addObject:theirLinkedInProfile];
-            if (_profiles.count == matchCount) {
-                [self.collectionView reloadData];
-            }
-        }];
+
+    FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];
+    [firebaseClient matchesForUser: userId withBlock:^(NSArray *matches) {
+        _profiles = matches;
+        [self.collectionView reloadData];
     }];
 }
 
@@ -59,8 +45,8 @@ NSMutableArray *_profiles;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MatchesCollectionViewCell *cell = (MatchesCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
-
-    NSLog(@"touched cell %@ at indexPath %@", cell, indexPath);
+    LinkedInProfile *profile = [cell profile];
+    NSLog(@"touched cell %@ at indexPath %@", [profile firstName], indexPath);
 }
 
 
