@@ -44,7 +44,7 @@
 }
 
 - (void)transitionToProfileControllerWithProfile: (LinkedInProfile *) profile {
-    [_firebase saveLinkedInProfile:profile];
+    [_firebase saveLinkedInProfileWithId:[profile linkedInUserId] andProfile:[profile asDictionary]];
     _profile = profile;
     [self performSegueWithIdentifier:@"signedIn" sender:self];
 }

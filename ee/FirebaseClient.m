@@ -3,9 +3,8 @@
 
 @implementation FirebaseClient
 
--(void)saveLinkedInProfile:(NSDictionary*)profile {
-    NSString *linkedInUserId = profile[@"id"];
-    NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", linkedInUserId];
+-(void)saveLinkedInProfileWithId:(NSString*)id andProfile:(NSDictionary*)profile {
+    NSString *profileUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/users/%@/linkedInProfile", id];
     Firebase* firebase = [[Firebase alloc] initWithUrl:profileUrl];
     [firebase setValue:profile];
 }

@@ -6,7 +6,7 @@
 @synthesize imageView;
 
 - (void)loadProfile:(LinkedInProfile *)profile {
-    NSString *pictureUrl = profile[@"pictureUrl"];
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:pictureUrl] placeholderImage:nil];
+    [self.imageView sd_setImageWithURL:[profile pictureURL] placeholderImage:nil];
 }
+
 @end

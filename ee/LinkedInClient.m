@@ -50,16 +50,13 @@
 - (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(LinkedInProfile *linkedInProfile))profileBlock {
     NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-urls::(original),picture-url,id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
     
-    [self.httpClient GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, LinkedInProfile *linkedInProfile) {
-
-        NSString *linkedInUserId = [linkedInProfile objectForKey:@"id"];
+    [self.httpClient GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInProfileData) {
+        LinkedInProfile *profile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:linkedInProfileData];
+        NSString *linkedInUserId = [profile linkedInUserId];
         [self saveLinkedInId:linkedInUserId];
+        profileBlock(profile);
 
-        NSLog(@"current user %@", linkedInProfile);
-
-        profileBlock(linkedInProfile);
-
-    }            failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
     }];
 }

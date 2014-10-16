@@ -29,8 +29,8 @@ NSMutableArray *_profiles;
         unsigned long matchCount = (unsigned long)[snapshot childrenCount] - 1;
         
         [theirProfile observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
-            
-            [_profiles addObject:theirProfileSnapshot.value];
+            LinkedInProfile *theirLinkedInProfile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:theirProfileSnapshot.value];
+            [_profiles addObject:theirLinkedInProfile];
             if (_profiles.count == matchCount) {
                 [self.collectionView reloadData];
             }
@@ -51,7 +51,7 @@ NSMutableArray *_profiles;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MatchesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"profileView" forIndexPath:indexPath];
-    LinkedInProfile *profileData = _profiles[(NSUInteger) indexPath.row];
+    LinkedInProfile *profileData = (LinkedInProfile *)_profiles[(NSUInteger) indexPath.row];
     [cell loadProfile: profileData];
     return cell;
 }

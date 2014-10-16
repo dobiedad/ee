@@ -2,6 +2,6 @@
 
 @interface FirebaseClient : NSObject
 
--(void)saveLinkedInProfile:(NSDictionary*)profile;
+-(void)saveLinkedInProfileWithId:(NSString*)id andProfile:(NSDictionary*)profile;
 
 @end

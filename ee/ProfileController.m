@@ -17,7 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self updateProfileDetails];
+    [self updateProfileDetailsInView];
+    //[self startLocationManager];
 }
 
 - (void)startLocationManager {
@@ -76,23 +77,15 @@
     _profile = profile;
 }
 
-- (void)updateProfileDetails {
+- (void)updateProfileDetailsInView {
+
+    industryLabel.text = [_profile industry];
+    firstNameLabel.text = [_profile firstName];
+    jobLabel.text = [_profile companyName];
+    uniNameLabel.text = [_profile lastSchoolName];
+    uniCourseLabel.text = [_profile fieldOfStudy];
     
-    NSString *profilePicURL = [_profile objectForKey:@"pictureUrls"][@"values"][0];
-    NSString *companyName = _profile[@"positions"][@"values"][0][@"company"][@"name"];
-    NSString *lastSchoolName = _profile[@"educations"][@"values"][0][@"schoolName"];
-    NSString *lastSchoolCourse = _profile[@"educations"][@"values"][0][@"fieldOfStudy"];
-    
-    NSString *industry = [_profile objectForKey:@"industry"];
-    NSString *firstName = [_profile objectForKey:@"firstName"];
-    
-    industryLabel.text=industry;
-    firstNameLabel.text=firstName;
-    jobLabel.text=companyName;
-    uniNameLabel.text= lastSchoolName;
-    uniCourseLabel.text= lastSchoolCourse;
-    
-    profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profilePicURL]]];
+    profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
 }
 
 
