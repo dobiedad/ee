@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface LinkedInProfile : NSDictionary
+@interface LinkedInProfile : NSObject
 - (instancetype)initWithLinkedInApiUserData:(NSDictionary *)data;
 - (NSString *)linkedInUserId;
 - (NSString *)firstName;
