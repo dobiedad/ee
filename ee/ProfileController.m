@@ -30,6 +30,10 @@
     self.profileBlurView1.blurRadius = 15;
     self.profileBlurView2.dynamic = TRUE;
     self.profileBlurView2.blurRadius = 15;
+    self.profilePicImageView.layer.cornerRadius = 100.0;
+    [profilePicImageView setClipsToBounds:YES];
+
+
 }
 
 - (void)startLocationManager {
