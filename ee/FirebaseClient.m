@@ -21,15 +21,20 @@
 }
 
 - (void)getProfilesForMatches:(FDataSnapshot *)snapshot block:(void (^)(NSArray *))block {
-    NSMutableArray *results = [[NSMutableArray alloc] init];
+    __block NSMutableArray *results = [[NSMutableArray alloc] init];
+    
     NSString *theirProfilePath = [NSString stringWithFormat:@"users/%@/linkedInProfile", snapshot.name];
     Firebase *theirProfileFirebase = [self firebaseForPath:theirProfilePath];
     unsigned long matchCount = (unsigned long)[snapshot childrenCount] - 1;
+    
     [theirProfileFirebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
+        NSMutableArray *strongResults = weakResults;
+        
         LinkedInProfile *theirLinkedInProfile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:theirProfileSnapshot.value];
-        [results addObject:theirLinkedInProfile];
-        if (results.count == matchCount) {
-            block(results);
+        
+        [strongResults addObject:theirLinkedInProfile];
+        if (strongResults.count == matchCount) {
+            block(strongResults);
         }
     }];
 }
