@@ -252,7 +252,7 @@
                             <outlet property="delegate" destination="UaJ-wp-5O8" id="rz1-qq-sag"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Matches" id="ahJ-ut-eHH" userLabel="Matches"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
                     <connections>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                     </connections>

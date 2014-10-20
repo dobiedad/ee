@@ -32,6 +32,9 @@
     self.profileBlurView2.blurRadius = 15;
     self.profilePicImageView.layer.cornerRadius = 100.0;
     [profilePicImageView setClipsToBounds:YES];
+    self.profilePicImageView.layer.borderColor = [UIColor greenColor].CGColor;
+    self.profilePicImageView.layer.borderWidth = 1.5;
+    
 
 
 }
