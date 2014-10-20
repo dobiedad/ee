@@ -137,7 +137,7 @@
                             <constraint firstItem="hTg-ye-7pQ" firstAttribute="height" secondItem="m9y-ih-ra1" secondAttribute="height" id="oUc-4W-Xfm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf" userLabel="Profile"/>
                     <connections>
                         <outlet property="firstNameLabel" destination="apk-HL-rjw" id="xHc-OT-OUP"/>
                         <outlet property="industryLabel" destination="E2O-qZ-7vn" id="tnQ-vc-PWb"/>
@@ -252,7 +252,7 @@
                             <outlet property="delegate" destination="UaJ-wp-5O8" id="rz1-qq-sag"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Item" id="ahJ-ut-eHH"/>
+                    <tabBarItem key="tabBarItem" title="Matches" id="ahJ-ut-eHH" userLabel="Matches"/>
                     <connections>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                     </connections>
