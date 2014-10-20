@@ -14,11 +14,22 @@
 @synthesize uniCourseLabel;
 @synthesize uniNameLabel;
 @synthesize firstNameLabel;
+@synthesize profileBlurView;
+@synthesize profileBlurView1;
+@synthesize profileBlurView2;
+@synthesize profileBackgroundView;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateProfileDetailsInView];
     //[self startLocationManager];
+    self.profileBlurView.dynamic = TRUE;
+    self.profileBlurView.blurRadius = 15;
+    self.profileBlurView1.dynamic = TRUE;
+    self.profileBlurView1.blurRadius = 15;
+    self.profileBlurView2.dynamic = TRUE;
+    self.profileBlurView2.blurRadius = 15;
 }
 
 - (void)startLocationManager {
@@ -86,6 +97,7 @@
     uniCourseLabel.text = [_profile fieldOfStudy];
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
+    profileBackgroundView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
 }
 
 

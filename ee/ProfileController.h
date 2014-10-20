@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *jobLabel;
 @property (weak, nonatomic) IBOutlet UILabel *uniNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *uniCourseLabel;
+@property (weak, nonatomic) IBOutlet FXBlurView *profileBlurView;
+@property (weak, nonatomic) IBOutlet FXBlurView *profileBlurView1;
+@property (weak, nonatomic) IBOutlet FXBlurView *profileBlurView2;
+@property (weak, nonatomic) IBOutlet UIImageView *profileBackgroundView;
 
 @end
 
