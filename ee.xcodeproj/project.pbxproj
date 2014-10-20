@@ -15,6 +15,7 @@
 		035E844019EECB9200A34C9E /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035E843F19EECB9200A34C9E /* MainController.m */; };
 		81505D200E0495D76B01488C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9578A10F1481B00F9A16C019 /* libPods.a */; };
 		B32D69BC19EBF0EC00140565 /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D69BB19EBF0EC00140565 /* GeoFire.framework */; };
+		B3A44F6D19F552860043AE0A /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A44F6C19F552860043AE0A /* FXBlurView.m */; };
 		B3B7806519DD8912007ED955 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806419DD8912007ED955 /* main.m */; };
 		B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806719DD8912007ED955 /* AppDelegate.m */; };
 		B3B7806B19DD8912007ED955 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806A19DD8912007ED955 /* ProfileController.m */; };
@@ -58,6 +59,8 @@
 		87510AE949659EF03A56AB65 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "ee/Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9578A10F1481B00F9A16C019 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32D69BB19EBF0EC00140565 /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeoFire.framework; path = ee/GeoFire.framework; sourceTree = "<group>"; };
+		B3A44F6B19F552860043AE0A /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		B3A44F6C19F552860043AE0A /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		B3B7805F19DD8912007ED955 /* ee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B7806319DD8912007ED955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3B7806419DD8912007ED955 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				B3B7807219DD8913007ED955 /* Images.xcassets */,
 				B3B7807419DD8913007ED955 /* LaunchScreen.xib */,
 				B3B7806219DD8912007ED955 /* Supporting Files */,
+				B3A44F6B19F552860043AE0A /* FXBlurView.h */,
+				B3A44F6C19F552860043AE0A /* FXBlurView.m */,
 			);
 			path = ee;
 			sourceTree = "<group>";
@@ -280,8 +285,6 @@
 			mainGroup = B3B7805619DD8912007ED955;
 			productRefGroup = B3B7806019DD8912007ED955 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				B3B7805E19DD8912007ED955 /* ee */,
@@ -354,6 +357,7 @@
 				B3B7806E19DD8913007ED955 /* MatchesController.m in Sources */,
 				035E843719ED855A00A34C9E /* LinkedInClient.m in Sources */,
 				035E843A19EEB9F000A34C9E /* FirebaseClient.m in Sources */,
+				B3A44F6D19F552860043AE0A /* FXBlurView.m in Sources */,
 				B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */,
 				B3B7806B19DD8912007ED955 /* ProfileController.m in Sources */,
 				B3B7806519DD8912007ED955 /* main.m in Sources */,

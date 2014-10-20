@@ -2,6 +2,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <GeoFire/GeoFire.h>
 #import "LinkedInProfile.h"
+#import "FXBlurView.h"
+
 
 @interface ProfileController : UIViewController
 
