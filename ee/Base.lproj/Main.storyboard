@@ -176,15 +176,22 @@
                                     <action selector="didTapSignInButton:" destination="kC0-hg-2ZE" eventType="touchUpInside" id="U9O-GG-CrO"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="va3-5V-eD2" userLabel="spinner">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nCe-PK-pgF" firstAttribute="centerY" secondItem="vGS-hu-5oG" secondAttribute="centerY" id="Ad1-ch-C9R"/>
+                            <constraint firstAttribute="centerY" secondItem="va3-5V-eD2" secondAttribute="centerY" id="F4V-Gt-Gxp"/>
+                            <constraint firstAttribute="centerX" secondItem="va3-5V-eD2" secondAttribute="centerX" id="ji7-FK-kJP"/>
                             <constraint firstItem="nCe-PK-pgF" firstAttribute="centerX" secondItem="vGS-hu-5oG" secondAttribute="centerX" id="lZF-1Q-QIu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="nCe-PK-pgF" id="kHd-yP-laQ"/>
+                        <outlet property="spinner" destination="va3-5V-eD2" id="GJh-aW-W2C"/>
                         <segue destination="49e-Tb-3d3" kind="presentation" identifier="signedIn" id="tQW-bM-pPS"/>
                     </connections>
                 </viewController>

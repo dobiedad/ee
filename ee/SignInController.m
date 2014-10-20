@@ -11,6 +11,7 @@
     FirebaseClient *_firebase;
     LinkedInProfile *_profile;
 }
+@synthesize spinner;
 
 @synthesize signInButton;
 
@@ -18,6 +19,7 @@
     [super viewDidLoad];
     
     signInButton.hidden = true;
+
     
     _linkedIn = [[LinkedInClient alloc] init];
     _firebase = [[FirebaseClient alloc] init];
@@ -35,6 +37,7 @@
 
 - (void)enableSignInButton {
     signInButton.hidden = false;
+    spinner.hidden=false;
 }
 
 - (IBAction)didTapSignInButton:(id)sender {
