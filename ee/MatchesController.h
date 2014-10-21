@@ -1,5 +1,4 @@
 #import <UIKit/UIKit.h>
-#import "FXBlurView.h"
 
 
 @interface MatchesController : UICollectionViewController
