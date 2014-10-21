@@ -16,8 +16,7 @@
     [self.imageView sd_setImageWithURL:[profile pictureURL] placeholderImage:nil];
     jobLabel.text =  [_profile companyName], [_profile industry];
     nameLabel.text = [_profile firstName];
-    self.imageView.layer.borderColor = [UIColor greenColor].CGColor;
-    self.imageView.layer.borderWidth = 1;
+
 
     
     

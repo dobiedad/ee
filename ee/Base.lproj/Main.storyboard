@@ -25,7 +25,7 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTg-ye-7pQ" userLabel="profileBlurView" customClass="FXBlurView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2O-9X-d9B" userLabel="profileBlurView1" customClass="FXBlurView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2O-9X-d9B" userLabel="profileBlurView1" customClass="FXBlurView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9y-ih-ra1" userLabel="profileBlurView2" customClass="FXBlurView">
@@ -242,8 +242,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="230" height="345"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="matchImageView">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="228"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="height" multiplier="115:114" id="YTk-1F-REX"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
-                                            <rect key="frame" x="18" y="261" width="194" height="21"/>
+                                            <rect key="frame" x="18" y="253" width="194" height="21"/>
                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -254,12 +260,6 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK">
-                                            <rect key="frame" x="0.0" y="0.0" width="230" height="228"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="height" multiplier="115:114" id="YTk-1F-REX"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -283,11 +283,27 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
                     <connections>
+                        <outlet property="blurView" destination="A3S-RL-Kxm" id="yD4-lj-qch"/>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                         <outlet property="layout" destination="k9j-2M-IsG" id="RfN-rq-J8v"/>
+                        <outlet property="matchesBackground" destination="Rxv-Hd-VDz" id="tSJ-M8-tQP"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="MHd-XN-yJD">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxv-Hd-VDz" userLabel="matchesBackground">
+                            <rect key="frame" x="-140" y="-16" width="600" height="600"/>
+                        </imageView>
+                        <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-RL-Kxm" userLabel="FXBlurView" customClass="FXBlurView">
+                            <rect key="frame" x="-140" y="-16" width="600" height="600"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="714" y="432"/>
         </scene>

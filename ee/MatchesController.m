@@ -9,11 +9,19 @@
 @end
 
 @implementation MatchesController
+@synthesize blurView;
+@synthesize matchesBackground;
 
 NSArray *_profiles;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.blurView.dynamic = TRUE;
+    self.blurView.blurRadius = 15;
+    self.matchesBackground.image = [UIImage imageNamed:@"bg.png"];
+
+    
     
     NSString *userId = [self getSavedLinkedInUserId];
     
