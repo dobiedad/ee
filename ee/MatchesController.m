@@ -36,10 +36,17 @@ NSArray *_profiles;
     [self layout].minimumInteritemSpacing = marginWidth;
     [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
     
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
+    [vibrancyEffectView setFrame:self.matchesBackground.bounds];
     blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
     [self.matchesBackground insertSubview:blurView atIndex:0];
+    [blurView.contentView addSubview:vibrancyEffectView];
+
 
     
 
