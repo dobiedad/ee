@@ -4,7 +4,6 @@
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Profile Controller-->
@@ -19,124 +18,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTg-ye-7pQ" userLabel="profileBlurView" customClass="FXBlurView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2O-9X-d9B" userLabel="profileBlurView1" customClass="FXBlurView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9y-ih-ra1" userLabel="profileBlurView2" customClass="FXBlurView">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                                <subviews>
-                                                    <view clearsContextBeforeDrawing="NO" alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JMT-HU-rGl" userLabel="profileView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                                        <subviews>
-                                                            <view clearsContextBeforeDrawing="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNR-Ek-xSc" userLabel="profileView1">
-                                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.57999999999999996" colorSpace="calibratedRGB"/>
-                                                            </view>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="JNR-Ek-xSc" secondAttribute="trailing" id="10y-t0-NLo"/>
-                                                            <constraint firstItem="JNR-Ek-xSc" firstAttribute="top" secondItem="JMT-HU-rGl" secondAttribute="top" id="KZf-W8-YmQ"/>
-                                                            <constraint firstItem="JNR-Ek-xSc" firstAttribute="leading" secondItem="JMT-HU-rGl" secondAttribute="leading" id="ljN-AW-Odn"/>
-                                                            <constraint firstAttribute="bottom" secondItem="JNR-Ek-xSc" secondAttribute="bottom" id="oc1-Gf-peE"/>
-                                                            <constraint firstItem="JNR-Ek-xSc" firstAttribute="height" secondItem="JMT-HU-rGl" secondAttribute="height" id="s9e-9d-E4i"/>
-                                                            <constraint firstItem="JNR-Ek-xSc" firstAttribute="width" secondItem="JMT-HU-rGl" secondAttribute="width" id="wK0-Y7-Sdi"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="JMT-HU-rGl" secondAttribute="bottom" id="8cT-R6-rlv"/>
-                                                    <constraint firstAttribute="trailing" secondItem="JMT-HU-rGl" secondAttribute="trailing" id="GUv-yM-ffH"/>
-                                                    <constraint firstItem="JMT-HU-rGl" firstAttribute="leading" secondItem="m9y-ih-ra1" secondAttribute="leading" id="Q8E-mR-dof"/>
-                                                    <constraint firstAttribute="centerX" secondItem="JMT-HU-rGl" secondAttribute="centerX" id="YQd-Rn-Gp0"/>
-                                                    <constraint firstItem="JMT-HU-rGl" firstAttribute="top" secondItem="m9y-ih-ra1" secondAttribute="top" id="uqf-xw-Ks7"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Information Technology" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
-                                                        <rect key="frame" x="210" y="309" width="180" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Economics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
-                                                        <rect key="frame" x="257" y="338" width="86" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oxford" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
-                                                        <rect key="frame" x="274" y="367" width="53" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Featurist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
-                                                        <rect key="frame" x="267" y="280" width="67" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
-                                                        <rect key="frame" x="281" y="25" width="38" height="21"/>
-                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImageView">
-                                                        <rect key="frame" x="250" y="63" width="100" height="100"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="200" id="008-7m-AqG"/>
-                                                            <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="0.67000000000000004" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="centerX" secondItem="E2O-qZ-7vn" secondAttribute="centerX" id="1x9-RV-Q4h"/>
-                                                    <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="EM2-Sd-nOO"/>
-                                                    <constraint firstAttribute="centerX" secondItem="apk-HL-rjw" secondAttribute="centerX" id="O96-Rf-D5w"/>
-                                                    <constraint firstAttribute="centerX" secondItem="yLt-OB-uwr" secondAttribute="centerX" id="Xc9-hO-HDr"/>
-                                                    <constraint firstAttribute="centerX" secondItem="lsL-iR-9uf" secondAttribute="centerX" id="cXN-ZU-Uhj"/>
-                                                    <constraint firstItem="bfF-XQ-GiU" firstAttribute="top" secondItem="uMQ-t9-wVg" secondAttribute="top" constant="60" id="jhj-fT-Fsl"/>
-                                                    <constraint firstAttribute="centerX" secondItem="JnT-D2-cW2" secondAttribute="centerX" id="tRi-JJ-UMc"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Information Technology" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
+                                        <rect key="frame" x="210" y="309" width="180" height="21"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Economics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
+                                        <rect key="frame" x="257" y="338" width="86" height="21"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oxford" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
+                                        <rect key="frame" x="274" y="367" width="53" height="21"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Featurist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
+                                        <rect key="frame" x="267" y="280" width="67" height="21"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
+                                        <rect key="frame" x="281" y="25" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImageView">
+                                        <rect key="frame" x="250" y="63" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="centerX" secondItem="uMQ-t9-wVg" secondAttribute="centerX" id="A7r-hc-fr2"/>
-                                            <constraint firstItem="m9y-ih-ra1" firstAttribute="leading" secondItem="n2O-9X-d9B" secondAttribute="leading" id="DZY-XI-bSR"/>
-                                            <constraint firstItem="m9y-ih-ra1" firstAttribute="top" secondItem="n2O-9X-d9B" secondAttribute="top" id="w2o-Fc-mgu"/>
+                                            <constraint firstAttribute="width" constant="200" id="008-7m-AqG"/>
+                                            <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
                                         </constraints>
-                                    </view>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.67000000000000004" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="yLt-OB-uwr" secondAttribute="centerX" id="2Ju-rz-D8y"/>
+                                    <constraint firstAttribute="centerX" secondItem="JnT-D2-cW2" secondAttribute="centerX" id="4hj-VE-MNY"/>
+                                    <constraint firstAttribute="centerX" secondItem="E2O-qZ-7vn" secondAttribute="centerX" id="Jjx-mJ-FUv"/>
+                                    <constraint firstAttribute="centerX" secondItem="lsL-iR-9uf" secondAttribute="centerX" id="Kba-nN-gOQ"/>
+                                    <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="kUc-iG-1JL"/>
+                                    <constraint firstAttribute="centerX" secondItem="apk-HL-rjw" secondAttribute="centerX" id="mnZ-lU-atV"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="A1I-xK-0p6" secondAttribute="width" id="96h-Qj-AEQ"/>
-                            <constraint firstItem="hTg-ye-7pQ" firstAttribute="height" secondItem="n2O-9X-d9B" secondAttribute="height" id="Dga-y9-jea"/>
-                            <constraint firstItem="hTg-ye-7pQ" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="Ho6-bT-o1x"/>
-                            <constraint firstItem="hTg-ye-7pQ" firstAttribute="width" secondItem="m9y-ih-ra1" secondAttribute="width" id="IJN-lt-dmC"/>
-                            <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="M8S-AE-Tsa"/>
-                            <constraint firstItem="hTg-ye-7pQ" firstAttribute="width" secondItem="n2O-9X-d9B" secondAttribute="width" id="NQf-73-KMJ"/>
-                            <constraint firstItem="hTg-ye-7pQ" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Rps-ef-T9D"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="A1I-xK-0p6" secondAttribute="bottom" id="Tcc-lo-B2z"/>
-                            <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="eKe-k9-bt0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="hkW-eA-0l7"/>
-                            <constraint firstAttribute="height" secondItem="A1I-xK-0p6" secondAttribute="height" id="lCG-Yd-QYc"/>
-                            <constraint firstItem="hTg-ye-7pQ" firstAttribute="height" secondItem="m9y-ih-ra1" secondAttribute="height" id="oUc-4W-Xfm"/>
+                            <constraint firstAttribute="trailing" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="2cI-ZJ-ELa"/>
+                            <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="35F-AZ-ghp"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="A1I-xK-0p6" secondAttribute="bottom" id="3mM-kt-qfk"/>
+                            <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="loy-Um-7w9"/>
+                            <constraint firstAttribute="centerX" secondItem="uMQ-t9-wVg" secondAttribute="centerX" id="tGB-1v-geQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf" userLabel="Profile"/>
@@ -145,9 +88,6 @@
                         <outlet property="industryLabel" destination="E2O-qZ-7vn" id="tnQ-vc-PWb"/>
                         <outlet property="jobLabel" destination="JnT-D2-cW2" id="rHp-cR-Iyb"/>
                         <outlet property="profileBackgroundView" destination="A1I-xK-0p6" id="d8k-9N-XhD"/>
-                        <outlet property="profileBlurView" destination="hTg-ye-7pQ" id="spo-ST-fNu"/>
-                        <outlet property="profileBlurView1" destination="n2O-9X-d9B" id="soK-v3-zMP"/>
-                        <outlet property="profileBlurView2" destination="m9y-ih-ra1" id="cuy-nr-jS1"/>
                         <outlet property="profilePicImageView" destination="bfF-XQ-GiU" id="K9H-XK-G7A"/>
                         <outlet property="uniCourseLabel" destination="yLt-OB-uwr" id="47F-yy-me6"/>
                         <outlet property="uniNameLabel" destination="lsL-iR-9uf" id="FYa-Pp-avA"/>

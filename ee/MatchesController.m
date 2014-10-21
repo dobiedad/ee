@@ -30,15 +30,18 @@ NSArray *_profiles;
 
     
     CGFloat marginWidth = 10.f;
+
     CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
     
     [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
     [self layout].minimumInteritemSpacing = marginWidth;
     [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
     
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
     
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    blurView.alpha= 0.9f;
+
     
     UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
     UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];

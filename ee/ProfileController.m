@@ -14,9 +14,7 @@
 @synthesize uniCourseLabel;
 @synthesize uniNameLabel;
 @synthesize firstNameLabel;
-@synthesize profileBlurView;
-@synthesize profileBlurView1;
-@synthesize profileBlurView2;
+
 @synthesize profileBackgroundView;
 
 
@@ -24,12 +22,26 @@
     [super viewDidLoad];
     [self updateProfileDetailsInView];
     //[self startLocationManager];
-    self.profileBlurView.dynamic = TRUE;
-    self.profileBlurView.blurRadius = 15;
-    self.profileBlurView1.dynamic = TRUE;
-    self.profileBlurView1.blurRadius = 15;
-    self.profileBlurView2.dynamic = TRUE;
-    self.profileBlurView2.blurRadius = 15;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
+    blurView.alpha= 0.9f;
+    
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
+    [vibrancyEffectView setFrame:self.profileBackgroundView.bounds];
+    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    [self.profileBackgroundView insertSubview:blurView atIndex:0];
+    [blurView.contentView addSubview:vibrancyEffectView];
+    
+
+    
     self.profilePicImageView.layer.cornerRadius = 100.0;
     [profilePicImageView setClipsToBounds:YES];
     self.profilePicImageView.layer.borderColor = [UIColor greenColor].CGColor;
