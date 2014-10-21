@@ -10,7 +10,7 @@
     if (savedAccessToken == nil) {
         noSavedTokenBlock();
     } else {
-        [self getLinkedInProfileWithAccessToken: savedAccessToken withSuccess: signedInBlock];
+        [self getLinkedInProfileWithAccessToken: savedAccessToken withSuccess: signedInBlock orWhenCancelled:noSavedTokenBlock];
     }
 }
 
@@ -26,28 +26,32 @@
     [defaults synchronize];
 }
 
-- (void)getLinkedInProfileWithAccessToken:(NSString *)accessToken withSuccess:(void (^)(LinkedInProfile *linkedInProfile))profileBlock {
-    [self requestMeWithToken:accessToken andCallBlockWithProfile:profileBlock];
+- (void)getLinkedInProfileWithAccessToken:(NSString *)accessToken withSuccess:(void (^)(LinkedInProfile *linkedInProfile))profileBlock orWhenCancelled:(void (^)())cancelledBlock {
+    [self requestMeWithToken:accessToken andCallBlockWithProfile:profileBlock orWhenCancelled: cancelledBlock];
 }
 
-- (void)showLinkedInSignIn:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock {
+- (void)showLinkedInSignIn:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock orWhenCancelled:(void (^)())cancelledBlock {
     [self.httpClient getAuthorizationCode:^(NSString *code) {
         [self.httpClient getAccessToken:code success:^(NSDictionary *accessTokenData) {
             NSString *accessToken = accessTokenData[@"access_token"];
             [self saveAccessToken:accessToken];
-            [self requestMeWithToken:accessToken andCallBlockWithProfile:signedInBlock];
+            [self requestMeWithToken:accessToken andCallBlockWithProfile:signedInBlock orWhenCancelled:cancelledBlock];
 
         }                       failure:^(NSError *error) {
             NSLog(@"Quering accessToken failed %@", error);
+            cancelledBlock();
         }];
     }                              cancel:^{
         NSLog(@"Authorization was cancelled by user");
+        cancelledBlock();
+        
     }                             failure:^(NSError *error) {
         NSLog(@"Authorization failed %@", error);
+        cancelledBlock();
     }];
 }
 
-- (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(LinkedInProfile *linkedInProfile))profileBlock {
+- (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(LinkedInProfile *linkedInProfile))profileBlock orWhenCancelled:(void (^)())cancelledBlock {
     NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-urls::(original),picture-url,id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
     
     [self.httpClient GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInProfileData) {
@@ -58,6 +62,7 @@
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch current user %@", error);
+        [self showLinkedInSignIn:profileBlock orWhenCancelled:cancelledBlock];
     }];
 }
 

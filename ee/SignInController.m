@@ -20,7 +20,6 @@
     
     signInButton.hidden = true;
 
-    
     _linkedIn = [[LinkedInClient alloc] init];
     _firebase = [[FirebaseClient alloc] init];
     
@@ -37,12 +36,14 @@
 
 - (void)enableSignInButton {
     signInButton.hidden = false;
-    spinner.hidden=false;
+    spinner.hidden = true;
 }
 
 - (IBAction)didTapSignInButton:(id)sender {
     [_linkedIn showLinkedInSignIn:^(LinkedInProfile *linkedInProfile) {
         [self transitionToProfileControllerWithProfile: linkedInProfile];
+    } orWhenCancelled:^{
+        [self enableSignInButton];
     }];
 }
 

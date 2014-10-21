@@ -5,6 +5,6 @@
 
 - (void)attemptToSignInFromSavedTokenWithSuccess:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock andNoSavedToken:(void (^)())noSavedTokenBlock;
 
-- (void)showLinkedInSignIn:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock;
+- (void)showLinkedInSignIn:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock orWhenCancelled:(void (^)())cancelledBlock;
 
 @end
