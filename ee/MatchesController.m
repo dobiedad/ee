@@ -16,6 +16,12 @@ NSArray *_profiles;
     [super viewDidLoad];
     
     NSString *userId = [self getSavedLinkedInUserId];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat itemWidth = (screenWidth / 2);
+    
+    [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
 
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];
     [firebaseClient matchesForUser: userId withBlock:^(NSArray *matches) {
