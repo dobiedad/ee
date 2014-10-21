@@ -19,9 +19,14 @@ NSArray *_profiles;
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
-    CGFloat itemWidth = (screenWidth / 2);
+    
+    CGFloat marginWidth = 10.f;
+    CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
     
     [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
+    [self layout].minimumInteritemSpacing = marginWidth;
+    [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
+    
 
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];
     [firebaseClient matchesForUser: userId withBlock:^(NSArray *matches) {
