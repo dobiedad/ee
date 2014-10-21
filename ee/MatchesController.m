@@ -9,7 +9,6 @@
 @end
 
 @implementation MatchesController
-@synthesize blurView;
 @synthesize matchesBackground;
 
 NSArray *_profiles;
@@ -17,9 +16,9 @@ NSArray *_profiles;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.blurView.dynamic = TRUE;
-    self.blurView.blurRadius = 15;
+
     self.matchesBackground.image = [UIImage imageNamed:@"bg.png"];
+    
 
     
     
@@ -27,6 +26,8 @@ NSArray *_profiles;
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+
     
     CGFloat marginWidth = 10.f;
     CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
@@ -34,6 +35,12 @@ NSArray *_profiles;
     [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
     [self layout].minimumInteritemSpacing = marginWidth;
     [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    [self.matchesBackground insertSubview:blurView atIndex:0];
+
     
 
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];

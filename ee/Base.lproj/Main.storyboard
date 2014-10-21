@@ -234,20 +234,10 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <view key="backgroundView" contentMode="scaleToFill" id="MHd-XN-yJD">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" id="Rxv-Hd-VDz" userLabel="matchesBackground">
+                            <rect key="frame" x="-185" y="-127" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxv-Hd-VDz" userLabel="matchesBackground">
-                                    <rect key="frame" x="-140" y="-16" width="600" height="600"/>
-                                </imageView>
-                                <view alpha="0.90000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3S-RL-Kxm" userLabel="FXBlurView" customClass="FXBlurView">
-                                    <rect key="frame" x="-140" y="-16" width="600" height="600"/>
-                                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
+                        </imageView>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileView" id="ump-hS-F58" customClass="MatchesCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -297,7 +287,6 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
                     <connections>
-                        <outlet property="blurView" destination="A3S-RL-Kxm" id="yD4-lj-qch"/>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                         <outlet property="layout" destination="k9j-2M-IsG" id="RfN-rq-J8v"/>
                         <outlet property="matchesBackground" destination="Rxv-Hd-VDz" id="tSJ-M8-tQP"/>
