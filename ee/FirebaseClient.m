@@ -28,14 +28,14 @@
     unsigned long matchCount = (unsigned long)[snapshot childrenCount] - 1;
     
     [theirProfileFirebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
-        NSMutableArray *strongResults = weakResults;
+//        NSMutableArray *strongResults = weakResults;
         
         LinkedInProfile *theirLinkedInProfile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:theirProfileSnapshot.value];
         
-        [strongResults addObject:theirLinkedInProfile];
-        if (strongResults.count == matchCount) {
-            block(strongResults);
-        }
+        [results addObject:theirLinkedInProfile];
+//        if (strongResults.count == matchCount) {
+            block(results);
+//        }
     }];
 }
 
