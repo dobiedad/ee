@@ -2,7 +2,9 @@
 #import "LinkedInProfile.h"
 #import <Firebase/Firebase.h>
 
-@implementation FirebaseClient
+@implementation FirebaseClient {
+    NSMutableArray *_results;
+}
 
 -(void)saveLinkedInProfileWithId:(NSString*)id andProfile:(NSDictionary*)profile {
     NSString *path = [NSString stringWithFormat:@"users/%@/linkedInProfile", id];
@@ -21,20 +23,17 @@
 }
 
 - (void)getProfilesForMatches:(FDataSnapshot *)snapshot block:(void (^)(NSArray *))block {
-    __block NSMutableArray *results = [[NSMutableArray alloc] init];
+    _results = [[NSMutableArray alloc] init];
     
     NSString *theirProfilePath = [NSString stringWithFormat:@"users/%@/linkedInProfile", snapshot.name];
     Firebase *theirProfileFirebase = [self firebaseForPath:theirProfilePath];
     unsigned long matchCount = (unsigned long)[snapshot childrenCount] - 1;
     
     [theirProfileFirebase observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *theirProfileSnapshot) {
-        NSMutableArray *strongResults = weakResults;
-        
         LinkedInProfile *theirLinkedInProfile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:theirProfileSnapshot.value];
-        
-        [strongResults addObject:theirLinkedInProfile];
-        if (strongResults.count == matchCount) {
-            block(strongResults);
+        [_results addObject:theirLinkedInProfile];
+        if (_results.count == matchCount) {
+            block(_results);
         }
     }];
 }
