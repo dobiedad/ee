@@ -3,7 +3,8 @@
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Profile Controller-->
@@ -165,11 +166,11 @@
             <objects>
                 <collectionViewController id="UaJ-wp-5O8" userLabel="Matches Controller" customClass="MatchesController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9XG-rf-WVO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="k9j-2M-IsG">
-                            <size key="itemSize" width="230" height="345"/>
+                            <size key="itemSize" width="359" height="345"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -183,65 +184,64 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="230" height="345"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="359" height="345"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="matchImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="230" height="228"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="height" multiplier="115:114" id="YTk-1F-REX"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
-                                            <rect key="frame" x="103" y="154" width="25" height="19"/>
-                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
-                                            <rect key="frame" x="92" y="126" width="46" height="19"/>
-                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
-                                            <rect key="frame" x="121" y="227" width="109" height="118"/>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xl5-sJ-1mR" userLabel="buttonsPanel">
+                                            <rect key="frame" x="-15" y="199" width="374" height="146"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                    <rect key="frame" x="22" y="27" width="64" height="64"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="fOx-bo-mFg"/>
-                                                        <constraint firstAttribute="width" constant="32" id="gPb-hv-6eU"/>
-                                                    </constraints>
-                                                    <state key="normal" image="friend.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
+                                                    <rect key="frame" x="65" y="15" width="115" height="115"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
+                                                            <rect key="frame" x="25" y="26" width="64" height="64"/>
+                                                            <state key="normal" image="cancel.png">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                </view>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
+                                                    <rect key="frame" x="178" y="15" width="115" height="115"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
+                                                            <rect key="frame" x="25" y="26" width="64" height="64"/>
+                                                            <state key="normal" image="friend.png">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="vyB-2A-wom" secondAttribute="centerY" id="Hzx-NZ-D9v"/>
-                                                <constraint firstAttribute="centerX" secondItem="vyB-2A-wom" secondAttribute="centerX" id="YYP-Zw-Rkw"/>
-                                            </constraints>
+                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
-                                            <rect key="frame" x="0.0" y="227" width="113" height="118"/>
+                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="201"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
-                                                    <rect key="frame" x="29" y="29" width="64" height="64"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="5oS-yB-nY7"/>
-                                                        <constraint firstAttribute="width" constant="32" id="Xf3-zg-pSl"/>
-                                                    </constraints>
-                                                    <state key="normal" image="cancel.png">
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
+                                                    <rect key="frame" x="167" y="140" width="25" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
+                                                    <rect key="frame" x="156" y="33" width="46" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="Image">
+                                                    <rect key="frame" x="30" y="0.0" width="230" height="228"/>
+                                                </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="xsg-8e-BjZ" secondAttribute="centerY" id="lyL-XL-b6a"/>
-                                                <constraint firstAttribute="centerX" secondItem="xsg-8e-BjZ" secondAttribute="centerX" id="ndL-6d-8xA"/>
+                                                <constraint firstItem="xGW-jd-6xK" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" id="C8X-2D-wxB"/>
+                                                <constraint firstAttribute="bottom" secondItem="xGW-jd-6xK" secondAttribute="bottom" id="pUg-fQ-1un"/>
+                                                <constraint firstAttribute="trailing" secondItem="xGW-jd-6xK" secondAttribute="trailing" id="snF-1P-bhP"/>
+                                                <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" id="wCj-5W-T1N"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -249,17 +249,16 @@
                                 </view>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="tNF-Vw-dmq" secondAttribute="bottom" id="0Ja-mX-cUL"/>
-                                    <constraint firstAttribute="centerX" secondItem="Uch-gA-3qh" secondAttribute="centerX" id="DSB-rp-rJb"/>
-                                    <constraint firstAttribute="centerX" secondItem="mvu-D4-Bh4" secondAttribute="centerX" id="KZD-JQ-l4i"/>
-                                    <constraint firstAttribute="trailing" secondItem="xGW-jd-6xK" secondAttribute="trailing" id="Nsi-Hi-yb8"/>
-                                    <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leading" id="T3C-sg-ZEf"/>
-                                    <constraint firstAttribute="bottom" secondItem="JmM-zq-pfx" secondAttribute="bottom" id="ZoN-oQ-r3b"/>
-                                    <constraint firstItem="tNF-Vw-dmq" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leading" id="aVB-tZ-iRF"/>
-                                    <constraint firstAttribute="centerX" secondItem="xGW-jd-6xK" secondAttribute="centerX" id="iip-O7-ez3"/>
-                                    <constraint firstAttribute="trailing" secondItem="JmM-zq-pfx" secondAttribute="trailing" id="ma2-7K-baZ"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="xl5-sJ-1mR" secondAttribute="bottom" id="Mgd-eQ-kVp"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="CNG-y0-fDq" secondAttribute="trailing" id="OC6-M7-KT5"/>
+                                    <constraint firstItem="CNG-y0-fDq" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leadingMargin" id="VzB-Yb-o22"/>
+                                    <constraint firstItem="CNG-y0-fDq" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="centerYWithinMargins" multiplier="0.6" id="luL-cx-Ipb"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="buttonsPanel" destination="xl5-sJ-1mR" id="V8u-4e-cJS"/>
+                                    <outlet property="cancelView" destination="tNF-Vw-dmq" id="LAe-lg-Hxz"/>
+                                    <outlet property="friendView" destination="JmM-zq-pfx" id="Sel-P2-82H"/>
+                                    <outlet property="imagePanel" destination="CNG-y0-fDq" id="xnG-JU-0x2"/>
                                     <outlet property="imageView" destination="xGW-jd-6xK" id="K67-Y3-54X"/>
                                     <outlet property="jobLabel" destination="Uch-gA-3qh" id="fOG-Pa-I42"/>
                                     <outlet property="nameLabel" destination="mvu-D4-Bh4" id="QWy-6H-NfO"/>
@@ -272,6 +271,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                         <outlet property="layout" destination="k9j-2M-IsG" id="RfN-rq-J8v"/>
@@ -280,7 +280,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="717" y="424"/>
+            <point key="canvasLocation" x="781.5" y="423.5"/>
         </scene>
     </scenes>
     <resources>

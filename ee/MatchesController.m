@@ -19,6 +19,7 @@ NSArray *_profiles;
 
     self.matchesBackground.image = [UIImage imageNamed:@"colour.jpg"];
     
+    
 
     
     NSString *userId = [self getSavedLinkedInUserId];
@@ -40,6 +41,7 @@ NSArray *_profiles;
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
 
     
     UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];

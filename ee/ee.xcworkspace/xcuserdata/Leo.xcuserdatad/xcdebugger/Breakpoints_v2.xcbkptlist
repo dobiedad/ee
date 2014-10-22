@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatchesCollectionViewCell.m"
-            timestampString = "435591452.20906"
+            timestampString = "435674243.313072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-loadProfile:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,57 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatchesController.m"
-            timestampString = "435609960.253965"
+            timestampString = "435668786.534252"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MatchesController viewDidLoad]"
-                  moduleName = "ee"
-                  urlString = "file:///Users/Leo/iOS/ee/ee/MatchesController.m"
-                  timestampString = "435515916.536524"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "216">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[MatchesController viewDidLoad]_block_invoke"
-                  moduleName = "ee"
-                  urlString = "file:///Users/Leo/iOS/ee/ee/MatchesController.m"
-                  timestampString = "435515916.536773"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MatchesController.m"
-            timestampString = "435609960.253965"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -120,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatchesCollectionViewCell.m"
-            timestampString = "435597127.733648"
+            timestampString = "435681069.080299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-loadProfile:"
             landmarkType = "5">
          </BreakpointContent>
