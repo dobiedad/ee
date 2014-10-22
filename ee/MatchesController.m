@@ -17,10 +17,9 @@ NSArray *_profiles;
     [super viewDidLoad];
     
 
-    self.matchesBackground.image = [UIImage imageNamed:@"bg.png"];
+    self.matchesBackground.image = [UIImage imageNamed:@"colour.jpg"];
     
 
-    
     
     NSString *userId = [self getSavedLinkedInUserId];
     
@@ -30,6 +29,7 @@ NSArray *_profiles;
 
     
     CGFloat marginWidth = 10.f;
+    
 
     CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
     
@@ -37,10 +37,12 @@ NSArray *_profiles;
     [self layout].minimumInteritemSpacing = marginWidth;
     [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
     
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    blurView.alpha= 0.9f;
+    blurView.alpha= 1.0f;
+
+    blurView.alpha= 0.8f;
 
     
     UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];

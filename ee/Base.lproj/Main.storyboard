@@ -24,32 +24,26 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Information Technology" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Information Technology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
                                         <rect key="frame" x="210" y="309" width="180" height="21"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Economics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
                                         <rect key="frame" x="257" y="338" width="86" height="21"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oxford" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oxford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
                                         <rect key="frame" x="274" y="367" width="53" height="21"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Featurist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
                                         <rect key="frame" x="267" y="280" width="67" height="21"/>
-                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
-                                        <rect key="frame" x="281" y="25" width="38" height="21"/>
                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -61,6 +55,12 @@
                                             <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
+                                        <rect key="frame" x="281" y="34" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.67000000000000004" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -73,7 +73,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.88" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="2cI-ZJ-ELa"/>
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="35F-AZ-ghp"/>
@@ -167,7 +167,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9XG-rf-WVO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.28395706310000002" blue="0.26750878290000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="k9j-2M-IsG">
                             <size key="itemSize" width="230" height="345"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -179,7 +179,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="profileView" id="ump-hS-F58" customClass="MatchesCollectionViewCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.29999999999999999" contentMode="center" reuseIdentifier="profileView" id="ump-hS-F58" customClass="MatchesCollectionViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -192,25 +192,51 @@
                                                 <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="height" multiplier="115:114" id="YTk-1F-REX"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
-                                            <rect key="frame" x="18" y="253" width="194" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
+                                            <rect key="frame" x="103" y="154" width="25" height="19"/>
                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
-                                            <rect key="frame" x="55" y="301" width="121" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
+                                            <rect key="frame" x="93" y="30" width="46" height="19"/>
                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
+                                            <rect key="frame" x="146" y="254" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="fOx-bo-mFg"/>
+                                                <constraint firstAttribute="width" constant="32" id="gPb-hv-6eU"/>
+                                            </constraints>
+                                            <state key="normal" image="friend.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
+                                            <rect key="frame" x="28" y="256" width="64" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="5oS-yB-nY7"/>
+                                                <constraint firstAttribute="width" constant="32" id="Xf3-zg-pSl"/>
+                                            </constraints>
+                                            <state key="normal" image="cancel.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xsg-8e-BjZ" secondAttribute="bottom" constant="10" id="8Jx-m9-uvD"/>
+                                    <constraint firstAttribute="trailing" secondItem="vyB-2A-wom" secondAttribute="trailing" constant="5" id="AKN-Lb-ms5"/>
+                                    <constraint firstAttribute="centerX" secondItem="Uch-gA-3qh" secondAttribute="centerX" id="DSB-rp-rJb"/>
+                                    <constraint firstItem="xsg-8e-BjZ" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leading" constant="10" id="Doa-jK-BhP"/>
+                                    <constraint firstAttribute="centerX" secondItem="mvu-D4-Bh4" secondAttribute="centerX" id="KZD-JQ-l4i"/>
                                     <constraint firstAttribute="trailing" secondItem="xGW-jd-6xK" secondAttribute="trailing" id="Nsi-Hi-yb8"/>
                                     <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leading" id="T3C-sg-ZEf"/>
+                                    <constraint firstAttribute="bottom" secondItem="vyB-2A-wom" secondAttribute="bottom" constant="10" id="VT2-zs-zMa"/>
                                     <constraint firstAttribute="centerX" secondItem="xGW-jd-6xK" secondAttribute="centerX" id="iip-O7-ez3"/>
                                 </constraints>
                                 <connections>
@@ -234,10 +260,12 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714" y="432"/>
+            <point key="canvasLocation" x="717" y="424"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cancel.png" width="64" height="64"/>
         <image name="first" width="30" height="30"/>
+        <image name="friend.png" width="64" height="64"/>
     </resources>
 </document>

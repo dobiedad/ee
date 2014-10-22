@@ -10,6 +10,8 @@
 	<string>ee</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>8A3ACC9891CB23920D898976F40655AA09D59FE9</key>
+		<string>github.com:leomdivani/-.git</string>
 		<key>90B0CF203C440245D26693927DBE5EC2A0C702F7</key>
 		<string>github.com:leomdivani/ee.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>ee/ee.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>8A3ACC9891CB23920D898976F40655AA09D59FE9</key>
+		<string>../../../NumberInPhone</string>
 		<key>90B0CF203C440245D26693927DBE5EC2A0C702F7</key>
 		<string>../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>90B0CF203C440245D26693927DBE5EC2A0C702F7</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ee</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A3ACC9891CB23920D898976F40655AA09D59FE9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NumberInPhone</string>
 		</dict>
 	</array>
 </dict>
