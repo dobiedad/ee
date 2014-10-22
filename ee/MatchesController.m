@@ -40,9 +40,6 @@ NSArray *_profiles;
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    blurView.alpha= 1.0f;
-
-    blurView.alpha= 0.8f;
 
     
     UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
