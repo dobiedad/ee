@@ -175,7 +175,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" id="Rxv-Hd-VDz" userLabel="matchesBackground">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <cells>
@@ -189,42 +189,6 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-yC-KXJ" userLabel="constraintsView">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xl5-sJ-1mR" userLabel="buttonsPanel">
-                                                    <rect key="frame" x="0.0" y="210" width="200" height="90"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
-                                                            <rect key="frame" x="-94" y="-21" width="30" height="69"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="34"/>
-                                                                    <state key="normal" title="Friend">
-                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </state>
-                                                                </button>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <variation key="widthClass=regular" fixedFrame="YES">
-                                                                <rect key="frame" x="-1" y="85" width="45" height="14"/>
-                                                            </variation>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
-                                                            <rect key="frame" x="8" y="8" width="64" height="64"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                                                    <state key="normal" image="cancel.png">
-                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </state>
-                                                                </button>
-                                                            </subviews>
-                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
-                                                            <variation key="widthClass=regular" fixedFrame="YES">
-                                                                <rect key="frame" x="-39" y="48" width="85" height="1"/>
-                                                            </variation>
-                                                        </view>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="210"/>
                                                     <subviews>
@@ -244,6 +208,56 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xl5-sJ-1mR" userLabel="buttonsPanel">
+                                                    <rect key="frame" x="0.0" y="210" width="200" height="90"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
+                                                            <rect key="frame" x="20" y="8" width="64" height="64"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
+                                                                    <rect key="frame" x="-20" y="-218" width="64" height="64"/>
+                                                                    <state key="normal" image="cancel.png">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="64" id="esN-ZN-Idr"/>
+                                                                <constraint firstAttribute="height" constant="64" id="hts-Hn-L0r"/>
+                                                            </constraints>
+                                                            <variation key="widthClass=regular" fixedFrame="YES">
+                                                                <rect key="frame" x="-39" y="48" width="85" height="1"/>
+                                                            </variation>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
+                                                            <rect key="frame" x="116" y="8" width="64" height="64"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
+                                                                    <rect key="frame" x="-116" y="-218" width="51" height="34"/>
+                                                                    <state key="normal" title="Friend">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="64" id="8tB-Zz-aeM"/>
+                                                                <constraint firstAttribute="height" constant="64" id="DlH-Rh-TG8"/>
+                                                            </constraints>
+                                                            <variation key="widthClass=regular" fixedFrame="YES">
+                                                                <rect key="frame" x="-1" y="85" width="45" height="14"/>
+                                                            </variation>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="JmM-zq-pfx" secondAttribute="trailing" constant="20" id="Npp-3j-rtd"/>
+                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="leading" secondItem="xl5-sJ-1mR" secondAttribute="leading" constant="20" id="pBT-JG-leg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tNF-Vw-dmq" secondAttribute="bottom" constant="18" id="pE6-nw-hBE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JmM-zq-pfx" secondAttribute="bottom" constant="18" id="uiJ-7z-XqL"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -258,7 +272,6 @@
                                                 <constraint firstItem="CNG-y0-fDq" firstAttribute="top" secondItem="Hzw-yC-KXJ" secondAttribute="top" id="geY-Ed-klA"/>
                                                 <constraint firstAttribute="bottom" secondItem="xl5-sJ-1mR" secondAttribute="bottom" id="sdc-j5-J7h"/>
                                             </constraints>
-                                            <variation key="widthClass=regular"/>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -270,7 +283,6 @@
                                     <constraint firstAttribute="bottom" secondItem="Hzw-yC-KXJ" secondAttribute="bottom" id="enb-Wd-svh"/>
                                     <constraint firstItem="Hzw-yC-KXJ" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="top" id="sAb-RI-aft"/>
                                 </constraints>
-                                <variation key="widthClass=regular"/>
                                 <connections>
                                     <outlet property="buttonsPanel" destination="xl5-sJ-1mR" id="V8u-4e-cJS"/>
                                     <outlet property="cancelView" destination="tNF-Vw-dmq" id="LAe-lg-Hxz"/>
