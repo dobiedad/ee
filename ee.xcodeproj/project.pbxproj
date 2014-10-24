@@ -18,6 +18,7 @@
 		B3628C2619F6E22A00389C31 /* colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2419F6E22A00389C31 /* colour.jpg */; };
 		B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2519F6E22A00389C31 /* colour@2x.jpg */; };
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
+		B36FE63F19FADAB300CA6109 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B36FE63E19FADAB300CA6109 /* friends.png */; };
 		B39FEED619F7BD7F00613416 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B39FEED519F7BD7F00613416 /* cancel.png */; };
 		B3B7806519DD8912007ED955 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806419DD8912007ED955 /* main.m */; };
 		B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806719DD8912007ED955 /* AppDelegate.m */; };
@@ -65,6 +66,7 @@
 		B3628C2419F6E22A00389C31 /* colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colour.jpg; path = ../../NumberInPhone/images/colour.jpg; sourceTree = "<group>"; };
 		B3628C2519F6E22A00389C31 /* colour@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "colour@2x.jpg"; path = "../../NumberInPhone/images/colour@2x.jpg"; sourceTree = "<group>"; };
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		B36FE63E19FADAB300CA6109 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
 		B39FEED519F7BD7F00613416 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		B3B7805F19DD8912007ED955 /* ee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B7806319DD8912007ED955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				B36B5B0519F6B39C00C3BED1 /* bg.png */,
 				B3628C2419F6E22A00389C31 /* colour.jpg */,
+				B36FE63E19FADAB300CA6109 /* friends.png */,
 				B39FEED519F7BD7F00613416 /* cancel.png */,
 				B3628C2519F6E22A00389C31 /* colour@2x.jpg */,
 				B3B7806619DD8912007ED955 /* AppDelegate.h */,
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */,
+				B36FE63F19FADAB300CA6109 /* friends.png in Resources */,
 				B3B7807119DD8913007ED955 /* Main.storyboard in Resources */,
 				B3B7807619DD8913007ED955 /* LaunchScreen.xib in Resources */,
 				B39FEED619F7BD7F00613416 /* cancel.png in Resources */,
