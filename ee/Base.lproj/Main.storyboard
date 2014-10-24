@@ -193,10 +193,10 @@
                                                     <rect key="frame" x="0.0" y="210" width="200" height="90"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
-                                                            <rect key="frame" x="20" y="8" width="64" height="64"/>
+                                                            <rect key="frame" x="20" y="0.0" width="64" height="90"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="90"/>
                                                                     <state key="normal" image="cancel.png">
                                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
@@ -216,10 +216,10 @@
                                                             </variation>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
-                                                            <rect key="frame" x="116" y="8" width="64" height="64"/>
+                                                            <rect key="frame" x="116" y="0.0" width="64" height="90"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="90"/>
                                                                     <state key="normal" image="friends.png">
                                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
@@ -241,11 +241,17 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JmM-zq-pfx" secondAttribute="bottom" id="FoR-OW-wVY"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="top" secondItem="xl5-sJ-1mR" secondAttribute="top" id="KeH-uT-1GC"/>
+                                                        <constraint firstAttribute="height" secondItem="JmM-zq-pfx" secondAttribute="height" id="MzZ-pt-Tti"/>
                                                         <constraint firstAttribute="trailing" secondItem="JmM-zq-pfx" secondAttribute="trailing" constant="20" id="Npp-3j-rtd"/>
                                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JmM-zq-pfx" secondAttribute="bottom" id="Ui7-M8-RGN"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tNF-Vw-dmq" secondAttribute="bottom" id="WSn-Iv-jW8"/>
+                                                        <constraint firstAttribute="height" secondItem="tNF-Vw-dmq" secondAttribute="height" id="bHi-Je-psP"/>
                                                         <constraint firstItem="tNF-Vw-dmq" firstAttribute="leading" secondItem="xl5-sJ-1mR" secondAttribute="leading" constant="20" id="pBT-JG-leg"/>
                                                         <constraint firstAttribute="bottom" secondItem="tNF-Vw-dmq" secondAttribute="bottom" constant="18" id="pE6-nw-hBE"/>
                                                         <constraint firstAttribute="bottom" secondItem="JmM-zq-pfx" secondAttribute="bottom" constant="18" id="uiJ-7z-XqL"/>
+                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="top" secondItem="xl5-sJ-1mR" secondAttribute="top" id="zIx-XQ-cyF"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
