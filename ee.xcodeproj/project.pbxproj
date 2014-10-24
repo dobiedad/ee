@@ -17,8 +17,6 @@
 		B32D69BC19EBF0EC00140565 /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D69BB19EBF0EC00140565 /* GeoFire.framework */; };
 		B3628C2619F6E22A00389C31 /* colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2419F6E22A00389C31 /* colour.jpg */; };
 		B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2519F6E22A00389C31 /* colour@2x.jpg */; };
-		B3628C2A19F6E66500389C31 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2819F6E66500389C31 /* chat.png */; };
-		B3628C2B19F6E66500389C31 /* friend.png in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2919F6E66500389C31 /* friend.png */; };
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
 		B39FEED619F7BD7F00613416 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B39FEED519F7BD7F00613416 /* cancel.png */; };
 		B3B7806519DD8912007ED955 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806419DD8912007ED955 /* main.m */; };
@@ -66,8 +64,6 @@
 		B32D69BB19EBF0EC00140565 /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeoFire.framework; path = ee/GeoFire.framework; sourceTree = "<group>"; };
 		B3628C2419F6E22A00389C31 /* colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colour.jpg; path = ../../NumberInPhone/images/colour.jpg; sourceTree = "<group>"; };
 		B3628C2519F6E22A00389C31 /* colour@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "colour@2x.jpg"; path = "../../NumberInPhone/images/colour@2x.jpg"; sourceTree = "<group>"; };
-		B3628C2819F6E66500389C31 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chat.png; path = ../../../Downloads/chat.png; sourceTree = "<group>"; };
-		B3628C2919F6E66500389C31 /* friend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = friend.png; path = ../../../Downloads/friend.png; sourceTree = "<group>"; };
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B39FEED519F7BD7F00613416 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		B3B7805F19DD8912007ED955 /* ee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ee.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,9 +162,7 @@
 			children = (
 				B36B5B0519F6B39C00C3BED1 /* bg.png */,
 				B3628C2419F6E22A00389C31 /* colour.jpg */,
-				B3628C2819F6E66500389C31 /* chat.png */,
 				B39FEED519F7BD7F00613416 /* cancel.png */,
-				B3628C2919F6E66500389C31 /* friend.png */,
 				B3628C2519F6E22A00389C31 /* colour@2x.jpg */,
 				B3B7806619DD8912007ED955 /* AppDelegate.h */,
 				B3B7806719DD8912007ED955 /* AppDelegate.m */,
@@ -315,8 +309,6 @@
 				B3B7807119DD8913007ED955 /* Main.storyboard in Resources */,
 				B3B7807619DD8913007ED955 /* LaunchScreen.xib in Resources */,
 				B39FEED619F7BD7F00613416 /* cancel.png in Resources */,
-				B3628C2B19F6E66500389C31 /* friend.png in Resources */,
-				B3628C2A19F6E66500389C31 /* chat.png in Resources */,
 				B3628C2619F6E22A00389C31 /* colour.jpg in Resources */,
 				B3B7808D19DD8924007ED955 /* Podfile in Resources */,
 				B3B7807319DD8913007ED955 /* Images.xcassets in Resources */,

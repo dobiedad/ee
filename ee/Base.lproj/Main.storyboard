@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kC0-hg-2ZE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kC0-hg-2ZE">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -78,9 +77,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="2cI-ZJ-ELa"/>
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="35F-AZ-ghp"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="A1I-xK-0p6" secondAttribute="bottom" id="3mM-kt-qfk"/>
-                            <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="loy-Um-7w9"/>
                             <constraint firstAttribute="centerX" secondItem="uMQ-t9-wVg" secondAttribute="centerX" id="tGB-1v-geQ"/>
+                            <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="vqp-P6-4AJ"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="A1I-xK-0p6" secondAttribute="bottom" id="yIl-Wu-zW6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf" userLabel="Profile"/>
@@ -166,17 +165,17 @@
             <objects>
                 <collectionViewController id="UaJ-wp-5O8" userLabel="Matches Controller" customClass="MatchesController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9XG-rf-WVO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="k9j-2M-IsG">
-                            <size key="itemSize" width="359" height="345"/>
+                            <size key="itemSize" width="200" height="300"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" id="Rxv-Hd-VDz" userLabel="matchesBackground">
-                            <rect key="frame" x="-185" y="-127" width="600" height="600"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <cells>
@@ -184,76 +183,94 @@
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="359" height="345"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xl5-sJ-1mR" userLabel="buttonsPanel">
-                                            <rect key="frame" x="-15" y="199" width="374" height="146"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-yC-KXJ" userLabel="constraintsView">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
-                                                    <rect key="frame" x="65" y="15" width="115" height="115"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xl5-sJ-1mR" userLabel="buttonsPanel">
+                                                    <rect key="frame" x="0.0" y="210" width="200" height="90"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
-                                                            <rect key="frame" x="25" y="26" width="64" height="64"/>
-                                                            <state key="normal" image="cancel.png">
-                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                        </button>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
+                                                            <rect key="frame" x="-94" y="-21" width="30" height="69"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="51" height="34"/>
+                                                                    <state key="normal" title="Friend">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <variation key="widthClass=regular" fixedFrame="YES">
+                                                                <rect key="frame" x="-1" y="85" width="45" height="14"/>
+                                                            </variation>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
+                                                            <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                                    <state key="normal" image="cancel.png">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                            <variation key="widthClass=regular" fixedFrame="YES">
+                                                                <rect key="frame" x="-39" y="48" width="85" height="1"/>
+                                                            </variation>
+                                                        </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
-                                                    <rect key="frame" x="178" y="15" width="115" height="115"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="210"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                            <rect key="frame" x="25" y="26" width="64" height="64"/>
-                                                            <state key="normal" image="friend.png">
-                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                            </state>
-                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="19"/>
+                                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="Image"/>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="201"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
-                                                    <rect key="frame" x="167" y="140" width="25" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
-                                                    <rect key="frame" x="156" y="33" width="46" height="19"/>
-                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="Image">
-                                                    <rect key="frame" x="30" y="0.0" width="230" height="228"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="xGW-jd-6xK" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" id="C8X-2D-wxB"/>
-                                                <constraint firstAttribute="bottom" secondItem="xGW-jd-6xK" secondAttribute="bottom" id="pUg-fQ-1un"/>
-                                                <constraint firstAttribute="trailing" secondItem="xGW-jd-6xK" secondAttribute="trailing" id="snF-1P-bhP"/>
-                                                <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" id="wCj-5W-T1N"/>
+                                                <constraint firstItem="xl5-sJ-1mR" firstAttribute="height" secondItem="Hzw-yC-KXJ" secondAttribute="height" multiplier="0.3" id="9bu-Kg-QV1"/>
+                                                <constraint firstAttribute="trailing" secondItem="CNG-y0-fDq" secondAttribute="trailing" id="DO9-nd-ZOF"/>
+                                                <constraint firstItem="xl5-sJ-1mR" firstAttribute="leading" secondItem="Hzw-yC-KXJ" secondAttribute="leading" id="DsT-vE-kwa"/>
+                                                <constraint firstItem="CNG-y0-fDq" firstAttribute="height" secondItem="Hzw-yC-KXJ" secondAttribute="height" multiplier="0.7" id="FYK-E3-e6n"/>
+                                                <constraint firstItem="CNG-y0-fDq" firstAttribute="leading" secondItem="Hzw-yC-KXJ" secondAttribute="leading" id="JPb-aL-CUz"/>
+                                                <constraint firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" id="MfS-SX-BEN"/>
+                                                <constraint firstAttribute="trailing" secondItem="xl5-sJ-1mR" secondAttribute="trailing" id="Wce-mo-YeU"/>
+                                                <constraint firstAttribute="width" secondItem="xl5-sJ-1mR" secondAttribute="width" id="gKi-ak-Gd4"/>
+                                                <constraint firstItem="CNG-y0-fDq" firstAttribute="top" secondItem="Hzw-yC-KXJ" secondAttribute="top" id="geY-Ed-klA"/>
+                                                <constraint firstAttribute="bottom" secondItem="xl5-sJ-1mR" secondAttribute="bottom" id="sdc-j5-J7h"/>
                                             </constraints>
+                                            <variation key="widthClass=regular"/>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="xl5-sJ-1mR" secondAttribute="bottom" id="Mgd-eQ-kVp"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="CNG-y0-fDq" secondAttribute="trailing" id="OC6-M7-KT5"/>
-                                    <constraint firstItem="CNG-y0-fDq" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leadingMargin" id="VzB-Yb-o22"/>
-                                    <constraint firstItem="CNG-y0-fDq" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="centerYWithinMargins" multiplier="0.6" id="luL-cx-Ipb"/>
+                                    <constraint firstItem="Hzw-yC-KXJ" firstAttribute="leading" secondItem="ump-hS-F58" secondAttribute="leading" id="QBa-cU-oxR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hzw-yC-KXJ" secondAttribute="trailing" id="eZ3-ba-KZE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hzw-yC-KXJ" secondAttribute="bottom" id="enb-Wd-svh"/>
+                                    <constraint firstItem="Hzw-yC-KXJ" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="top" id="sAb-RI-aft"/>
                                 </constraints>
+                                <variation key="widthClass=regular"/>
                                 <connections>
                                     <outlet property="buttonsPanel" destination="xl5-sJ-1mR" id="V8u-4e-cJS"/>
                                     <outlet property="cancelView" destination="tNF-Vw-dmq" id="LAe-lg-Hxz"/>
@@ -271,7 +288,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                         <outlet property="layout" destination="k9j-2M-IsG" id="RfN-rq-J8v"/>
@@ -280,12 +297,11 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.5" y="423.5"/>
+            <point key="canvasLocation" x="781" y="423"/>
         </scene>
     </scenes>
     <resources>
         <image name="cancel.png" width="64" height="64"/>
         <image name="first" width="30" height="30"/>
-        <image name="friend.png" width="64" height="64"/>
     </resources>
 </document>

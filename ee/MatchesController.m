@@ -50,8 +50,6 @@ NSArray *_profiles;
     blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
     [self.matchesBackground insertSubview:blurView atIndex:0];
     [blurView.contentView addSubview:vibrancyEffectView];
-
-
     
 
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];

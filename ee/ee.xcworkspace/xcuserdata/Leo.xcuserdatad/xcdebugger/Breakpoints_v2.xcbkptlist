@@ -25,22 +25,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MatchesCollectionViewCell.m"
-            timestampString = "435674243.313072"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "-loadProfile:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "MatchesController.m"
             timestampString = "435668786.534252"
             startingColumnNumber = "9223372036854775807"
@@ -74,13 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatchesCollectionViewCell.m"
-            timestampString = "435681069.080299"
+            timestampString = "435861401.32809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-loadProfile:"
-            landmarkType = "5">
+            startingLineNumber = "92"
+            endingLineNumber = "92">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
