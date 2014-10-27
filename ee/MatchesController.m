@@ -38,7 +38,7 @@ NSArray *_profiles;
     [self layout].minimumInteritemSpacing = marginWidth;
     [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
     
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
     
@@ -52,12 +52,21 @@ NSArray *_profiles;
     [blurView.contentView addSubview:vibrancyEffectView];
     
 
+    
+
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];
     [firebaseClient matchesForUser: userId withBlock:^(NSArray *matches) {
         _profiles = matches;
         [self.collectionView reloadData];
     }];
 }
+
+
+
+
+
+
+
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {

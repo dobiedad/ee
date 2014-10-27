@@ -21,11 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateProfileDetailsInView];
+    [self paralax];
+
     //[self startLocationManager];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
+    CGFloat screenWidth = screenRect.size.width * 1.2;
+    CGFloat screenHeight = screenRect.size.height * 1.2;
     
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     
@@ -49,6 +51,34 @@
 
 
 }
+
+
+- (void)paralax
+{
+    // Set vertical effect
+    UIInterpolatingMotionEffect *verticalMotionEffect =
+    [[UIInterpolatingMotionEffect alloc]
+     initWithKeyPath:@"center.y"
+     type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    verticalMotionEffect.minimumRelativeValue = @(-30);
+    verticalMotionEffect.maximumRelativeValue = @(30);
+    
+    // Set horizontal effect
+    UIInterpolatingMotionEffect *horizontalMotionEffect =
+    [[UIInterpolatingMotionEffect alloc]
+     initWithKeyPath:@"center.x"
+     type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    horizontalMotionEffect.minimumRelativeValue = @(-30);
+    horizontalMotionEffect.maximumRelativeValue = @(30);
+    
+    // Create group to combine both
+    UIMotionEffectGroup *group = [UIMotionEffectGroup new];
+    group.motionEffects = @[horizontalMotionEffect, verticalMotionEffect];
+    
+    // Add both effects to your view
+    [profilePicImageView addMotionEffect:group];
+}
+
 
 - (void)startLocationManager {
     if ([CLLocationManager locationServicesEnabled]) {
