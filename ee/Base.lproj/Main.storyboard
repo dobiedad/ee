@@ -206,7 +206,7 @@
                                                                     </state>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="0.83000000000000007" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="centerX" secondItem="xsg-8e-BjZ" secondAttribute="centerX" id="8d7-wM-HVA"/>
                                                                 <constraint firstAttribute="width" constant="64" id="esN-ZN-Idr"/>
@@ -231,7 +231,7 @@
                                                                     </state>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="0.67000000000000004" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="centerX" secondItem="vyB-2A-wom" secondAttribute="centerX" id="GtS-tG-6XC"/>
                                                                 <constraint firstAttribute="centerY" secondItem="vyB-2A-wom" secondAttribute="centerY" id="VSU-J5-3oJ"/>
@@ -241,7 +241,7 @@
                                                             </variation>
                                                         </view>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.66666666669999997" green="0.15484538880000001" blue="0.07852594332" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="tNF-Vw-dmq" firstAttribute="width" secondItem="xl5-sJ-1mR" secondAttribute="width" multiplier="0.495" id="Dpa-Vs-lej"/>
                                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JmM-zq-pfx" secondAttribute="bottom" id="FoR-OW-wVY"/>
