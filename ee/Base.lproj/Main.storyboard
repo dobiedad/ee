@@ -221,7 +221,11 @@
                                                             <rect key="frame" x="110" y="0.0" width="90" height="90"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                    <rect key="frame" x="29" y="29" width="32" height="32"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="32" id="Sym-hk-H1p"/>
+                                                                        <constraint firstAttribute="width" constant="32" id="dWz-c7-QQ2"/>
+                                                                    </constraints>
                                                                     <state key="normal" image="friends.png">
                                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
@@ -229,12 +233,8 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="vyB-2A-wom" firstAttribute="width" secondItem="JmM-zq-pfx" secondAttribute="width" id="FZS-Km-ceU"/>
-                                                                <constraint firstAttribute="bottom" secondItem="vyB-2A-wom" secondAttribute="bottom" id="MEi-uE-aIz"/>
-                                                                <constraint firstAttribute="trailing" secondItem="vyB-2A-wom" secondAttribute="trailing" id="VgK-rG-iIW"/>
-                                                                <constraint firstItem="vyB-2A-wom" firstAttribute="height" secondItem="JmM-zq-pfx" secondAttribute="height" id="iz8-Ml-lsp"/>
-                                                                <constraint firstItem="vyB-2A-wom" firstAttribute="leading" secondItem="JmM-zq-pfx" secondAttribute="leading" id="tDg-oK-3Xe"/>
-                                                                <constraint firstItem="vyB-2A-wom" firstAttribute="top" secondItem="JmM-zq-pfx" secondAttribute="top" id="yTS-c5-ewP"/>
+                                                                <constraint firstAttribute="centerX" secondItem="vyB-2A-wom" secondAttribute="centerX" id="GtS-tG-6XC"/>
+                                                                <constraint firstAttribute="centerY" secondItem="vyB-2A-wom" secondAttribute="centerY" id="VSU-J5-3oJ"/>
                                                             </constraints>
                                                             <variation key="widthClass=regular" fixedFrame="YES">
                                                                 <rect key="frame" x="-1" y="85" width="45" height="14"/>
