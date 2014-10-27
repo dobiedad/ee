@@ -165,7 +165,7 @@
             <objects>
                 <collectionViewController id="UaJ-wp-5O8" userLabel="Matches Controller" customClass="MatchesController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9XG-rf-WVO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="k9j-2M-IsG">
@@ -196,7 +196,11 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                                    <rect key="frame" x="29" y="29" width="32" height="32"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="PX9-hl-d4c"/>
+                                                                        <constraint firstAttribute="height" constant="32" id="fp0-jG-tRZ"/>
+                                                                    </constraints>
                                                                     <state key="normal" image="cancel.png">
                                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                                     </state>
@@ -204,12 +208,10 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="xsg-8e-BjZ" firstAttribute="leading" secondItem="tNF-Vw-dmq" secondAttribute="leading" id="CX3-DO-43J"/>
-                                                                <constraint firstAttribute="trailing" secondItem="xsg-8e-BjZ" secondAttribute="trailing" id="Fo9-a7-hlh"/>
-                                                                <constraint firstAttribute="bottom" secondItem="xsg-8e-BjZ" secondAttribute="bottom" id="IEQ-DL-qsK"/>
+                                                                <constraint firstAttribute="centerX" secondItem="xsg-8e-BjZ" secondAttribute="centerX" id="8d7-wM-HVA"/>
                                                                 <constraint firstAttribute="width" constant="64" id="esN-ZN-Idr"/>
                                                                 <constraint firstAttribute="height" constant="64" id="hts-Hn-L0r"/>
-                                                                <constraint firstItem="xsg-8e-BjZ" firstAttribute="top" secondItem="tNF-Vw-dmq" secondAttribute="top" id="r8j-s3-CMB"/>
+                                                                <constraint firstAttribute="centerY" secondItem="xsg-8e-BjZ" secondAttribute="centerY" id="vXH-Lt-Asv"/>
                                                             </constraints>
                                                             <variation key="widthClass=regular" fixedFrame="YES">
                                                                 <rect key="frame" x="-39" y="48" width="85" height="1"/>
@@ -259,14 +261,14 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="210"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
-                                                            <rect key="frame" x="5" y="161" width="46" height="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvu-D4-Bh4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="19"/>
                                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
-                                                            <rect key="frame" x="5" y="186" width="25" height="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uch-gA-3qh" userLabel="Job">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="19"/>
                                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="0.98999999999999999" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -277,14 +279,10 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="mvu-D4-Bh4" secondAttribute="bottom" constant="30" id="APd-Vp-92t"/>
-                                                        <constraint firstItem="mvu-D4-Bh4" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" constant="5" id="ShT-eW-8HI"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="height" secondItem="CNG-y0-fDq" secondAttribute="height" id="UOv-y6-KSD"/>
                                                         <constraint firstAttribute="trailing" secondItem="xGW-jd-6xK" secondAttribute="trailing" id="dRe-9Q-3Xp"/>
-                                                        <constraint firstItem="Uch-gA-3qh" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" constant="5" id="lCr-CR-YKa"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" id="naG-yL-NyA"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" id="u2B-oo-WTK"/>
-                                                        <constraint firstAttribute="bottom" secondItem="Uch-gA-3qh" secondAttribute="bottom" constant="5" id="w5L-UE-dyt"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" id="wTx-uS-1uY"/>
                                                     </constraints>
                                                 </view>
@@ -330,7 +328,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                         <outlet property="layout" destination="k9j-2M-IsG" id="RfN-rq-J8v"/>
