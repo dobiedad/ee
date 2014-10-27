@@ -165,10 +165,11 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" customClass="MainController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" alpha="0.80000000000000004" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.21859680159864481" green="0.76705845752942559" blue="1" alpha="0.20999999999999999" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.66666666669999997" green="0.15484538880000001" blue="0.07852594332" alpha="0.17999999999999999" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
