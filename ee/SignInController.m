@@ -50,12 +50,12 @@
 - (void)transitionToProfileControllerWithProfile: (LinkedInProfile *) profile {
     [_firebase saveLinkedInProfileWithId:[profile linkedInUserId] andProfile:[profile asDictionary]];
     _profile = profile;
-    [self performSegueWithIdentifier:@"signedIn" sender:self];
+    [self performSegueWithIdentifier:@"main" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"signedIn"]) {
+    if ([[segue identifier] isEqualToString:@"main"]) {
         MainController *mainController = [segue destinationViewController];
         [mainController setProfile:_profile];
     }
