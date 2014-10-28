@@ -20,7 +20,8 @@
     scrollView.showsHorizontalScrollIndicator = YES;
     scrollView.showsVerticalScrollIndicator=NO;
     scrollView.pagingEnabled = YES;
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
    
     
     

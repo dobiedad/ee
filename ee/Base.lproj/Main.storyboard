@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -153,12 +154,28 @@
                     <connections>
                         <outlet property="signInButton" destination="nCe-PK-pgF" id="kHd-yP-laQ"/>
                         <outlet property="spinner" destination="va3-5V-eD2" id="GJh-aW-W2C"/>
-                        <segue destination="Tr7-JN-fT2" kind="presentation" identifier="main" id="dkW-9d-4yV"/>
+                        <segue destination="C7j-gK-4NH" kind="presentation" identifier="main" id="BcH-LI-u95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2eq-ZP-yie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-840" y="25"/>
+            <point key="canvasLocation" x="-1505" y="-42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Ff-wv-cIi">
+            <objects>
+                <navigationController id="C7j-gK-4NH" customClass="NavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LME-3V-tEr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Tr7-JN-fT2" kind="relationship" relationship="rootViewController" id="wTB-Wo-cb6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bX-X0-Knc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-673" y="-363"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="oJo-UQ-2Bj">
@@ -181,7 +198,8 @@
                                             <segue destination="9pv-A4-QxB" kind="embed" id="yXK-Sv-bzx"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-qT-8hL" userLabel="matchesContainer">
+                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-qT-8hL" userLabel="matchesContainer">
+                                        <rect key="frame" x="375" y="0.0" width="375" height="667"/>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="UaJ-wp-5O8" kind="embed" id="332-wE-4mD"/>
@@ -190,8 +208,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rbG-qT-8hL" secondAttribute="bottom" id="GFL-Ml-b4I"/>
+                                    <constraint firstAttribute="bottom" secondItem="crw-6H-LPz" secondAttribute="bottom" id="HIC-Ye-HsP"/>
                                     <constraint firstItem="crw-6H-LPz" firstAttribute="width" secondItem="HKx-0h-Bia" secondAttribute="width" id="Kn3-8S-3S9"/>
                                     <constraint firstAttribute="width" secondItem="rbG-qT-8hL" secondAttribute="width" id="Nxp-ut-HYc"/>
+                                    <constraint firstItem="rbG-qT-8hL" firstAttribute="top" secondItem="HKx-0h-Bia" secondAttribute="top" id="ZiF-P8-hXf"/>
+                                    <constraint firstItem="crw-6H-LPz" firstAttribute="top" secondItem="HKx-0h-Bia" secondAttribute="top" id="edB-KP-67s"/>
                                     <constraint firstItem="crw-6H-LPz" firstAttribute="height" secondItem="HKx-0h-Bia" secondAttribute="height" id="fTm-Oe-2vB"/>
                                     <constraint firstAttribute="height" secondItem="rbG-qT-8hL" secondAttribute="height" id="mc5-Ky-c2B"/>
                                     <constraint firstItem="crw-6H-LPz" firstAttribute="leading" secondItem="HKx-0h-Bia" secondAttribute="leading" id="nGk-fv-Rk3"/>
@@ -199,12 +221,14 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.66666666669999997" green="0.15484538880000001" blue="0.07852594332" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.10289980690309151" green="0.66666666669999997" blue="0.050344150881059771" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="HKx-0h-Bia" firstAttribute="width" secondItem="8H3-xT-egK" secondAttribute="width" id="HZR-Du-AN6"/>
                             <constraint firstAttribute="height" secondItem="HKx-0h-Bia" secondAttribute="height" id="ejT-5R-fI2"/>
+                            <constraint firstItem="HKx-0h-Bia" firstAttribute="top" secondItem="8H3-xT-egK" secondAttribute="topMargin" id="hKp-7T-AD9"/>
                         </constraints>
                     </scrollView>
+                    <navigationItem key="navigationItem" id="mnh-7g-exV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="matchesContainer" destination="rbG-qT-8hL" id="RIg-rM-iH7"/>
@@ -368,6 +392,7 @@
                                     <constraint firstAttribute="trailing" secondItem="Hzw-yC-KXJ" secondAttribute="trailing" id="eZ3-ba-KZE"/>
                                     <constraint firstAttribute="bottom" secondItem="Hzw-yC-KXJ" secondAttribute="bottom" id="enb-Wd-svh"/>
                                     <constraint firstItem="Hzw-yC-KXJ" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="top" id="sAb-RI-aft"/>
+                                    <constraint firstItem="Hzw-yC-KXJ" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="topMargin" id="uLF-Sr-seu"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="buttonsPanel" destination="xl5-sJ-1mR" id="V8u-4e-cJS"/>
@@ -377,6 +402,7 @@
                                     <outlet property="imageView" destination="xGW-jd-6xK" id="K67-Y3-54X"/>
                                     <outlet property="jobLabel" destination="Uch-gA-3qh" id="fOG-Pa-I42"/>
                                     <outlet property="nameLabel" destination="mvu-D4-Bh4" id="QWy-6H-NfO"/>
+                                    <segue destination="9pv-A4-QxB" kind="show" id="4BG-ug-x6W"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -386,6 +412,8 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
@@ -395,7 +423,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545.5" y="313.5"/>
+            <point key="canvasLocation" x="1363.5" y="-97.5"/>
         </scene>
     </scenes>
     <resources>
@@ -403,4 +431,7 @@
         <image name="first" width="30" height="30"/>
         <image name="friends.png" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4BG-ug-x6W"/>
+    </inferredMetricsTieBreakers>
 </document>

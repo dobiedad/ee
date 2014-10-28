@@ -13,47 +13,8 @@
 
 NSArray *_profiles;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-
-    self.matchesBackground.image = [UIImage imageNamed:@"colour.jpg"];
-    
-    
-
-    
+- (void)loadMatchesFromFirebase {
     NSString *userId = [self getSavedLinkedInUserId];
-    
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
-
-    
-    CGFloat marginWidth = 10.f;
-    
-
-    CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
-    
-    [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
-    [self layout].minimumInteritemSpacing = marginWidth;
-    [self layout].sectionInset = UIEdgeInsetsMake(marginWidth, marginWidth, marginWidth, marginWidth);
-    
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    
-    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    
-
-    
-    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
-    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
-    [vibrancyEffectView setFrame:self.matchesBackground.bounds];
-    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
-    [self.matchesBackground insertSubview:blurView atIndex:0];
-    [blurView.contentView addSubview:vibrancyEffectView];
-    
-
-    
-
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];
     [firebaseClient matchesForUser: userId withBlock:^(NSArray *matches) {
         _profiles = matches;
@@ -61,12 +22,48 @@ NSArray *_profiles;
     }];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.matchesBackground.image = [UIImage imageNamed:@"colour.jpg"];
+    
+    [self layoutBlur];
+    [self layoutCollectionView];
+    [self loadMatchesFromFirebase];
+}
+
+- (void) layoutCollectionView {
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    
+    CGFloat marginWidth = 10.f;
+
+    CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
+    
+    CGFloat topBarOffset = 75.f;
+    
+    [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
+    [self layout].minimumInteritemSpacing = marginWidth;
+    [self layout].sectionInset = UIEdgeInsetsMake(topBarOffset + marginWidth, marginWidth, marginWidth, marginWidth);
+}
 
 
-
-
-
-
+- (void)layoutBlur {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
+    [vibrancyEffectView setFrame:self.matchesBackground.bounds];
+    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    [self.matchesBackground insertSubview:blurView atIndex:0];
+    [blurView.contentView addSubview:vibrancyEffectView];
+}
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
@@ -90,9 +87,10 @@ NSArray *_profiles;
 {
     MatchesCollectionViewCell *cell = (MatchesCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
     LinkedInProfile *profile = [cell profile];
+    
+    
     NSLog(@"touched cell %@ at indexPath %@", [profile firstName], indexPath);
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
