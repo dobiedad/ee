@@ -31,9 +31,6 @@ NSArray *_profiles;
     [self layoutBlur];
     [self layoutCollectionView];
     [self loadMatchesFromFirebase];
-    
-    
-    
 }
 
 - (void) layoutCollectionView {
@@ -71,7 +68,7 @@ NSArray *_profiles;
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 10;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
