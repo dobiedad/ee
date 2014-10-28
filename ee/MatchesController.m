@@ -22,6 +22,7 @@ NSArray *_profiles;
     }];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,6 +31,9 @@ NSArray *_profiles;
     [self layoutBlur];
     [self layoutCollectionView];
     [self loadMatchesFromFirebase];
+    
+    
+    
 }
 
 - (void) layoutCollectionView {
@@ -90,6 +94,7 @@ NSArray *_profiles;
     
     
     NSLog(@"touched cell %@ at indexPath %@", [profile firstName], indexPath);
+
 }
 
 - (void)didReceiveMemoryWarning {
