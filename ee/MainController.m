@@ -16,18 +16,17 @@
     [super viewDidLoad];
 
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
+    scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
     scrollView.showsHorizontalScrollIndicator = YES;
     scrollView.showsVerticalScrollIndicator=NO;
     scrollView.pagingEnabled = YES;
     
-    self.profileContainer.frame = CGRectMake(
-        self.scrollView.frame.size.width * 0, 0.f, self.scrollView.frame.size.width, self.scrollView.frame.size.height);
+   
     
-    self.matchesContainer.frame = CGRectMake(self.scrollView.frame.size.width * 1, 0.f,
-                                             self.scrollView.frame.size.width, self.scrollView.frame.size.height);
-
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
