@@ -33,6 +33,9 @@
         }
     }
 }
+- (IBAction)profileButtonClicked:(id)sender {
+    [scrollView scrollRectToVisible:(self.profileContainer.frame) animated:true];
+}
 
 
 - (void)didReceiveMemoryWarning {
