@@ -21,6 +21,7 @@
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
 		B36FE63F19FADAB300CA6109 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B36FE63E19FADAB300CA6109 /* friends.png */; };
 		B3983D2A1A011AB6004D3FFA /* profile1.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D291A011AB6004D3FFA /* profile1.png */; };
+		B3983D2D1A011DD3004D3FFA /* ChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3983D2C1A011DD3004D3FFA /* ChatController.m */; };
 		B39FEED619F7BD7F00613416 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B39FEED519F7BD7F00613416 /* cancel.png */; };
 		B3B7806519DD8912007ED955 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806419DD8912007ED955 /* main.m */; };
 		B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806719DD8912007ED955 /* AppDelegate.m */; };
@@ -72,6 +73,8 @@
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B36FE63E19FADAB300CA6109 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
 		B3983D291A011AB6004D3FFA /* profile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile1.png; sourceTree = "<group>"; };
+		B3983D2B1A011DD3004D3FFA /* ChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatController.h; sourceTree = "<group>"; };
+		B3983D2C1A011DD3004D3FFA /* ChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatController.m; sourceTree = "<group>"; };
 		B39FEED519F7BD7F00613416 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		B3B7805F19DD8912007ED955 /* ee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B7806319DD8912007ED955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				035E843619ED855A00A34C9E /* LinkedInClient.m */,
 				035E843B19EEC43300A34C9E /* LinkedInProfile.h */,
 				035E843C19EEC43300A34C9E /* LinkedInProfile.m */,
+				B3983D2B1A011DD3004D3FFA /* ChatController.h */,
+				B3983D2C1A011DD3004D3FFA /* ChatController.m */,
 				035E843819EEB9F000A34C9E /* FirebaseClient.h */,
 				035E843919EEB9F000A34C9E /* FirebaseClient.m */,
 				B3B7808B19DD8924007ED955 /* Podfile */,
@@ -379,6 +384,7 @@
 				035E843D19EEC43300A34C9E /* LinkedInProfile.m in Sources */,
 				035E843019ED759900A34C9E /* MatchesCollectionViewCell.m in Sources */,
 				B3B7806E19DD8913007ED955 /* MatchesController.m in Sources */,
+				B3983D2D1A011DD3004D3FFA /* ChatController.m in Sources */,
 				035E843719ED855A00A34C9E /* LinkedInClient.m in Sources */,
 				035E843A19EEB9F000A34C9E /* FirebaseClient.m in Sources */,
 				B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */,

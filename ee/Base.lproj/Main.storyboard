@@ -247,6 +247,43 @@
             </objects>
             <point key="canvasLocation" x="154.5" y="43.5"/>
         </scene>
+        <!--Chat Controller-->
+        <scene sceneID="aNy-T6-ub5">
+            <objects>
+                <viewController id="kTp-BM-7cN" customClass="ChatController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IjY-d2-k2C"/>
+                        <viewControllerLayoutGuide type="bottom" id="oVV-qa-QNg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kJe-S9-m4W" userLabel="superView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-RP-eEW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhu-R5-h00">
+                                        <rect key="frame" x="166" y="267" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aQa-RP-eEW" firstAttribute="height" secondItem="kJe-S9-m4W" secondAttribute="height" id="3pM-yv-j64"/>
+                            <constraint firstItem="aQa-RP-eEW" firstAttribute="width" secondItem="kJe-S9-m4W" secondAttribute="width" id="PbU-7k-S7x"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XfZ-EQ-Udq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="581"/>
+        </scene>
         <!--Matches Controller-->
         <scene sceneID="nAz-AH-LsN">
             <objects>
