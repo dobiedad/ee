@@ -134,6 +134,7 @@
 
 - (void)setProfile:(LinkedInProfile *)profile {
     _profile = profile;
+    [self updateProfileDetailsInView];
 }
 
 - (void)updateProfileDetailsInView {

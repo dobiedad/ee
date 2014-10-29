@@ -3,6 +3,7 @@
 #import "MatchesCollectionViewCell.h"
 #import "LinkedInProfile.h"
 #import "FirebaseClient.h"
+#import "ProfileController.h"
 
 @interface MatchesController () <UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -12,6 +13,7 @@
 @synthesize matchesBackground;
 
 NSArray *_profiles;
+LinkedInProfile *_selectedProfile;
 
 - (void)loadMatchesFromFirebase {
     NSString *userId = [self getSavedLinkedInUserId];
@@ -87,11 +89,16 @@ NSArray *_profiles;
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MatchesCollectionViewCell *cell = (MatchesCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
-    LinkedInProfile *profile = [cell profile];
-    
-    
-    NSLog(@"touched cell %@ at indexPath %@", [profile firstName], indexPath);
+    _selectedProfile = [cell profile];
+    [self performSegueWithIdentifier:@"selectedProfile" sender:self];
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"selectedProfile"]) {
+        ProfileController *profileController = [segue destinationViewController];
+        [profileController setProfile:_selectedProfile];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

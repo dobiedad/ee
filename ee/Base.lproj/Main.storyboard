@@ -16,51 +16,51 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" userLabel="superView">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
-                                <rect key="frame" x="0.0" y="0.0" width="343" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
-                                <rect key="frame" x="0.0" y="44" width="343" height="667"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
+                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImageView">
-                                        <rect key="frame" x="72" y="20" width="200" height="200"/>
+                                        <rect key="frame" x="88" y="20" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="008-7m-AqG"/>
                                             <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
-                                        <rect key="frame" x="0.0" y="247" width="343" height="420"/>
+                                        <rect key="frame" x="0.0" y="247" width="375" height="420"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Technology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
-                                                <rect key="frame" x="81" y="75" width="182" height="19"/>
+                                                <rect key="frame" x="97" y="75" width="182" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
-                                                <rect key="frame" x="131" y="106" width="82" height="19"/>
+                                                <rect key="frame" x="147" y="106" width="82" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oxford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
-                                                <rect key="frame" x="145" y="138" width="54" height="19"/>
+                                                <rect key="frame" x="161" y="138" width="54" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
-                                                <rect key="frame" x="138" y="43" width="67" height="19"/>
+                                                <rect key="frame" x="154" y="43" width="67" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
-                                                <rect key="frame" x="154" y="12" width="35" height="19"/>
+                                                <rect key="frame" x="170" y="12" width="35" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -181,62 +181,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bX-X0-Knc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-673" y="-363"/>
-        </scene>
-        <!--Main Controller-->
-        <scene sceneID="oJo-UQ-2Bj">
-            <objects>
-                <viewController id="Tr7-JN-fT2" customClass="MainController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ikb-IV-dCZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ODE-0H-GA2"/>
-                    </layoutGuides>
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="8H3-xT-egK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HKx-0h-Bia">
-                                <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crw-6H-LPz" userLabel="profileContainer">
-                                        <rect key="frame" x="0.0" y="2" width="375" height="667"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-qT-8hL" userLabel="matchesContainer">
-                                        <rect key="frame" x="375" y="0.0" width="375" height="667"/>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                    </containerView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="rbG-qT-8hL" secondAttribute="bottom" id="GFL-Ml-b4I"/>
-                                    <constraint firstAttribute="bottom" secondItem="crw-6H-LPz" secondAttribute="bottom" id="HIC-Ye-HsP"/>
-                                    <constraint firstItem="crw-6H-LPz" firstAttribute="width" secondItem="HKx-0h-Bia" secondAttribute="width" id="Kn3-8S-3S9"/>
-                                    <constraint firstAttribute="width" secondItem="rbG-qT-8hL" secondAttribute="width" id="Nxp-ut-HYc"/>
-                                    <constraint firstItem="rbG-qT-8hL" firstAttribute="top" secondItem="HKx-0h-Bia" secondAttribute="top" id="ZiF-P8-hXf"/>
-                                    <constraint firstItem="crw-6H-LPz" firstAttribute="top" secondItem="HKx-0h-Bia" secondAttribute="top" id="edB-KP-67s"/>
-                                    <constraint firstItem="crw-6H-LPz" firstAttribute="height" secondItem="HKx-0h-Bia" secondAttribute="height" id="fTm-Oe-2vB"/>
-                                    <constraint firstAttribute="height" secondItem="rbG-qT-8hL" secondAttribute="height" id="mc5-Ky-c2B"/>
-                                    <constraint firstItem="crw-6H-LPz" firstAttribute="leading" secondItem="HKx-0h-Bia" secondAttribute="leading" id="nGk-fv-Rk3"/>
-                                    <constraint firstItem="crw-6H-LPz" firstAttribute="trailing" secondItem="rbG-qT-8hL" secondAttribute="leading" id="oP9-cj-WNn"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.10289980690309151" green="0.66666666669999997" blue="0.050344150881059771" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="HKx-0h-Bia" firstAttribute="width" secondItem="8H3-xT-egK" secondAttribute="width" id="HZR-Du-AN6"/>
-                            <constraint firstAttribute="height" secondItem="HKx-0h-Bia" secondAttribute="height" id="ejT-5R-fI2"/>
-                            <constraint firstItem="HKx-0h-Bia" firstAttribute="top" secondItem="8H3-xT-egK" secondAttribute="topMargin" id="hKp-7T-AD9"/>
-                        </constraints>
-                    </scrollView>
-                    <navigationItem key="navigationItem" id="mnh-7g-exV"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="matchesContainer" destination="rbG-qT-8hL" id="RIg-rM-iH7"/>
-                        <outlet property="profileContainer" destination="crw-6H-LPz" id="S9q-12-nb3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wye-sB-4N3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-445.5" y="380.5"/>
         </scene>
         <!--Main Controller-->
         <scene sceneID="evd-Kz-akx">
@@ -456,7 +400,6 @@
                                     <outlet property="imageView" destination="xGW-jd-6xK" id="K67-Y3-54X"/>
                                     <outlet property="jobLabel" destination="Uch-gA-3qh" id="fOG-Pa-I42"/>
                                     <outlet property="nameLabel" destination="mvu-D4-Bh4" id="QWy-6H-NfO"/>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="4BG-ug-x6W"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -473,11 +416,12 @@
                         <outlet property="collectionView" destination="9XG-rf-WVO" id="OAS-oz-D7b"/>
                         <outlet property="layout" destination="k9j-2M-IsG" id="RfN-rq-J8v"/>
                         <outlet property="matchesBackground" destination="Rxv-Hd-VDz" id="tSJ-M8-tQP"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="selectedProfile" id="k0A-Z4-5Ir"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1363.5" y="-97.5"/>
+            <point key="canvasLocation" x="1210.5" y="-90.5"/>
         </scene>
     </scenes>
     <resources>
@@ -486,6 +430,6 @@
         <image name="friends.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wBf-sQ-QiM"/>
+        <segue reference="k0A-Z4-5Ir"/>
     </inferredMetricsTieBreakers>
 </document>

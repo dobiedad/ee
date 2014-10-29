@@ -5,6 +5,7 @@
 @end
 
 @implementation MainController {
+    LinkedInProfile *_profile;
 }
 
 
@@ -23,9 +24,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
 
    
+    NSLog(@"%lu", self.childViewControllers.count);
     
-    
-    
+    for (UIViewController *viewController in self.childViewControllers)
+    {
+        if ([viewController respondsToSelector:@selector(setProfile:)]) {
+            [viewController performSelector:@selector(setProfile:) withObject:_profile];
+        }
+    }
 }
 
 
@@ -34,12 +40,7 @@
 }
 
 -(void)setProfile: (LinkedInProfile*) profile {
-//    for (UIViewController *viewController in self.viewControllers)
-//    {
-//        if ([viewController respondsToSelector:@selector(setProfile:)]) {
-//            [viewController performSelector:@selector(setProfile:) withObject:profile];
-//        }
-//    }
+    _profile = profile;
 }
 
 @end
