@@ -8,13 +8,25 @@
 
 #import "SlackController.h"
 #import "SlackTableViewCell.h"
+#import "LinkedInClient.h"
+#import "LinkedInProfile.h"
+
+#import "FirebaseClient.h"
+#import <Firebase/Firebase.h>
+
+
 
 #import <LoremIpsum/LoremIpsum.h>
 
 static NSString *MessengerCellIdentifier = @"MessengerCell";
 static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 
-@interface SlackController ()
+@interface SlackController (){
+    LinkedInProfile *_currentUsersProfile;
+    LinkedInProfile *_otherUsersProfile;
+
+    
+}
 
 @property (nonatomic, strong) NSMutableArray *messages;
 @property (nonatomic, strong) NSArray *users;
@@ -26,6 +38,15 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 @end
 
 @implementation SlackController
+
+- (void)saveMessage: (NSDictionary*) chat withUser:(NSString*) userA andUser:(NSString*) userB {
+    Firebase *chatFirebase = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/matches/%@/%@/messages", userA, userB]];
+    [chatFirebase setValue:chat];
+}
+
+- (void)setProfile:(LinkedInProfile *)profile {
+    _currentUsersProfile = profile;
+}
 
 
 - (void)layoutBlur {
@@ -241,6 +262,8 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     [self.tableView slk_scrollToTopAnimated:YES];
     
     [super didPressRightButton:sender];
+    
+    [self saveMessage:message withUser:theirLinkedInUserId andUser:linkedInUserId];
 }
 
 - (void)didPasteMediaContent:(NSDictionary *)userInfo
