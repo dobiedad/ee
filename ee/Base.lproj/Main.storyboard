@@ -209,14 +209,24 @@
                                             <segue destination="UaJ-wp-5O8" kind="embed" identifier="matchesView" id="PXl-HD-b8m"/>
                                         </connections>
                                     </containerView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-rM-tPT" userLabel="chatContainer">
+                                        <rect key="frame" x="750" y="-85" width="375" height="667"/>
+                                        <connections>
+                                            <segue destination="kTp-BM-7cN" kind="embed" id="CvQ-gA-cbM"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="leading" secondItem="sTc-4S-n9N" secondAttribute="leading" id="84r-Ry-r74"/>
                                     <constraint firstItem="ydZ-e8-mId" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="BjC-7Q-zq7"/>
+                                    <constraint firstItem="3Je-rM-tPT" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="Vew-uh-tfF"/>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="top" secondItem="sTc-4S-n9N" secondAttribute="top" id="XHC-GQ-GhH"/>
                                     <constraint firstItem="ydZ-e8-mId" firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="bia-Lj-nMI"/>
+                                    <constraint firstItem="3Je-rM-tPT" firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="c9q-Xr-DHU"/>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="ebT-cT-r6N"/>
+                                    <constraint firstItem="3Je-rM-tPT" firstAttribute="top" secondItem="sTc-4S-n9N" secondAttribute="top" id="fDv-Al-S0m"/>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="trailing" secondItem="ydZ-e8-mId" secondAttribute="leading" id="gDb-cq-FOO"/>
+                                    <constraint firstItem="ydZ-e8-mId" firstAttribute="trailing" secondItem="3Je-rM-tPT" secondAttribute="leading" id="iFb-Ts-PG7"/>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="iSN-N4-PyA"/>
                                 </constraints>
                             </scrollView>
@@ -259,30 +269,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-RP-eEW">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-RP-eEW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhu-R5-h00">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhu-R5-h00">
                                         <rect key="frame" x="166" y="267" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.10094000319140406" blue="0.059893569531091706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="fhu-R5-h00" secondAttribute="centerX" id="NEi-x1-jWd"/>
+                                    <constraint firstAttribute="centerY" secondItem="fhu-R5-h00" secondAttribute="centerY" id="UPp-QY-5UC"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.072095109273421776" green="0.28181200502042048" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aQa-RP-eEW" firstAttribute="height" secondItem="kJe-S9-m4W" secondAttribute="height" id="3pM-yv-j64"/>
-                            <constraint firstItem="aQa-RP-eEW" firstAttribute="width" secondItem="kJe-S9-m4W" secondAttribute="width" id="PbU-7k-S7x"/>
+                            <constraint firstItem="aQa-RP-eEW" firstAttribute="leading" secondItem="kJe-S9-m4W" secondAttribute="leading" id="D2D-iW-0CG"/>
+                            <constraint firstItem="aQa-RP-eEW" firstAttribute="top" secondItem="IjY-d2-k2C" secondAttribute="bottom" id="Zxh-Kn-6S0"/>
+                            <constraint firstItem="oVV-qa-QNg" firstAttribute="top" secondItem="aQa-RP-eEW" secondAttribute="bottom" id="go5-yB-EjE"/>
+                            <constraint firstAttribute="trailing" secondItem="aQa-RP-eEW" secondAttribute="trailing" id="w4u-R8-qbb"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfZ-EQ-Udq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="581"/>
+            <point key="canvasLocation" x="789.5" y="775.5"/>
         </scene>
         <!--Matches Controller-->
         <scene sceneID="nAz-AH-LsN">
