@@ -4,6 +4,8 @@
 #import "LinkedInProfile.h"
 #import "FirebaseClient.h"
 #import "ProfileController.h"
+#import "TLYShyNavBarManager.h"
+
 
 @interface MatchesController () <UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -33,6 +35,13 @@ LinkedInProfile *_selectedProfile;
     [self layoutBlur];
     [self layoutCollectionView];
     [self loadMatchesFromFirebase];
+//    MatchesController* parent = (MatchesController*)[self parentViewController];
+
+//    NSLog(@"bla bla %@",parent);
+//    self.shyNavBarManager.scrollView = self.collectionView;
+    
+
+
 }
 
 - (void) layoutCollectionView {

@@ -60,6 +60,12 @@
 #define COCOAPODS_VERSION_MINOR_IOSLinkedInAPI 0
 #define COCOAPODS_VERSION_PATCH_IOSLinkedInAPI 0
 
+// LoremIpsum
+#define COCOAPODS_POD_AVAILABLE_LoremIpsum
+#define COCOAPODS_VERSION_MAJOR_LoremIpsum 1
+#define COCOAPODS_VERSION_MINOR_LoremIpsum 0
+#define COCOAPODS_VERSION_PATCH_LoremIpsum 0
+
 // SDWebImage
 #define COCOAPODS_POD_AVAILABLE_SDWebImage
 #define COCOAPODS_VERSION_MAJOR_SDWebImage 3
@@ -71,4 +77,22 @@
 #define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
+
+// SlackTextViewController
+#define COCOAPODS_POD_AVAILABLE_SlackTextViewController
+#define COCOAPODS_VERSION_MAJOR_SlackTextViewController 1
+#define COCOAPODS_VERSION_MINOR_SlackTextViewController 2
+#define COCOAPODS_VERSION_PATCH_SlackTextViewController 8
+
+// SlackTextViewController/Additions
+#define COCOAPODS_POD_AVAILABLE_SlackTextViewController_Additions
+#define COCOAPODS_VERSION_MAJOR_SlackTextViewController_Additions 1
+#define COCOAPODS_VERSION_MINOR_SlackTextViewController_Additions 2
+#define COCOAPODS_VERSION_PATCH_SlackTextViewController_Additions 8
+
+// TLYShyNavBar
+#define COCOAPODS_POD_AVAILABLE_TLYShyNavBar
+#define COCOAPODS_VERSION_MAJOR_TLYShyNavBar 0
+#define COCOAPODS_VERSION_MINOR_TLYShyNavBar 9
+#define COCOAPODS_VERSION_PATCH_TLYShyNavBar 8
 

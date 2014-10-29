@@ -1,4 +1,7 @@
 pod 'IOSLinkedInAPI'
 pod 'Firebase', '>= 1.1.12'
 pod 'SDWebImage', '~>3.6'
+pod 'TLYShyNavBar'
+pod 'SlackTextViewController'
+pod 'LoremIpsum', '~> 1.0'
 xcodeproj '../ee.xcodeproj'

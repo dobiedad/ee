@@ -7,5 +7,6 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *profileContainer;
 @property (weak, nonatomic) IBOutlet UIView *matchesContainer;
+@property (weak, nonatomic) IBOutlet UIView *chatContainer;
 
 @end

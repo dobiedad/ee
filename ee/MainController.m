@@ -1,5 +1,6 @@
 #import "MainController.h"
 #import "LinkedInProfile.h"
+#import "TLYShyNavBarManager.h"
 
 @interface MainController ()
 @end
@@ -12,6 +13,7 @@
 @synthesize scrollView;
 @synthesize matchesContainer;
 @synthesize profileContainer;
+@synthesize chatContainer;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,6 +39,10 @@
     [scrollView scrollRectToVisible:(self.profileContainer.frame) animated:true];
 }
 
+- (IBAction)chatButtonClicked:(id)sender {
+    [scrollView scrollRectToVisible:(self.chatContainer.frame) animated:true];
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
