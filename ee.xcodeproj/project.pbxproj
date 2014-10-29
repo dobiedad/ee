@@ -26,6 +26,8 @@
 		B3983D371A013D1B004D3FFA /* chat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D361A013D1B004D3FFA /* chat@2x.png */; };
 		B3983D3D1A01521D004D3FFA /* SlackController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3983D3C1A01521D004D3FFA /* SlackController.m */; };
 		B3983D401A015563004D3FFA /* SlackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3983D3F1A015563004D3FFA /* SlackTableViewCell.m */; };
+		B3983D431A015DFA004D3FFA /* building.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3983D411A015DFA004D3FFA /* building.jpg */; };
+		B3983D441A015DFA004D3FFA /* building@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3983D421A015DFA004D3FFA /* building@2x.jpg */; };
 		B39FEED619F7BD7F00613416 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = B39FEED519F7BD7F00613416 /* cancel.png */; };
 		B3B7806519DD8912007ED955 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806419DD8912007ED955 /* main.m */; };
 		B3B7806819DD8912007ED955 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7806719DD8912007ED955 /* AppDelegate.m */; };
@@ -84,6 +86,8 @@
 		B3983D3C1A01521D004D3FFA /* SlackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlackController.m; sourceTree = "<group>"; };
 		B3983D3E1A015563004D3FFA /* SlackTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlackTableViewCell.h; sourceTree = "<group>"; };
 		B3983D3F1A015563004D3FFA /* SlackTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlackTableViewCell.m; sourceTree = "<group>"; };
+		B3983D411A015DFA004D3FFA /* building.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = building.jpg; path = ../../NumberInPhone/images/building.jpg; sourceTree = "<group>"; };
+		B3983D421A015DFA004D3FFA /* building@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "building@2x.jpg"; path = "../../NumberInPhone/images/building@2x.jpg"; sourceTree = "<group>"; };
 		B39FEED519F7BD7F00613416 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		B3B7805F19DD8912007ED955 /* ee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B7806319DD8912007ED955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				B3983D311A013C9E004D3FFA /* profileFlat.png */,
 				B3983D361A013D1B004D3FFA /* chat@2x.png */,
 				B3983D321A013C9E004D3FFA /* profileFlat@2x.png */,
+				B3983D411A015DFA004D3FFA /* building.jpg */,
+				B3983D421A015DFA004D3FFA /* building@2x.jpg */,
 				B3628C2419F6E22A00389C31 /* colour.jpg */,
 				B36FE63E19FADAB300CA6109 /* friends.png */,
 				B39FEED519F7BD7F00613416 /* cancel.png */,
@@ -335,9 +341,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3983D441A015DFA004D3FFA /* building@2x.jpg in Resources */,
 				B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */,
 				B3983D351A013C9E004D3FFA /* profileFlat@2x.png in Resources */,
 				B3983D341A013C9E004D3FFA /* profileFlat.png in Resources */,
+				B3983D431A015DFA004D3FFA /* building.jpg in Resources */,
 				B3983D371A013D1B004D3FFA /* chat@2x.png in Resources */,
 				B36FE63F19FADAB300CA6109 /* friends.png in Resources */,
 				B3B7807119DD8913007ED955 /* Main.storyboard in Resources */,

@@ -275,9 +275,21 @@
                     <view key="view" contentMode="scaleToFill" id="kJe-S9-m4W" userLabel="superView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="building.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="K9e-se-8J0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.072095109273421776" green="0.28181200502042048" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="K9e-se-8J0" firstAttribute="height" secondItem="kJe-S9-m4W" secondAttribute="height" id="FSc-oq-br0"/>
+                            <constraint firstItem="K9e-se-8J0" firstAttribute="width" secondItem="kJe-S9-m4W" secondAttribute="width" id="VEN-Ac-ITa"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="K9e-se-8J0" id="NvV-P5-dWf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfZ-EQ-Udq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -470,6 +482,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="building.jpg" width="750" height="1334"/>
         <image name="cancel.png" width="64" height="64"/>
         <image name="chat.png" width="32" height="32"/>
         <image name="first" width="30" height="30"/>

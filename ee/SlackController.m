@@ -21,10 +21,28 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 @property (nonatomic, strong) NSArray *channels;
 @property (nonatomic, strong) NSArray *emojis;
 @property (nonatomic, strong) NSArray *searchResult;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
 @implementation SlackController
+
+
+- (void)layoutBlur {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
+    [vibrancyEffectView setFrame:self.backgroundImage.bounds];
+    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    [self.backgroundImage insertSubview:blurView atIndex:0];
+    [blurView.contentView addSubview:vibrancyEffectView];
+}
 
 
 - (id)init
@@ -50,6 +68,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self layoutBlur];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
