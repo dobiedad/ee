@@ -20,6 +20,7 @@
 		B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2519F6E22A00389C31 /* colour@2x.jpg */; };
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
 		B36FE63F19FADAB300CA6109 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B36FE63E19FADAB300CA6109 /* friends.png */; };
+		B372EB741A025C1B00225907 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B372EB731A025C1B00225907 /* bean.jpg */; };
 		B3983D2F1A013B00004D3FFA /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D2E1A013B00004D3FFA /* chat.png */; };
 		B3983D341A013C9E004D3FFA /* profileFlat.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D311A013C9E004D3FFA /* profileFlat.png */; };
 		B3983D351A013C9E004D3FFA /* profileFlat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D321A013C9E004D3FFA /* profileFlat@2x.png */; };
@@ -79,6 +80,7 @@
 		B3628C2519F6E22A00389C31 /* colour@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "colour@2x.jpg"; path = "../../NumberInPhone/images/colour@2x.jpg"; sourceTree = "<group>"; };
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B36FE63E19FADAB300CA6109 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
+		B372EB731A025C1B00225907 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bean.jpg; sourceTree = "<group>"; };
 		B3983D2E1A013B00004D3FFA /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		B3983D311A013C9E004D3FFA /* profileFlat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileFlat.png; sourceTree = "<group>"; };
 		B3983D321A013C9E004D3FFA /* profileFlat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileFlat@2x.png"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B3983D311A013C9E004D3FFA /* profileFlat.png */,
 				B3983D361A013D1B004D3FFA /* chat@2x.png */,
 				B3983D321A013C9E004D3FFA /* profileFlat@2x.png */,
+				B372EB731A025C1B00225907 /* bean.jpg */,
 				B3983D411A015DFA004D3FFA /* building.jpg */,
 				B3983D421A015DFA004D3FFA /* building@2x.jpg */,
 				B3628C2419F6E22A00389C31 /* colour.jpg */,
@@ -359,6 +362,7 @@
 				B39FEED619F7BD7F00613416 /* cancel.png in Resources */,
 				B3628C2619F6E22A00389C31 /* colour.jpg in Resources */,
 				B3B7808D19DD8924007ED955 /* Podfile in Resources */,
+				B372EB741A025C1B00225907 /* bean.jpg in Resources */,
 				B3B7807319DD8913007ED955 /* Images.xcassets in Resources */,
 				B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */,
 			);

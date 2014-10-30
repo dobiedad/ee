@@ -263,7 +263,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     
     [super didPressRightButton:sender];
     
-    [self saveMessage:message withUser:theirLinkedInUserId andUser:linkedInUserId];
+//    [self saveMessage:message withUser:theirLinkedInUserId andUser:linkedInUserId];
 }
 
 - (void)didPasteMediaContent:(NSDictionary *)userInfo
