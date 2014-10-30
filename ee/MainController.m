@@ -16,9 +16,11 @@
 @synthesize matchesContainer;
 @synthesize profileContainer;
 @synthesize chatContainer;
+@synthesize backgroundImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self blur];
 
     
     scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
@@ -66,6 +68,26 @@
         [scrollView scrollRectToVisible:(self.profileContainer.frame) animated:true];
     }
 
+}
+
+- (void)blur {
+    //[self startLocationManager];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
+    
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
+    [vibrancyEffectView setFrame:self.backgroundImage.bounds];
+    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    [self.backgroundImage insertSubview:blurView atIndex:0];
+    [blurView.contentView addSubview:vibrancyEffectView];
 }
 
 - (IBAction)chatButtonClicked:(id)sender {

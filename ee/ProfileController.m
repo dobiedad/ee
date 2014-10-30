@@ -21,11 +21,7 @@
 @synthesize profileBackgroundView;
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self updateProfileDetailsInView];
-    [self paralax];
-
+- (void)blur {
     //[self startLocationManager];
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -43,6 +39,14 @@
     blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
     [self.profileBackgroundView insertSubview:blurView atIndex:0];
     [blurView.contentView addSubview:vibrancyEffectView];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateProfileDetailsInView];
+    [self paralax];
+
+    [self blur];
     
 
     
@@ -62,60 +66,7 @@
 - (void) tappedProfileImage {
     CGFloat originX = profilePicImageView.frame.origin.x;
     
-//    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
-//
-//    [UIView mt_animateWithViews:@[profilePicImageView]
-//                       duration:0.1
-//                 timingFunction:kMTEaseOutQuad
-//                     animations:^{
-//                         CGRect r             = profilePicImageView.frame;
-//                         r.origin.x           = originX + 70;
-//                         profilePicImageView.frame = r;
-//                     }
-//                     completion:^{
-//                         [UIView mt_animateWithViews:@[profilePicImageView]
-//                                            duration:0.15
-//                                      timingFunction:kMTEaseInQuad
-//                                          animations:^{
-//                                              CGRect r             = profilePicImageView.frame;
-//                                              r.origin.x           = originX  ;
-//                                              profilePicImageView.frame = r;
-//                                              
-//                                          }
-//                                        completion:^{
-//                                            [UIView mt_animateWithViews:@[profilePicImageView]
-//                                                               duration:0.1
-//                                                         timingFunction:kMTEaseOutQuad
-//                                                             animations:^{
-//                                                                 CGRect r             = profilePicImageView.frame;
-//                                                                 r.origin.x           = originX - 70 ;
-//                                                                 profilePicImageView.frame = r;
-//                                                             }
-//                                                             completion:^{
-//                                                                 [UIView mt_animateWithViews:@[profilePicImageView]
-//                                                                                    duration:0.15
-//                                                                              timingFunction:kMTEaseInQuad
-//                                                                                  animations:^{
-//                                                                                      CGRect r             = profilePicImageView.frame;
-//                                                                                      r.origin.x           = originX;
-//                                                                                      profilePicImageView.frame = r;
-//                                                                                  }
-//                                                                  ];
-//                                                                 
-//                                                                 
-//                                                                 
-//                                                             }
-//
-//                                             
-//                                             ];
-//                                            
-//                                              
-//                                        
-//                    }
-//                ];
-//            }
-//     ];
     
     
     [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{

@@ -8,5 +8,6 @@
 @property (weak, nonatomic) IBOutlet UIView *profileContainer;
 @property (weak, nonatomic) IBOutlet UIView *matchesContainer;
 @property (weak, nonatomic) IBOutlet UIView *chatContainer;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
