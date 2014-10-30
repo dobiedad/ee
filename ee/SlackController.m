@@ -527,4 +527,8 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 }
 
 
+-(void)setOtherUsersProfile: (LinkedInProfile*) profile {
+    
+}
+
 @end

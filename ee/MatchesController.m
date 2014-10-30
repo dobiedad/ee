@@ -97,6 +97,7 @@ LinkedInProfile *_selectedProfile;
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"TAPPP!");
     MatchesCollectionViewCell *cell = (MatchesCollectionViewCell *) [collectionView cellForItemAtIndexPath:indexPath];
     _selectedProfile = [cell profile];
     [self performSegueWithIdentifier:@"selectedProfile" sender:self];

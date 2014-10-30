@@ -24,6 +24,7 @@ PODS:
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
   - LoremIpsum (1.0.0)
+  - MTAnimation (1.2.2)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.1)
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - Firebase (>= 1.1.12)
   - IOSLinkedInAPI
   - LoremIpsum (~> 1.0)
+  - MTAnimation
   - SDWebImage (~> 3.6)
   - SlackTextViewController
   - TLYShyNavBar
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   Firebase: 26ca966dea982f29a4685f7fa8f596d56e5487ad
   IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
   LoremIpsum: a4d378ecaffcb08c7e40cdba3fb935dc41b2272c
+  MTAnimation: eeedb417b12eb293ad2e32a02f113d9e98641ae0
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   SlackTextViewController: 61997309c7b95490d165d926c7064502eb6fad80
   TLYShyNavBar: cf15a919cf7f6e79080ac5b95b56580a752cf64d

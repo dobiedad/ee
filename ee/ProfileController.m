@@ -1,4 +1,7 @@
 #import "ProfileController.h"
+#import <UIView+MTAnimation.h>
+#import <AudioToolbox/AudioServices.h>
+
 
 @interface ProfileController () <CLLocationManagerDelegate>
 @end
@@ -47,11 +50,84 @@
     [profilePicImageView setClipsToBounds:YES];
     self.profilePicImageView.layer.borderColor = [UIColor greenColor].CGColor;
     self.profilePicImageView.layer.borderWidth = 1.5;
+    UITapGestureRecognizer *newTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedProfileImage)];
+    
+    [profilePicImageView setUserInteractionEnabled:YES];
+    
+    [profilePicImageView addGestureRecognizer:newTap];
     
 
 
 }
+- (void) tappedProfileImage {
+    CGFloat originX = profilePicImageView.frame.origin.x;
+    
+//    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 
+//
+//    [UIView mt_animateWithViews:@[profilePicImageView]
+//                       duration:0.1
+//                 timingFunction:kMTEaseOutQuad
+//                     animations:^{
+//                         CGRect r             = profilePicImageView.frame;
+//                         r.origin.x           = originX + 70;
+//                         profilePicImageView.frame = r;
+//                     }
+//                     completion:^{
+//                         [UIView mt_animateWithViews:@[profilePicImageView]
+//                                            duration:0.15
+//                                      timingFunction:kMTEaseInQuad
+//                                          animations:^{
+//                                              CGRect r             = profilePicImageView.frame;
+//                                              r.origin.x           = originX  ;
+//                                              profilePicImageView.frame = r;
+//                                              
+//                                          }
+//                                        completion:^{
+//                                            [UIView mt_animateWithViews:@[profilePicImageView]
+//                                                               duration:0.1
+//                                                         timingFunction:kMTEaseOutQuad
+//                                                             animations:^{
+//                                                                 CGRect r             = profilePicImageView.frame;
+//                                                                 r.origin.x           = originX - 70 ;
+//                                                                 profilePicImageView.frame = r;
+//                                                             }
+//                                                             completion:^{
+//                                                                 [UIView mt_animateWithViews:@[profilePicImageView]
+//                                                                                    duration:0.15
+//                                                                              timingFunction:kMTEaseInQuad
+//                                                                                  animations:^{
+//                                                                                      CGRect r             = profilePicImageView.frame;
+//                                                                                      r.origin.x           = originX;
+//                                                                                      profilePicImageView.frame = r;
+//                                                                                  }
+//                                                                  ];
+//                                                                 
+//                                                                 
+//                                                                 
+//                                                             }
+//
+//                                             
+//                                             ];
+//                                            
+//                                              
+//                                        
+//                    }
+//                ];
+//            }
+//     ];
+    
+    
+    [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [profilePicImageView setTransform:CGAffineTransformRotate(profilePicImageView.transform, M_PI  )];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            [profilePicImageView setTransform:CGAffineTransformRotate(profilePicImageView.transform, M_PI  )];
+        } completion:^(BOOL finished) {}];
+    }];
+    
+   
+}
 
 - (void)paralax
 {

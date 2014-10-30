@@ -1,12 +1,14 @@
 #import "MainController.h"
 #import "LinkedInProfile.h"
 #import "TLYShyNavBarManager.h"
+#import <UIView+MTAnimation.h>
 
 @interface MainController ()
 @end
 
 @implementation MainController {
     LinkedInProfile *_profile;
+
 }
 
 
@@ -36,11 +38,68 @@
     }
 }
 - (IBAction)profileButtonClicked:(id)sender {
-    [scrollView scrollRectToVisible:(self.profileContainer.frame) animated:true];
+    
+    if (scrollView.contentOffset.x == self.profileContainer.frame.origin.x) {
+        [UIView mt_animateWithViews:@[profileContainer]
+                           duration:0.1
+                     timingFunction:kMTEaseOutQuad
+                         animations:^{
+                             CGRect r             = profileContainer.frame;
+                             r.origin.x           = 50;
+                             profileContainer.frame = r;
+                         }
+                         completion:^{
+                             [UIView mt_animateWithViews:@[profileContainer]
+                                                duration:0.1
+                                          timingFunction:kMTEaseInQuad
+                                              animations:^{
+                                                  CGRect r             = profileContainer.frame;
+                                                  r.origin.x           = 0 ;
+                                                  profileContainer.frame = r;
+                                              }
+                              ];
+                         }
+         ];
+        
+    }
+    else{
+        [scrollView scrollRectToVisible:(self.profileContainer.frame) animated:true];
+    }
+
 }
 
 - (IBAction)chatButtonClicked:(id)sender {
-    [scrollView scrollRectToVisible:(self.chatContainer.frame) animated:true];
+    
+    if (scrollView.contentOffset.x == self.chatContainer.frame.origin.x) {
+        
+        CGFloat originX = chatContainer.frame.origin.x;
+        
+        [UIView mt_animateWithViews:@[chatContainer]
+                           duration:0.1
+                     timingFunction:kMTEaseOutQuad
+                         animations:^{
+                             CGRect r             = chatContainer.frame;
+                             r.origin.x           = originX - 50;
+                             chatContainer.frame = r;
+                         }  
+                         completion:^{
+                             [UIView mt_animateWithViews:@[chatContainer]
+                                                duration:0.1
+                                          timingFunction:kMTEaseInQuad
+                                              animations:^{
+                                                  CGRect r             = chatContainer.frame;
+                                                  r.origin.x           = originX;
+                                                  chatContainer.frame = r;
+                                              }
+                              ];
+                         }
+         ];
+        
+    }
+    else{
+        [scrollView scrollRectToVisible:(self.chatContainer.frame) animated:true];
+    }
+    
 
 }
 

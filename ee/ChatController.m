@@ -1,19 +1,16 @@
-//
-//  ChatController.m
-//  ee
-//
-//  Created by Leo Mdivani on 29/10/2014.
-//  Copyright (c) 2014 Dizzolve. All rights reserved.
-//
-
 #import "ChatController.h"
+#import "ProfileController.h"
+#import "SlackController.h"
 
 @interface ChatController ()
 
 @end
 
 @implementation ChatController
+
 NSArray *chatUsers;
+LinkedInProfile *_selectedProfile;
+
 @synthesize backgroundImage;
 
 - (void)viewDidLoad {
@@ -56,6 +53,24 @@ NSArray *chatUsers;
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // fetch the Profile from the underlying array
+    
+    // segue to slack
+    
+    [self performSegueWithIdentifier:@"slack" sender:self];
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"slack"]) {
+        SlackController *slackController = [segue destinationViewController];
+        [slackController setOtherUsersProfile:_selectedProfile];
+    }
+}
+
 
 - (void)layoutBlur {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
@@ -74,14 +89,8 @@ NSArray *chatUsers;
 }
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end
