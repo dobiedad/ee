@@ -31,6 +31,5 @@
 - (IBAction)friendButtonClicked:(id)sender {
     
     
-    
 }
 @end

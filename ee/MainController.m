@@ -2,13 +2,18 @@
 #import "LinkedInProfile.h"
 #import "TLYShyNavBarManager.h"
 #import <UIView+MTAnimation.h>
+#import <GeoFire/GeoFire.h>
 
-@interface MainController ()
+@import CoreLocation;
+
+@interface MainController () <CLLocationManagerDelegate>
+@property (nonatomic,strong) CLLocationManager *locationManager;
+
 @end
 
 @implementation MainController {
     LinkedInProfile *_profile;
-
+    GFCircleQuery *_geoQuery;
 }
 
 
@@ -38,6 +43,8 @@
             [viewController performSelector:@selector(setProfile:) withObject:_profile];
         }
     }
+    
+    [self startLocationManager];
 }
 - (IBAction)profileButtonClicked:(id)sender {
     
@@ -131,6 +138,62 @@
 
 -(void)setProfile: (LinkedInProfile*) profile {
     _profile = profile;
+}
+
+
+
+- (void)startLocationManager {
+    if ([CLLocationManager locationServicesEnabled]) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        [self.locationManager startUpdatingLocation];
+        NSLog(@"Location services enabled!");
+    } else {
+        NSLog(@"Location services are not enabled");
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *location = [locations lastObject];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *linkedInUserId = [defaults objectForKey:@"linkedInUserId"];
+    
+    NSString *usersRootUrl = [NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/locations"];
+    
+    Firebase* firebase = [[Firebase alloc] initWithUrl:usersRootUrl];
+    GeoFire *geoFire = [[GeoFire alloc] initWithFirebaseRef:firebase];
+    
+    [geoFire setLocation:location forKey:linkedInUserId];
+    
+    CLLocation *center = [[CLLocation alloc] initWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
+    
+    [_geoQuery removeAllObservers];
+    
+    _geoQuery = [geoFire queryAtLocation:center withRadius:0.1];
+    
+    [_geoQuery observeEventType:GFEventTypeKeyEntered withBlock:^(NSString *theirLinkedInUserId, CLLocation *theirLocation) {
+        
+        if (linkedInUserId != theirLinkedInUserId) {
+            
+            // TODO: Get the existing match. If it exists, update it, otherwise create it
+            
+            NSNumber *timeNow = @([[NSDate date] timeIntervalSince1970]);
+            NSNumber *lat = @(theirLocation.coordinate.latitude);
+            NSNumber *lng = @(theirLocation.coordinate.longitude);
+            
+            NSDictionary *match = @{@"lat" : lat, @"long" : lng, @"time" : timeNow};
+            
+            [self saveMatch:match withUser:linkedInUserId andUser:theirLinkedInUserId];
+            [self saveMatch:match withUser:theirLinkedInUserId andUser:linkedInUserId];
+        }
+    }];
+}
+
+- (void)saveMatch: (NSDictionary*) match withUser:(NSString*) userA andUser:(NSString*) userB {
+    Firebase *matchesFirebase = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/matches/%@/%@", userA, userB]];
+    [matchesFirebase setValue:match];
 }
 
 @end
