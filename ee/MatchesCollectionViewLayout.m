@@ -5,7 +5,7 @@
 - (void)prepareLayout {
     
     CGFloat marginWidth = 10.f;
-    CGFloat cellWidthHeightRatio = 1.3f;
+    CGFloat cellWidthHeightRatio = 1.586f;
     
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
@@ -22,7 +22,7 @@
     
     CGFloat cellWidth = (screenWidth / cellsPerRow) - (marginMultiple * marginWidth);
     
-    self.itemSize = CGSizeMake(cellWidth, cellWidth * cellWidthHeightRatio);
+    self.itemSize = CGSizeMake(cellWidth, cellWidth / cellWidthHeightRatio);
     self.minimumInteritemSpacing = marginWidth;
     self.sectionInset = UIEdgeInsetsMake(marginWidth + 60, marginWidth, marginWidth, marginWidth);
     

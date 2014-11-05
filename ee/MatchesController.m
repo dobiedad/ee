@@ -38,12 +38,6 @@ LinkedInProfile *_selectedProfile;
     
     [self layoutBlur];
     [self loadMatchesFromFirebase];
-//    MatchesController* parent = (MatchesController*)[self parentViewController];
-
-//    NSLog(@"bla bla %@",parent);
-//    self.shyNavBarManager.scrollView = self.collectionView;
-    
-
 
 }
 
