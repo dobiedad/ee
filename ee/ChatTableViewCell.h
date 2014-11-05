@@ -7,5 +7,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicImage;
+@property (weak, nonatomic) IBOutlet UITextView *lastMessage;
 
 @end

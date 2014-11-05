@@ -14,32 +14,51 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2UD-lg-D3O" id="KCw-da-0Yh">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mif-Sl-5qH">
-                        <rect key="frame" x="18" y="10" width="80" height="80"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-UC-0Ea" userLabel="Name">
+                        <rect key="frame" x="106" y="19" width="37" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mif-Sl-5qH">
+                        <rect key="frame" x="18" y="11" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="P5S-tV-swY"/>
                             <constraint firstAttribute="height" constant="80" id="ie5-NB-LhF"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-UC-0Ea" userLabel="Name">
-                        <rect key="frame" x="106" y="18" width="37" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqA-SO-SCa" userLabel="lastMessage">
+                        <rect key="frame" x="106" y="44" width="227" height="47"/>
+                        <color key="backgroundColor" white="1" alpha="0.12" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/10/1992" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsM-Mx-aMk">
+                        <rect key="frame" x="274" y="18" width="69" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.0" green="0.50980395078659058" blue="0.70980393886566162" alpha="0.52000000000000002" colorSpace="deviceRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="mif-Sl-5qH" secondAttribute="leading" multiplier="20" id="6SL-Z2-v0Y"/>
                     <constraint firstItem="fgg-UC-0Ea" firstAttribute="leading" secondItem="mif-Sl-5qH" secondAttribute="trailing" constant="8" id="HTC-fc-m1W"/>
+                    <constraint firstAttribute="trailing" secondItem="PsM-Mx-aMk" secondAttribute="trailing" constant="8" id="JUL-OO-hOv"/>
+                    <constraint firstItem="fgg-UC-0Ea" firstAttribute="top" secondItem="PsM-Mx-aMk" secondAttribute="top" id="Ppg-rj-GdY"/>
                     <constraint firstAttribute="centerY" secondItem="mif-Sl-5qH" secondAttribute="centerY" id="Rdz-Yl-oVV"/>
+                    <constraint firstItem="OqA-SO-SCa" firstAttribute="leading" secondItem="mif-Sl-5qH" secondAttribute="trailing" constant="8" id="Ygd-bF-O2s"/>
                     <constraint firstItem="fgg-UC-0Ea" firstAttribute="top" secondItem="KCw-da-0Yh" secondAttribute="top" constant="18" id="gvq-2X-VH7"/>
+                    <constraint firstItem="OqA-SO-SCa" firstAttribute="top" secondItem="fgg-UC-0Ea" secondAttribute="bottom" constant="4" id="sqw-wF-kDl"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="firstNameLabel" destination="fgg-UC-0Ea" id="ep3-b9-hOa"/>
+                <outlet property="lastMessage" destination="OqA-SO-SCa" id="DIQ-sU-Lzc"/>
                 <outlet property="profilePicImage" destination="mif-Sl-5qH" id="b1D-u1-m7R"/>
             </connections>
-            <point key="canvasLocation" x="489.5" y="120"/>
+            <point key="canvasLocation" x="489.5" y="118"/>
         </tableViewCell>
     </objects>
 </document>
