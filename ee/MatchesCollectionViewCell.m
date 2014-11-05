@@ -59,6 +59,9 @@
 }
 
 
+- (IBAction)cancelTapped:(id)sender {
+    NSLog(@"CANCEL TAPPED");
+}
 
 
 - (LinkedInProfile *)profile {

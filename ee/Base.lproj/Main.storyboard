@@ -26,42 +26,60 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
                                 <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImageView">
-                                        <rect key="frame" x="88" y="20" width="200" height="200"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aO8-B7-EM3" userLabel="lineView">
+                                                <rect key="frame" x="0.0" y="131" width="375" height="5"/>
+                                                <color key="backgroundColor" red="0.69803921568627447" green="0.68235294117647061" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
+                                                <rect key="frame" x="88" y="34" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="008-7m-AqG"/>
+                                                    <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="008-7m-AqG"/>
-                                            <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
+                                            <constraint firstAttribute="centerY" secondItem="aO8-B7-EM3" secondAttribute="centerY" id="1j0-y8-JEz"/>
+                                            <constraint firstItem="aO8-B7-EM3" firstAttribute="width" secondItem="YFZ-zX-Mmz" secondAttribute="width" id="EXH-1j-O9v"/>
+                                            <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="KFD-tw-MMO"/>
+                                            <constraint firstItem="aO8-B7-EM3" firstAttribute="height" secondItem="YFZ-zX-Mmz" secondAttribute="height" multiplier="0.02" id="MvG-Rk-7Dy"/>
+                                            <constraint firstAttribute="centerX" secondItem="aO8-B7-EM3" secondAttribute="centerX" id="au8-qB-orm"/>
+                                            <constraint firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="centerY" id="wmn-B0-rUs"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
-                                        <rect key="frame" x="0.0" y="247" width="375" height="420"/>
+                                        <rect key="frame" x="0.0" y="267" width="375" height="400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Technology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
-                                                <rect key="frame" x="97" y="75" width="182" height="19"/>
+                                                <rect key="frame" x="97" y="71" width="182" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
-                                                <rect key="frame" x="147" y="106" width="82" height="19"/>
+                                                <rect key="frame" x="147" y="100" width="82" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oxford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
-                                                <rect key="frame" x="161" y="138" width="54" height="19"/>
+                                                <rect key="frame" x="161" y="131" width="54" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
-                                                <rect key="frame" x="154" y="43" width="67" height="19"/>
+                                                <rect key="frame" x="154" y="40" width="67" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
-                                                <rect key="frame" x="170" y="12" width="35" height="19"/>
+                                                <rect key="frame" x="170" y="11" width="35" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -84,11 +102,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="YFZ-zX-Mmz" firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" multiplier="0.4" id="Elb-Pr-rx1"/>
+                                    <constraint firstItem="YFZ-zX-Mmz" firstAttribute="leading" secondItem="uMQ-t9-wVg" secondAttribute="leading" id="KOF-mf-RJw"/>
                                     <constraint firstAttribute="bottom" secondItem="894-qq-YmT" secondAttribute="bottom" id="LKG-VE-ynZ"/>
-                                    <constraint firstItem="894-qq-YmT" firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" multiplier="0.63" id="O6a-ts-vXA"/>
+                                    <constraint firstItem="894-qq-YmT" firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" multiplier="0.6" id="O6a-ts-vXA"/>
+                                    <constraint firstItem="YFZ-zX-Mmz" firstAttribute="width" secondItem="uMQ-t9-wVg" secondAttribute="width" id="RU8-7T-Vz9"/>
+                                    <constraint firstItem="YFZ-zX-Mmz" firstAttribute="top" secondItem="uMQ-t9-wVg" secondAttribute="top" id="bus-G6-nOy"/>
                                     <constraint firstItem="894-qq-YmT" firstAttribute="leading" secondItem="uMQ-t9-wVg" secondAttribute="leading" id="c3K-QP-vXT"/>
-                                    <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="kUc-iG-1JL"/>
-                                    <constraint firstItem="bfF-XQ-GiU" firstAttribute="top" secondItem="uMQ-t9-wVg" secondAttribute="top" constant="20" id="kae-I9-Krk"/>
                                     <constraint firstItem="894-qq-YmT" firstAttribute="width" secondItem="uMQ-t9-wVg" secondAttribute="width" id="l4N-e8-BCj"/>
                                 </constraints>
                             </view>
@@ -434,13 +454,6 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
                                                             <rect key="frame" x="0.0" y="117" width="91" height="113"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="113"/>
-                                                                    <color key="backgroundColor" red="1" green="0.093747945239863295" blue="0.049429047058373032" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
-                                                                    <state key="normal">
-                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </state>
-                                                                </button>
                                                                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancel.png" translatesAutoresizingMaskIntoConstraints="NO" id="ged-oS-HLW" userLabel="cancelImage">
                                                                     <rect key="frame" x="30" y="41" width="32" height="32"/>
                                                                     <accessibility key="accessibilityConfiguration">
@@ -451,6 +464,13 @@
                                                                         <constraint firstAttribute="height" constant="32" id="kTY-Da-OcN"/>
                                                                     </constraints>
                                                                 </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="113"/>
+                                                                    <color key="backgroundColor" red="1" green="0.093747945239863295" blue="0.049429047058373032" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                                    <connections>
+                                                                        <action selector="cancelTapped:" destination="ump-hS-F58" eventType="touchUpInside" id="19Y-5R-0g9"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.22745098039215686" green="0.29411764705882354" blue="0.50588235294117645" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                             <constraints>
@@ -469,6 +489,13 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
                                                             <rect key="frame" x="0.0" y="0.0" width="91" height="113"/>
                                                             <subviews>
+                                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends.png" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Tf-bTq" userLabel="friendImage">
+                                                                    <rect key="frame" x="29" y="41" width="32" height="32"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="FiL-zO-fuv"/>
+                                                                        <constraint firstAttribute="height" constant="32" id="Kfr-b6-q8i"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
                                                                     <rect key="frame" x="0.0" y="0.0" width="91" height="113"/>
                                                                     <color key="backgroundColor" red="0.18106190198173899" green="1" blue="0.13900590399842638" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
@@ -479,13 +506,6 @@
                                                                         <action selector="friendButtonClicked:" destination="ump-hS-F58" eventType="touchUpInside" id="Szq-Z8-2s1"/>
                                                                     </connections>
                                                                 </button>
-                                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends.png" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Tf-bTq" userLabel="friendImage">
-                                                                    <rect key="frame" x="29" y="41" width="32" height="32"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="32" id="FiL-zO-fuv"/>
-                                                                        <constraint firstAttribute="height" constant="32" id="Kfr-b6-q8i"/>
-                                                                    </constraints>
-                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.2306754035103297" green="0.34224173433965044" blue="0.66666668653488159" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                             <constraints>
