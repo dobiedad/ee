@@ -39,6 +39,8 @@
     
     imageView.layer.cornerRadius=imageWidth/2;
     imageView.layer.masksToBounds = YES;
+    imageView.layer.borderColor = [UIColor greenColor].CGColor;
+    imageView.layer.borderWidth = .5;
     
     self.imageView.image=currentFilteredVideoFrame;
 }
