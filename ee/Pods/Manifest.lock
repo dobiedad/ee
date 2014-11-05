@@ -21,6 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Firebase (1.1.12)
+  - GPUImage (0.1.6)
   - IOSLinkedInAPI (2.0.0):
     - AFNetworking (>= 2.0.0)
   - LoremIpsum (1.0.0)
@@ -37,6 +38,7 @@ PODS:
 
 DEPENDENCIES:
   - Firebase (>= 1.1.12)
+  - GPUImage
   - IOSLinkedInAPI
   - LoremIpsum (~> 1.0)
   - MTAnimation
@@ -47,6 +49,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   Firebase: 26ca966dea982f29a4685f7fa8f596d56e5487ad
+  GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
   IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
   LoremIpsum: a4d378ecaffcb08c7e40cdba3fb935dc41b2272c
   MTAnimation: eeedb417b12eb293ad2e32a02f113d9e98641ae0

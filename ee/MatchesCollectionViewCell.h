@@ -11,6 +11,7 @@
 @property (weak, nonatomic) IBOutlet UIView *friendView;
 @property (weak, nonatomic) IBOutlet UIView *cancelView;
 @property (weak, nonatomic) IBOutlet UIButton *friendButton;
+@property (weak, nonatomic) IBOutlet UIView *constraintsView;
 
 
 - (void)loadProfile:(LinkedInProfile *)profile;

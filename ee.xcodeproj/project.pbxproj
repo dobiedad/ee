@@ -20,6 +20,7 @@
 		B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */; };
 		B35C7E541A0A3E1F00430A60 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E531A0A3E1F00430A60 /* ChatCell.xib */; };
 		B35C7E5B1A0A567B00430A60 /* MatchesCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */; };
+		B35C7E5D1A0A7EAD00430A60 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35C7E5C1A0A7EAD00430A60 /* OpenGLES.framework */; };
 		B3628C2619F6E22A00389C31 /* colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2419F6E22A00389C31 /* colour.jpg */; };
 		B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2519F6E22A00389C31 /* colour@2x.jpg */; };
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
@@ -87,6 +88,7 @@
 		B35C7E531A0A3E1F00430A60 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesCollectionViewLayout.h; sourceTree = "<group>"; };
 		B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesCollectionViewLayout.m; sourceTree = "<group>"; };
+		B35C7E5C1A0A7EAD00430A60 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B3628C2419F6E22A00389C31 /* colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colour.jpg; path = ../../NumberInPhone/images/colour.jpg; sourceTree = "<group>"; };
 		B3628C2519F6E22A00389C31 /* colour@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "colour@2x.jpg"; path = "../../NumberInPhone/images/colour@2x.jpg"; sourceTree = "<group>"; };
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B35C7E5D1A0A7EAD00430A60 /* OpenGLES.framework in Frameworks */,
 				B3B7809919DDA269007ED955 /* SystemConfiguration.framework in Frameworks */,
 				B3B7809719DDA260007ED955 /* Security.framework in Frameworks */,
 				B32D69BC19EBF0EC00140565 /* GeoFire.framework in Frameworks */,
@@ -157,6 +160,7 @@
 		3A5E142CFCCD4E9196DBC386 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B35C7E5C1A0A7EAD00430A60 /* OpenGLES.framework */,
 				B32D69BB19EBF0EC00140565 /* GeoFire.framework */,
 				B3B7809819DDA269007ED955 /* SystemConfiguration.framework */,
 				B3B7809619DDA260007ED955 /* Security.framework */,
