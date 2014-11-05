@@ -424,7 +424,7 @@
                                                     <rect key="frame" x="274" y="0.0" width="91" height="230"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNF-Vw-dmq" userLabel="cancelView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="230"/>
+                                                            <rect key="frame" x="0.0" y="117" width="91" height="113"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsg-8e-BjZ" userLabel="cancelButton">
                                                                     <rect key="frame" x="34" y="29" width="32" height="32"/>
@@ -439,11 +439,11 @@
                                                                 <rect key="frame" x="-39" y="48" width="85" height="1"/>
                                                             </variation>
                                                         </view>
-                                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
-                                                            <rect key="frame" x="100" y="0.0" width="99" height="90"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="91" height="113"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                                    <rect key="frame" x="34" y="29" width="32" height="32"/>
+                                                                    <rect key="frame" x="34" y="29" width="33" height="32"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="32" id="Sym-hk-H1p"/>
                                                                         <constraint firstAttribute="width" constant="32" id="dWz-c7-QQ2"/>
@@ -468,19 +468,14 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.2286363294" blue="0.23903092279999999" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="width" secondItem="xl5-sJ-1mR" secondAttribute="width" multiplier="0.495" id="Dpa-Vs-lej"/>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JmM-zq-pfx" secondAttribute="bottom" id="FoR-OW-wVY"/>
-                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="top" secondItem="xl5-sJ-1mR" secondAttribute="top" id="KeH-uT-1GC"/>
-                                                        <constraint firstAttribute="trailing" secondItem="JmM-zq-pfx" secondAttribute="trailing" id="Npp-3j-rtd"/>
-                                                        <constraint firstAttribute="height" secondItem="JmM-zq-pfx" secondAttribute="height" id="P5g-xe-XSr"/>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JmM-zq-pfx" secondAttribute="bottom" id="Ui7-M8-RGN"/>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tNF-Vw-dmq" secondAttribute="bottom" id="WSn-Iv-jW8"/>
-                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="width" secondItem="xl5-sJ-1mR" secondAttribute="width" multiplier="0.495" id="XXj-MJ-wZ3"/>
-                                                        <constraint firstAttribute="height" secondItem="tNF-Vw-dmq" secondAttribute="height" id="bHi-Je-psP"/>
-                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="leading" secondItem="xl5-sJ-1mR" secondAttribute="leading" id="pBT-JG-leg"/>
-                                                        <constraint firstAttribute="bottom" secondItem="tNF-Vw-dmq" secondAttribute="bottom" constant="18" id="pE6-nw-hBE"/>
-                                                        <constraint firstAttribute="bottom" secondItem="JmM-zq-pfx" secondAttribute="bottom" constant="18" id="uiJ-7z-XqL"/>
-                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="top" secondItem="xl5-sJ-1mR" secondAttribute="top" id="zIx-XQ-cyF"/>
+                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="height" secondItem="xl5-sJ-1mR" secondAttribute="height" multiplier="0.49" id="18x-Ia-QbX"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="top" secondItem="xl5-sJ-1mR" secondAttribute="top" id="1oA-J8-Ecp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="tNF-Vw-dmq" secondAttribute="bottom" id="EVA-cZ-ylG"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="height" secondItem="xl5-sJ-1mR" secondAttribute="height" multiplier="0.49" id="LTJ-fy-YXn"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="width" secondItem="xl5-sJ-1mR" secondAttribute="width" id="N32-MH-z3u"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="leading" secondItem="xl5-sJ-1mR" secondAttribute="leading" id="PwB-fd-n2O"/>
+                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="width" secondItem="xl5-sJ-1mR" secondAttribute="width" id="SsY-iW-UfH"/>
+                                                        <constraint firstItem="tNF-Vw-dmq" firstAttribute="leading" secondItem="xl5-sJ-1mR" secondAttribute="leading" id="dfE-4t-IV6"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
