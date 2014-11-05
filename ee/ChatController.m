@@ -1,6 +1,8 @@
 #import "ChatController.h"
 #import "ProfileController.h"
+#import "ChatTableViewCell.h"
 #import "SlackController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ChatController ()
 
@@ -15,11 +17,18 @@ LinkedInProfile *_selectedProfile;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    chatUsers = [NSArray arrayWithObjects:@"John", @"James", @"Roman", @"Max", @"Josh", @"Adrian", @"Tim", @"Sophie", @"Jack", @"Russel", @"Boris", @"Rachel", @"Ross", @"Monica", @"Pheobe", @"Joey",@"Paul",@"Andrew", nil];
+    
+    LinkedInProfile *profile1 = [[LinkedInProfile alloc] initWithLinkedInApiUserData:@{
+                                                                                       @"firstName": @"Jack"
+                                                                                    
+                                                                                       }];
+    LinkedInProfile *profile2 = [[LinkedInProfile alloc] initWithLinkedInApiUserData:@{
+                                                                                       @"firstName": @"Jill"
+                                                                                       }];
+    
+    chatUsers = [NSArray arrayWithObjects:profile1, profile2, nil];
     [self layoutBlur];
     
-
-
     // Do any additional setup after loading the view.
 }
 
@@ -34,24 +43,20 @@ LinkedInProfile *_selectedProfile;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"SimpleTableCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
-    
-    cell.textLabel.text = [chatUsers objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"bean.jpg"];
+    static NSString *simpleTableIdentifier = @"ChatCell";
     tableView.backgroundColor= [UIColor clearColor];
-    cell.backgroundColor = [UIColor colorWithRed: 68.0/255.0 green: 125.0/255.0 blue: 190.0/255.0 alpha: 0.1];
-
 
     
-
+    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        [tableView registerNib:[UINib nibWithNibName:@"ChatCell" bundle:nil] forCellReuseIdentifier:@"ChatCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell"];
+    }
+    [cell setProfile: [chatUsers objectAtIndex:indexPath.row]];
     return cell;
 }
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -71,7 +76,7 @@ LinkedInProfile *_selectedProfile;
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-        return 70.0;
+        return 100.0;
 }
 
 - (void)layoutBlur {
@@ -89,9 +94,6 @@ LinkedInProfile *_selectedProfile;
     [self.backgroundImage insertSubview:blurView atIndex:0];
     [blurView.contentView addSubview:vibrancyEffectView];
 }
-
-
-
 
 
 

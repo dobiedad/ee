@@ -16,11 +16,13 @@
 		81505D200E0495D76B01488C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9578A10F1481B00F9A16C019 /* libPods.a */; };
 		B32D69BC19EBF0EC00140565 /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D69BB19EBF0EC00140565 /* GeoFire.framework */; };
 		B3535B8019FFB5220083F4E8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3535B7F19FFB5220083F4E8 /* NavigationController.m */; };
+		B35C7E4B1A0A365E00430A60 /* mrbean.png in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E4A1A0A365E00430A60 /* mrbean.png */; };
+		B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */; };
+		B35C7E541A0A3E1F00430A60 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E531A0A3E1F00430A60 /* ChatCell.xib */; };
 		B3628C2619F6E22A00389C31 /* colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2419F6E22A00389C31 /* colour.jpg */; };
 		B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2519F6E22A00389C31 /* colour@2x.jpg */; };
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
 		B36FE63F19FADAB300CA6109 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = B36FE63E19FADAB300CA6109 /* friends.png */; };
-		B372EB741A025C1B00225907 /* bean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B372EB731A025C1B00225907 /* bean.jpg */; };
 		B3797D741A02A129004093C1 /* weed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3797D721A02A129004093C1 /* weed.jpg */; };
 		B3797D751A02A129004093C1 /* weed@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3797D731A02A129004093C1 /* weed@2x.jpg */; };
 		B3983D2F1A013B00004D3FFA /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D2E1A013B00004D3FFA /* chat.png */; };
@@ -78,11 +80,14 @@
 		B32D69BB19EBF0EC00140565 /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeoFire.framework; path = ee/GeoFire.framework; sourceTree = "<group>"; };
 		B3535B7E19FFB5220083F4E8 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		B3535B7F19FFB5220083F4E8 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		B35C7E4A1A0A365E00430A60 /* mrbean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mrbean.png; sourceTree = "<group>"; };
+		B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
+		B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
+		B35C7E531A0A3E1F00430A60 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		B3628C2419F6E22A00389C31 /* colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colour.jpg; path = ../../NumberInPhone/images/colour.jpg; sourceTree = "<group>"; };
 		B3628C2519F6E22A00389C31 /* colour@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "colour@2x.jpg"; path = "../../NumberInPhone/images/colour@2x.jpg"; sourceTree = "<group>"; };
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B36FE63E19FADAB300CA6109 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
-		B372EB731A025C1B00225907 /* bean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bean.jpg; sourceTree = "<group>"; };
 		B3797D721A02A129004093C1 /* weed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weed.jpg; sourceTree = "<group>"; };
 		B3797D731A02A129004093C1 /* weed@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "weed@2x.jpg"; sourceTree = "<group>"; };
 		B3983D2E1A013B00004D3FFA /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
@@ -199,8 +204,8 @@
 				B3983D311A013C9E004D3FFA /* profileFlat.png */,
 				B3983D361A013D1B004D3FFA /* chat@2x.png */,
 				B3983D321A013C9E004D3FFA /* profileFlat@2x.png */,
-				B372EB731A025C1B00225907 /* bean.jpg */,
 				B3983D411A015DFA004D3FFA /* building.jpg */,
+				B35C7E4A1A0A365E00430A60 /* mrbean.png */,
 				B3983D421A015DFA004D3FFA /* building@2x.jpg */,
 				B3628C2419F6E22A00389C31 /* colour.jpg */,
 				B36FE63E19FADAB300CA6109 /* friends.png */,
@@ -235,8 +240,11 @@
 				B3983D3C1A01521D004D3FFA /* SlackController.m */,
 				B3983D3E1A015563004D3FFA /* SlackTableViewCell.h */,
 				B3983D3F1A015563004D3FFA /* SlackTableViewCell.m */,
+				B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */,
+				B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */,
 				B3983D451A016782004D3FFA /* ChatController.h */,
 				B3983D461A016782004D3FFA /* ChatController.m */,
+				B35C7E531A0A3E1F00430A60 /* ChatCell.xib */,
 			);
 			path = ee;
 			sourceTree = "<group>";
@@ -360,6 +368,7 @@
 				B3983D351A013C9E004D3FFA /* profileFlat@2x.png in Resources */,
 				B3797D741A02A129004093C1 /* weed.jpg in Resources */,
 				B3983D341A013C9E004D3FFA /* profileFlat.png in Resources */,
+				B35C7E541A0A3E1F00430A60 /* ChatCell.xib in Resources */,
 				B3983D431A015DFA004D3FFA /* building.jpg in Resources */,
 				B3983D371A013D1B004D3FFA /* chat@2x.png in Resources */,
 				B36FE63F19FADAB300CA6109 /* friends.png in Resources */,
@@ -367,9 +376,9 @@
 				B3983D2F1A013B00004D3FFA /* chat.png in Resources */,
 				B3B7807619DD8913007ED955 /* LaunchScreen.xib in Resources */,
 				B39FEED619F7BD7F00613416 /* cancel.png in Resources */,
+				B35C7E4B1A0A365E00430A60 /* mrbean.png in Resources */,
 				B3628C2619F6E22A00389C31 /* colour.jpg in Resources */,
 				B3B7808D19DD8924007ED955 /* Podfile in Resources */,
-				B372EB741A025C1B00225907 /* bean.jpg in Resources */,
 				B3797D751A02A129004093C1 /* weed@2x.jpg in Resources */,
 				B3B7807319DD8913007ED955 /* Images.xcassets in Resources */,
 				B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */,
@@ -425,6 +434,7 @@
 			files = (
 				035E843D19EEC43300A34C9E /* LinkedInProfile.m in Sources */,
 				035E843019ED759900A34C9E /* MatchesCollectionViewCell.m in Sources */,
+				B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */,
 				B3B7806E19DD8913007ED955 /* MatchesController.m in Sources */,
 				B3983D401A015563004D3FFA /* SlackTableViewCell.m in Sources */,
 				035E843719ED855A00A34C9E /* LinkedInClient.m in Sources */,

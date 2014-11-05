@@ -20,6 +20,18 @@
 @synthesize profileBackgroundView;
 
 
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateProfileDetailsInView];
+    [self paralax];
+    [self blur];
+    [self profilePic];
+    
+}
+
+
 - (void)blur {
     //[self startLocationManager];
     
@@ -40,15 +52,7 @@
     [blurView.contentView addSubview:vibrancyEffectView];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self updateProfileDetailsInView];
-    [self paralax];
-
-    [self blur];
-    
-
-    
+- (void)profilePic {
     self.profilePicImageView.layer.cornerRadius = 100.0;
     [profilePicImageView setClipsToBounds:YES];
     self.profilePicImageView.layer.borderColor = [UIColor greenColor].CGColor;
@@ -58,15 +62,11 @@
     [profilePicImageView setUserInteractionEnabled:YES];
     
     [profilePicImageView addGestureRecognizer:newTap];
-    
-
-
 }
+
+
 - (void) tappedProfileImage {
     CGFloat originX = profilePicImageView.frame.origin.x;
-    
-
-    
     
     [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         [profilePicImageView setTransform:CGAffineTransformRotate(profilePicImageView.transform, M_PI  )];

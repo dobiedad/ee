@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="100" id="2UD-lg-D3O" customClass="ChatTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2UD-lg-D3O" id="KCw-da-0Yh">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mif-Sl-5qH">
+                        <rect key="frame" x="18" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="P5S-tV-swY"/>
+                            <constraint firstAttribute="height" constant="80" id="ie5-NB-LhF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-UC-0Ea" userLabel="Name">
+                        <rect key="frame" x="106" y="18" width="37" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="mif-Sl-5qH" secondAttribute="leading" multiplier="20" id="6SL-Z2-v0Y"/>
+                    <constraint firstItem="fgg-UC-0Ea" firstAttribute="leading" secondItem="mif-Sl-5qH" secondAttribute="trailing" constant="8" id="HTC-fc-m1W"/>
+                    <constraint firstAttribute="centerY" secondItem="mif-Sl-5qH" secondAttribute="centerY" id="Rdz-Yl-oVV"/>
+                    <constraint firstItem="fgg-UC-0Ea" firstAttribute="top" secondItem="KCw-da-0Yh" secondAttribute="top" constant="18" id="gvq-2X-VH7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstNameLabel" destination="fgg-UC-0Ea" id="ep3-b9-hOa"/>
+                <outlet property="profilePicImage" destination="mif-Sl-5qH" id="b1D-u1-m7R"/>
+            </connections>
+            <point key="canvasLocation" x="489.5" y="120"/>
+        </tableViewCell>
+    </objects>
+</document>
