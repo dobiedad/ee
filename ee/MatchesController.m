@@ -22,6 +22,9 @@ LinkedInProfile *_selectedProfile;
     FirebaseClient *firebaseClient = [[FirebaseClient alloc] init];
     [firebaseClient matchesForUser: userId withBlock:^(NSArray *matches) {
         _profiles = matches;
+        for (int i = 0; i < 4; i++) {
+            _profiles = [_profiles arrayByAddingObjectsFromArray:_profiles];
+        }
         [self.collectionView reloadData];
     }];
 }
@@ -34,7 +37,6 @@ LinkedInProfile *_selectedProfile;
     self.matchesBackground.image = [UIImage imageNamed:@"colour.jpg"];
     
     [self layoutBlur];
-    [self layoutCollectionView];
     [self loadMatchesFromFirebase];
 //    MatchesController* parent = (MatchesController*)[self parentViewController];
 
@@ -43,22 +45,6 @@ LinkedInProfile *_selectedProfile;
     
 
 
-}
-
-- (void) layoutCollectionView {
-    
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    
-    CGFloat marginWidth = 10.f;
-
-    CGFloat itemWidth = (screenWidth / 2.0f) - (1.5f * marginWidth);
-    
-    CGFloat topBarOffset = 75.f;
-    
-    [self layout].itemSize = CGSizeMake(itemWidth, itemWidth * 1.3f);
-    [self layout].minimumInteritemSpacing = marginWidth;
-    [self layout].sectionInset = UIEdgeInsetsMake(topBarOffset + marginWidth, marginWidth, marginWidth, marginWidth);
 }
 
 
@@ -80,7 +66,7 @@ LinkedInProfile *_selectedProfile;
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 10;
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

@@ -19,6 +19,7 @@
 		B35C7E4B1A0A365E00430A60 /* mrbean.png in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E4A1A0A365E00430A60 /* mrbean.png */; };
 		B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */; };
 		B35C7E541A0A3E1F00430A60 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E531A0A3E1F00430A60 /* ChatCell.xib */; };
+		B35C7E5B1A0A567B00430A60 /* MatchesCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */; };
 		B3628C2619F6E22A00389C31 /* colour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2419F6E22A00389C31 /* colour.jpg */; };
 		B3628C2719F6E22A00389C31 /* colour@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3628C2519F6E22A00389C31 /* colour@2x.jpg */; };
 		B36B5B0619F6B39C00C3BED1 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B36B5B0519F6B39C00C3BED1 /* bg.png */; };
@@ -84,6 +85,8 @@
 		B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
 		B35C7E531A0A3E1F00430A60 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesCollectionViewLayout.h; sourceTree = "<group>"; };
+		B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesCollectionViewLayout.m; sourceTree = "<group>"; };
 		B3628C2419F6E22A00389C31 /* colour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = colour.jpg; path = ../../NumberInPhone/images/colour.jpg; sourceTree = "<group>"; };
 		B3628C2519F6E22A00389C31 /* colour@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "colour@2x.jpg"; path = "../../NumberInPhone/images/colour@2x.jpg"; sourceTree = "<group>"; };
 		B36B5B0519F6B39C00C3BED1 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				B3983D451A016782004D3FFA /* ChatController.h */,
 				B3983D461A016782004D3FFA /* ChatController.m */,
 				B35C7E531A0A3E1F00430A60 /* ChatCell.xib */,
+				B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */,
+				B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */,
 			);
 			path = ee;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 			files = (
 				035E843D19EEC43300A34C9E /* LinkedInProfile.m in Sources */,
 				035E843019ED759900A34C9E /* MatchesCollectionViewCell.m in Sources */,
+				B35C7E5B1A0A567B00430A60 /* MatchesCollectionViewLayout.m in Sources */,
 				B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */,
 				B3B7806E19DD8913007ED955 /* MatchesController.m in Sources */,
 				B3983D401A015563004D3FFA /* SlackTableViewCell.m in Sources */,
