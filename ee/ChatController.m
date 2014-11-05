@@ -70,7 +70,9 @@ LinkedInProfile *_selectedProfile;
         [slackController setOtherUsersProfile:_selectedProfile];
     }
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+        return 70.0;
+}
 
 - (void)layoutBlur {
     CGRect screenRect = [[UIScreen mainScreen] bounds];
