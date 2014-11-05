@@ -35,6 +35,11 @@
     
     UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
     
+    NSInteger imageWidth = imageView.frame.size.width;
+    
+    imageView.layer.cornerRadius=imageWidth/2;
+    imageView.layer.masksToBounds = YES;
+    
     self.imageView.image=currentFilteredVideoFrame;
 }
 
