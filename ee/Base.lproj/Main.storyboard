@@ -193,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434.5" y="601.5"/>
+            <point key="canvasLocation" x="1269.5" y="702.5"/>
         </scene>
         <!--Sign In Controller-->
         <scene sceneID="wCS-7Y-X5U">
@@ -275,18 +275,21 @@
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-pV-5Jn" userLabel="profileContainer">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="9pv-A4-QxB" kind="embed" identifier="profileView" id="wBf-sQ-QiM"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydZ-e8-mId" userLabel="matchesContainer">
                                         <rect key="frame" x="375" y="64" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="UaJ-wp-5O8" kind="embed" identifier="matchesView" id="PXl-HD-b8m"/>
+                                            <segue destination="BES-Cg-YL2" kind="embed" id="B2p-vy-Ch4"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-rM-tPT" userLabel="chatContainer">
                                         <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="LAO-pS-FX8" kind="embed" id="Gfh-hR-q8f"/>
                                         </connections>
@@ -308,7 +311,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fUu-VS-E3B" firstAttribute="top" secondItem="3Je-rM-tPT" secondAttribute="bottom" id="HBM-3K-0Fx"/>
                             <constraint firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="KKD-So-u6o"/>
@@ -397,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qo5-Af-qhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341.5" y="775.5"/>
+            <point key="canvasLocation" x="204.5" y="832.5"/>
         </scene>
         <!--Slack Controller-->
         <scene sceneID="aNy-T6-ub5">
@@ -428,7 +431,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfZ-EQ-Udq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949.5" y="775.5"/>
+            <point key="canvasLocation" x="752.5" y="707.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fjd-MU-nIg">
+            <objects>
+                <viewController id="BES-Cg-YL2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uGu-dP-INy"/>
+                        <viewControllerLayoutGuide type="bottom" id="agB-Lp-7Wx"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="rnV-4v-KiD" userLabel="superView">
+                        <rect key="frame" x="0.0" y="44" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Tl-Dfr">
+                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="UaJ-wp-5O8" kind="embed" id="F57-jm-qHC"/>
+                                </connections>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-Hn-EBw">
+                                <rect key="frame" x="121" y="54" width="133" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Matches"/>
+                                    <segment title="Friends"/>
+                                </segments>
+                                <color key="tintColor" red="0.29803921568627451" green="1" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fZh-Tl-Dfr" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" id="3sK-OC-anj"/>
+                            <constraint firstAttribute="width" secondItem="fZh-Tl-Dfr" secondAttribute="width" id="7jp-wF-CBJ"/>
+                            <constraint firstItem="ajA-Hn-EBw" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" constant="10" id="HF0-3R-Pkr"/>
+                            <constraint firstAttribute="height" secondItem="fZh-Tl-Dfr" secondAttribute="height" id="MbZ-fs-3ep"/>
+                            <constraint firstAttribute="centerX" secondItem="ajA-Hn-EBw" secondAttribute="centerX" id="Nr5-Bn-RRe"/>
+                            <constraint firstItem="fZh-Tl-Dfr" firstAttribute="leading" secondItem="rnV-4v-KiD" secondAttribute="leading" id="sFv-fI-utA"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LPh-s0-q9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.5" y="-768.5"/>
         </scene>
         <!--Matches Controller-->
         <scene sceneID="nAz-AH-LsN">
@@ -690,6 +739,6 @@
         <image name="weed.jpg" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k0A-Z4-5Ir"/>
+        <segue reference="wBf-sQ-QiM"/>
     </inferredMetricsTieBreakers>
 </document>

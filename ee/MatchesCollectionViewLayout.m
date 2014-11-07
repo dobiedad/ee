@@ -24,7 +24,7 @@
     
     self.itemSize = CGSizeMake(cellWidth, cellWidth / cellWidthHeightRatio);
     self.minimumInteritemSpacing = marginWidth;
-    self.sectionInset = UIEdgeInsetsMake(marginWidth + 60, marginWidth, marginWidth, marginWidth);
+    self.sectionInset = UIEdgeInsetsMake(marginWidth + 50 , marginWidth, marginWidth, marginWidth);
     
 }
 
