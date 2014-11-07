@@ -20,8 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
                                 <rect key="frame" x="0.0" y="44" width="375" height="667"/>
@@ -36,48 +36,89 @@
                                                     <constraint firstAttribute="height" constant="200" id="1eW-3H-37A"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27a-wz-gRI">
+                                                <rect key="frame" x="10" y="153" width="34" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1y-u0-d1a">
+                                                <rect key="frame" x="318" y="153" width="47" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Developer" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-yA-kYV">
+                                                <rect key="frame" x="10" y="204" width="87" height="30"/>
+                                                <color key="backgroundColor" red="0.72549019609999998" green="0.32549019610000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.92934032938162492" green="1" blue="0.94368462266555875" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Investment" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-c7-EBo">
+                                                <rect key="frame" x="273" y="204" width="92" height="30"/>
+                                                <color key="backgroundColor" red="0.28627450980392155" green="0.89411764705882357" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="1" green="0.1468541214060326" blue="0.072918746746243324" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="aTZ-yA-kYV" firstAttribute="top" secondItem="27a-wz-gRI" secondAttribute="bottom" constant="30" id="8bp-cT-s9H"/>
+                                            <constraint firstAttribute="trailing" secondItem="cM0-c7-EBo" secondAttribute="trailing" constant="10" id="ANg-J8-02W"/>
                                             <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="KFD-tw-MMO"/>
+                                            <constraint firstItem="27a-wz-gRI" firstAttribute="top" secondItem="p1y-u0-d1a" secondAttribute="top" id="SkJ-bf-Oqy"/>
+                                            <constraint firstItem="aTZ-yA-kYV" firstAttribute="leading" secondItem="YFZ-zX-Mmz" secondAttribute="leading" constant="10" id="X17-h2-KIh"/>
+                                            <constraint firstItem="cM0-c7-EBo" firstAttribute="top" secondItem="aTZ-yA-kYV" secondAttribute="top" id="dbe-YB-OcS"/>
+                                            <constraint firstItem="aTZ-yA-kYV" firstAttribute="top" secondItem="bfF-XQ-GiU" secondAttribute="bottom" constant="-30" id="huy-cV-tDF"/>
+                                            <constraint firstAttribute="trailing" secondItem="p1y-u0-d1a" secondAttribute="trailing" constant="10" id="og1-Tk-FRq"/>
                                             <constraint firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="centerY" id="wmn-B0-rUs"/>
+                                            <constraint firstItem="27a-wz-gRI" firstAttribute="leading" secondItem="YFZ-zX-Mmz" secondAttribute="leading" constant="10" id="wvQ-DY-FHz"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
-                                        <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                                        <rect key="frame" x="0.0" y="267" width="375" height="360"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Technology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
-                                                <rect key="frame" x="97" y="71" width="182" height="19"/>
+                                                <rect key="frame" x="97" y="63" width="182" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
-                                                <rect key="frame" x="147" y="100" width="82" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
+                                                <rect key="frame" x="147" y="81" width="82" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oxford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
-                                                <rect key="frame" x="161" y="131" width="54" height="19"/>
+                                                <rect key="frame" x="161" y="117" width="54" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
-                                                <rect key="frame" x="154" y="40" width="67" height="19"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
+                                                <rect key="frame" x="154" y="31" width="67" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
-                                                <rect key="frame" x="170" y="11" width="35" height="19"/>
+                                                <rect key="frame" x="170" y="9" width="35" height="19"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-VV-Wue">
+                                                <rect key="frame" x="79" y="289" width="240" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="0.040000000000000001" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.36625230787677898" green="1" blue="0.006472176000320129" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="E2O-qZ-7vn" firstAttribute="centerY" secondItem="894-qq-YmT" secondAttribute="centerY" multiplier="0.4" id="452-q5-Wi8"/>
                                             <constraint firstItem="lsL-iR-9uf" firstAttribute="centerY" secondItem="894-qq-YmT" secondAttribute="centerY" multiplier="0.7" id="6LZ-n0-FvG"/>
@@ -92,15 +133,15 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.92258836334365757" green="0.14720912649394891" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="YFZ-zX-Mmz" firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" multiplier="0.4" id="Elb-Pr-rx1"/>
                                     <constraint firstItem="YFZ-zX-Mmz" firstAttribute="leading" secondItem="uMQ-t9-wVg" secondAttribute="leading" id="KOF-mf-RJw"/>
-                                    <constraint firstAttribute="bottom" secondItem="894-qq-YmT" secondAttribute="bottom" id="LKG-VE-ynZ"/>
-                                    <constraint firstItem="894-qq-YmT" firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" multiplier="0.6" id="O6a-ts-vXA"/>
+                                    <constraint firstItem="894-qq-YmT" firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" multiplier="0.54" id="O6a-ts-vXA"/>
                                     <constraint firstItem="YFZ-zX-Mmz" firstAttribute="width" secondItem="uMQ-t9-wVg" secondAttribute="width" id="RU8-7T-Vz9"/>
                                     <constraint firstItem="YFZ-zX-Mmz" firstAttribute="top" secondItem="uMQ-t9-wVg" secondAttribute="top" id="bus-G6-nOy"/>
                                     <constraint firstItem="894-qq-YmT" firstAttribute="leading" secondItem="uMQ-t9-wVg" secondAttribute="leading" id="c3K-QP-vXT"/>
+                                    <constraint firstItem="894-qq-YmT" firstAttribute="top" secondItem="YFZ-zX-Mmz" secondAttribute="bottom" id="hJf-Ja-KU8"/>
                                     <constraint firstItem="894-qq-YmT" firstAttribute="width" secondItem="uMQ-t9-wVg" secondAttribute="width" id="l4N-e8-BCj"/>
                                 </constraints>
                             </view>
