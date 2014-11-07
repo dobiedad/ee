@@ -27,7 +27,7 @@
     UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
     
     GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:inputImage];
-    GPUImagePixellateFilter *stillImageFilter = [[GPUImagePixellateFilter alloc] init];
+    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
     
     [stillImageSource addTarget:stillImageFilter];
     [stillImageFilter useNextFrameForImageCapture];
