@@ -16,8 +16,9 @@
 @synthesize uniCourseLabel;
 @synthesize uniNameLabel;
 @synthesize firstNameLabel;
-
+@synthesize infoScrollView;
 @synthesize profileBackgroundView;
+@synthesize aboutMeTextView;
 
 
 
@@ -28,7 +29,10 @@
     [self paralax];
     [self blur];
     [self profilePic];
-    
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [aboutMeTextView endEditing:YES];
 }
 
 
@@ -38,6 +42,11 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
+    infoScrollView.contentSize = CGSizeMake(.95* screenWidth, screenHeight);
+    aboutMeTextView.layer.cornerRadius=5;
+    infoScrollView.layer.cornerRadius=5;
+    
+
     
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     

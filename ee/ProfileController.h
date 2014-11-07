@@ -11,7 +11,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *jobLabel;
 @property (weak, nonatomic) IBOutlet UILabel *uniNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *uniCourseLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *infoScrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *profileBackgroundView;
+@property (weak, nonatomic) IBOutlet UITextView *aboutMeTextView;
 
 @end
 
