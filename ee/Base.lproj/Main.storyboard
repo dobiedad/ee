@@ -20,10 +20,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
                                 <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
@@ -267,35 +268,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weed.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jM0-Ge-rVC" userLabel="backgroundImage">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-4S-n9N">
-                                <rect key="frame" x="0.0" y="64" width="375" height="667"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" pagingEnabled="YES" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-4S-n9N">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-pV-5Jn" userLabel="profileContainer">
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ItB-pV-5Jn" userLabel="profileContainer">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.89411764709999997" green="0.3231087678110115" blue="0.098100482413086887" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="9pv-A4-QxB" kind="embed" identifier="profileView" id="wBf-sQ-QiM"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ydZ-e8-mId" userLabel="matchesContainer">
-                                        <rect key="frame" x="375" y="64" width="375" height="667"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydZ-e8-mId" userLabel="matchesContainer">
+                                        <rect key="frame" x="375" y="0.0" width="375" height="603"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="BES-Cg-YL2" kind="embed" id="B2p-vy-Ch4"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-rM-tPT" userLabel="chatContainer">
-                                        <rect key="frame" x="750" y="0.0" width="375" height="667"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-rM-tPT" userLabel="chatContainer">
+                                        <rect key="frame" x="750" y="0.0" width="375" height="603"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="LAO-pS-FX8" kind="embed" id="Gfh-hR-q8f"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.70916781767955794" green="0.032165054424493592" blue="0.11271415699002588" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="leading" secondItem="sTc-4S-n9N" secondAttribute="leading" id="84r-Ry-r74"/>
                                     <constraint firstItem="ydZ-e8-mId" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="BjC-7Q-zq7"/>
@@ -311,18 +309,15 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.90376123495561211" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="sTc-4S-n9N" firstAttribute="leading" secondItem="Vja-g4-6hG" secondAttribute="leading" id="16e-Q3-IUw"/>
+                            <constraint firstAttribute="bottom" secondItem="sTc-4S-n9N" secondAttribute="bottom" id="ATW-XU-lfW"/>
                             <constraint firstItem="fUu-VS-E3B" firstAttribute="top" secondItem="3Je-rM-tPT" secondAttribute="bottom" id="HBM-3K-0Fx"/>
-                            <constraint firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="KKD-So-u6o"/>
-                            <constraint firstAttribute="trailing" secondItem="jM0-Ge-rVC" secondAttribute="trailing" id="Nlj-37-N1c"/>
-                            <constraint firstItem="fUu-VS-E3B" firstAttribute="top" secondItem="jM0-Ge-rVC" secondAttribute="bottom" id="WKh-em-ocC"/>
+                            <constraint firstItem="sTc-4S-n9N" firstAttribute="top" secondItem="bOA-NK-Df9" secondAttribute="bottom" id="a1d-eM-8C9"/>
                             <constraint firstItem="3Je-rM-tPT" firstAttribute="top" secondItem="bOA-NK-Df9" secondAttribute="bottom" id="ahZ-dR-tYC"/>
-                            <constraint firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="bkd-VJ-HIQ"/>
-                            <constraint firstItem="jM0-Ge-rVC" firstAttribute="leading" secondItem="Vja-g4-6hG" secondAttribute="leading" id="rVH-9v-Wah"/>
-                            <constraint firstItem="ydZ-e8-mId" firstAttribute="top" secondItem="bOA-NK-Df9" secondAttribute="top" id="vj6-NF-2lf"/>
-                            <constraint firstItem="fUu-VS-E3B" firstAttribute="top" secondItem="jM0-Ge-rVC" secondAttribute="bottom" id="wBa-fk-RKk"/>
-                            <constraint firstItem="jM0-Ge-rVC" firstAttribute="top" secondItem="Vja-g4-6hG" secondAttribute="top" id="zTC-PD-hos"/>
+                            <constraint firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="hm5-6J-wc9"/>
+                            <constraint firstItem="ydZ-e8-mId" firstAttribute="top" secondItem="bOA-NK-Df9" secondAttribute="bottom" id="vj6-NF-2lf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FRW-wp-BL5">
@@ -341,7 +336,6 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="jM0-Ge-rVC" id="csE-kn-ZGT"/>
                         <outlet property="chatContainer" destination="3Je-rM-tPT" id="smd-Tq-SSA"/>
                         <outlet property="matchesContainer" destination="ydZ-e8-mId" id="vcH-fw-Cc8"/>
                         <outlet property="profileContainer" destination="ItB-pV-5Jn" id="jha-Hh-VLI"/>
@@ -743,7 +737,6 @@
         <image name="first" width="30" height="30"/>
         <image name="friends.png" width="64" height="64"/>
         <image name="profileFlat.png" width="32" height="32"/>
-        <image name="weed.jpg" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wBf-sQ-QiM"/>
