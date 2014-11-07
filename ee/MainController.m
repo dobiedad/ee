@@ -23,16 +23,11 @@
 @synthesize chatContainer;
 @synthesize backgroundImage;
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self blur];
-
-    
-    scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
-    scrollView.showsHorizontalScrollIndicator = YES;
-    scrollView.showsVerticalScrollIndicator=NO;
-    scrollView.pagingEnabled = YES;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self layoutScrollView];
 
    
     NSLog(@"%lu", self.childViewControllers.count);
@@ -46,6 +41,26 @@
     
     [self startLocationManager];
 }
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [self layoutScrollView];
+}
+
+- (void)layoutScrollView {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    
+    scrollView.contentSize = CGSizeMake(screenWidth * 3,screenHeight);
+    scrollView.showsHorizontalScrollIndicator = YES;
+    scrollView.showsVerticalScrollIndicator=NO;
+    scrollView.pagingEnabled = YES;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+}
+
 - (IBAction)profileButtonClicked:(id)sender {
     
     if (scrollView.contentOffset.x == self.profileContainer.frame.origin.x) {

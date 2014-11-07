@@ -24,9 +24,23 @@
 }
 
 - (void)filters:(LinkedInProfile *)profile {
-    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
     
-    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:inputImage];
+    NSInteger imageWidth = imageView.frame.size.width;
+    imageView.layer.cornerRadius=imageWidth/2;
+    imageView.layer.masksToBounds = YES;
+    imageView.layer.borderColor = [UIColor greenColor].CGColor;
+    imageView.layer.borderWidth = .5;
+    
+//    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
+//    //self.imageView.image=[self applyFilterTo:inputImage];
+//    self.imageView.image=inputImage;
+    
+    [self.imageView sd_setImageWithURL:[profile pictureURL]
+                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+}
+
+- (UIImage *)applyFilterTo:(UIImage *)image {
+    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:image];
     GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
     
     [stillImageSource addTarget:stillImageFilter];
@@ -34,15 +48,7 @@
     [stillImageSource processImage];
     
     UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
-    
-    NSInteger imageWidth = imageView.frame.size.width;
-    
-    imageView.layer.cornerRadius=imageWidth/2;
-    imageView.layer.masksToBounds = YES;
-    imageView.layer.borderColor = [UIColor greenColor].CGColor;
-    imageView.layer.borderWidth = .5;
-    
-    self.imageView.image=currentFilteredVideoFrame;
+    return currentFilteredVideoFrame;
 }
 
 - (void)loadProfile:(LinkedInProfile *)profile {

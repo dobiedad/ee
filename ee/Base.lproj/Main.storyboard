@@ -20,12 +20,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
-                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
@@ -169,7 +169,7 @@
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="35F-AZ-ghp"/>
                             <constraint firstItem="GuO-Un-wcG" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" multiplier="0.95" id="3w6-xv-0dj"/>
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="FGI-80-bj7"/>
-                            <constraint firstItem="uMQ-t9-wVg" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="O6V-It-exD"/>
+                            <constraint firstItem="uMQ-t9-wVg" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="top" id="O6V-It-exD"/>
                             <constraint firstAttribute="height" secondItem="uMQ-t9-wVg" secondAttribute="height" id="l5b-pz-qp4"/>
                             <constraint firstItem="uMQ-t9-wVg" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="ngc-EP-FR1"/>
                             <constraint firstItem="GuO-Un-wcG" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="0.54" id="sNG-zg-Iwd"/>
@@ -298,7 +298,6 @@
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="leading" secondItem="sTc-4S-n9N" secondAttribute="leading" id="84r-Ry-r74"/>
                                     <constraint firstItem="ydZ-e8-mId" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="BjC-7Q-zq7"/>
                                     <constraint firstItem="3Je-rM-tPT" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="Vew-uh-tfF"/>
-                                    <constraint firstItem="ItB-pV-5Jn" firstAttribute="top" secondItem="sTc-4S-n9N" secondAttribute="top" id="XHC-GQ-GhH"/>
                                     <constraint firstItem="ydZ-e8-mId" firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="bia-Lj-nMI"/>
                                     <constraint firstItem="3Je-rM-tPT" firstAttribute="height" secondItem="sTc-4S-n9N" secondAttribute="height" id="c9q-Xr-DHU"/>
                                     <constraint firstItem="ItB-pV-5Jn" firstAttribute="width" secondItem="sTc-4S-n9N" secondAttribute="width" id="ebT-cT-r6N"/>
@@ -312,6 +311,7 @@
                         <color key="backgroundColor" red="0.0" green="0.90376123495561211" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sTc-4S-n9N" firstAttribute="leading" secondItem="Vja-g4-6hG" secondAttribute="leading" id="16e-Q3-IUw"/>
+                            <constraint firstItem="ItB-pV-5Jn" firstAttribute="top" secondItem="bOA-NK-Df9" secondAttribute="bottom" id="1fP-aE-LgW"/>
                             <constraint firstAttribute="bottom" secondItem="sTc-4S-n9N" secondAttribute="bottom" id="ATW-XU-lfW"/>
                             <constraint firstItem="fUu-VS-E3B" firstAttribute="top" secondItem="3Je-rM-tPT" secondAttribute="bottom" id="HBM-3K-0Fx"/>
                             <constraint firstItem="sTc-4S-n9N" firstAttribute="top" secondItem="bOA-NK-Df9" secondAttribute="bottom" id="a1d-eM-8C9"/>
@@ -439,13 +439,6 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Tl-Dfr" userLabel="matchesContainer">
-                                <rect key="frame" x="0.0" y="44" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="UaJ-wp-5O8" kind="embed" id="F57-jm-qHC"/>
-                                </connections>
-                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ajA-Hn-EBw">
                                 <rect key="frame" x="121" y="54" width="133" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -458,15 +451,23 @@
                                     <action selector="indexChanged:" destination="BES-Cg-YL2" eventType="valueChanged" id="0HA-7R-AWc"/>
                                 </connections>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Tl-Dfr" userLabel="matchesContainer">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="UaJ-wp-5O8" kind="embed" id="F57-jm-qHC"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" id="3sK-OC-anj"/>
                             <constraint firstAttribute="width" secondItem="fZh-Tl-Dfr" secondAttribute="width" id="7jp-wF-CBJ"/>
                             <constraint firstItem="ajA-Hn-EBw" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" constant="10" id="HF0-3R-Pkr"/>
-                            <constraint firstAttribute="height" secondItem="fZh-Tl-Dfr" secondAttribute="height" id="MbZ-fs-3ep"/>
                             <constraint firstAttribute="centerX" secondItem="ajA-Hn-EBw" secondAttribute="centerX" id="Nr5-Bn-RRe"/>
+                            <constraint firstItem="fZh-Tl-Dfr" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" id="dGN-OE-gpv"/>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="leading" secondItem="rnV-4v-KiD" secondAttribute="leading" id="sFv-fI-utA"/>
+                            <constraint firstAttribute="bottom" secondItem="fZh-Tl-Dfr" secondAttribute="bottom" id="vAX-4t-o4u"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -716,7 +717,7 @@
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Matches" image="first" id="ahJ-ut-eHH" userLabel="Matches"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -739,6 +740,6 @@
         <image name="profileFlat.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wBf-sQ-QiM"/>
+        <segue reference="k0A-Z4-5Ir"/>
     </inferredMetricsTieBreakers>
 </document>

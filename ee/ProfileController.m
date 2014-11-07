@@ -3,6 +3,7 @@
 #import <AudioToolbox/AudioServices.h>
 
 
+
 @interface ProfileController ()
 @end
 
@@ -42,7 +43,7 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
-    infoScrollView.contentSize = CGSizeMake(.95* screenWidth, screenHeight);
+    infoScrollView.contentSize = CGSizeMake(.95* screenWidth, infoScrollView.contentSize.height);
     aboutMeTextView.layer.cornerRadius=5;
     infoScrollView.layer.cornerRadius=5;
     
