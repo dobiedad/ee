@@ -433,10 +433,10 @@
             </objects>
             <point key="canvasLocation" x="752.5" y="707.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Segmented Controller-->
         <scene sceneID="fjd-MU-nIg">
             <objects>
-                <viewController id="BES-Cg-YL2" sceneMemberID="viewController">
+                <viewController id="BES-Cg-YL2" customClass="SegmentedController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uGu-dP-INy"/>
                         <viewControllerLayoutGuide type="bottom" id="agB-Lp-7Wx"/>
@@ -445,7 +445,7 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Tl-Dfr">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Tl-Dfr" userLabel="matchesContainer">
                                 <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -460,6 +460,9 @@
                                     <segment title="Friends"/>
                                 </segments>
                                 <color key="tintColor" red="0.29803921568627451" green="1" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="BES-Cg-YL2" eventType="valueChanged" id="0HA-7R-AWc"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -474,6 +477,10 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="matchesContainer" destination="fZh-Tl-Dfr" id="Q6G-jW-M1B"/>
+                        <outlet property="matchesSegment" destination="ajA-Hn-EBw" id="fRF-Ls-hVw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LPh-s0-q9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

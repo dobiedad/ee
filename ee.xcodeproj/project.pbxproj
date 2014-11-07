@@ -16,6 +16,7 @@
 		81505D200E0495D76B01488C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9578A10F1481B00F9A16C019 /* libPods.a */; };
 		B32D69BC19EBF0EC00140565 /* GeoFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32D69BB19EBF0EC00140565 /* GeoFire.framework */; };
 		B3535B8019FFB5220083F4E8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3535B7F19FFB5220083F4E8 /* NavigationController.m */; };
+		B353EB751A0CF3EF00463C44 /* SegmentedController.m in Sources */ = {isa = PBXBuildFile; fileRef = B353EB741A0CF3EF00463C44 /* SegmentedController.m */; };
 		B35C7E4B1A0A365E00430A60 /* mrbean.png in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E4A1A0A365E00430A60 /* mrbean.png */; };
 		B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */; };
 		B35C7E541A0A3E1F00430A60 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E531A0A3E1F00430A60 /* ChatCell.xib */; };
@@ -82,6 +83,8 @@
 		B32D69BB19EBF0EC00140565 /* GeoFire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GeoFire.framework; path = ee/GeoFire.framework; sourceTree = "<group>"; };
 		B3535B7E19FFB5220083F4E8 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		B3535B7F19FFB5220083F4E8 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		B353EB731A0CF3EF00463C44 /* SegmentedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedController.h; sourceTree = "<group>"; };
+		B353EB741A0CF3EF00463C44 /* SegmentedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedController.m; sourceTree = "<group>"; };
 		B35C7E4A1A0A365E00430A60 /* mrbean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mrbean.png; sourceTree = "<group>"; };
 		B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				B35C7E531A0A3E1F00430A60 /* ChatCell.xib */,
 				B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */,
 				B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */,
+				B353EB731A0CF3EF00463C44 /* SegmentedController.h */,
+				B353EB741A0CF3EF00463C44 /* SegmentedController.m */,
 			);
 			path = ee;
 			sourceTree = "<group>";
@@ -455,6 +460,7 @@
 				B3B7806B19DD8912007ED955 /* ProfileController.m in Sources */,
 				B3B7806519DD8912007ED955 /* main.m in Sources */,
 				B3535B8019FFB5220083F4E8 /* NavigationController.m in Sources */,
+				B353EB751A0CF3EF00463C44 /* SegmentedController.m in Sources */,
 				035E844019EECB9200A34C9E /* MainController.m in Sources */,
 				035E843319ED836900A34C9E /* SignInController.m in Sources */,
 			);
