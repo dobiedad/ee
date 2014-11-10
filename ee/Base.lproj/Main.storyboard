@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -531,8 +532,7 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="Image">
                                                             <rect key="frame" x="10" y="74" width="82" height="82"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="82" id="WaT-ph-b7t"/>
-                                                                <constraint firstAttribute="height" constant="82" id="bJ4-x1-N0u"/>
+                                                                <constraint firstAttribute="height" secondItem="xGW-jd-6xK" secondAttribute="width" multiplier="1:1" id="hMj-5h-jTE"/>
                                                             </constraints>
                                                         </imageView>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Front End Developer" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zme-Cg-oG6">
@@ -560,6 +560,7 @@
                                                         <constraint firstAttribute="centerX" secondItem="EAL-L2-lwB" secondAttribute="centerX" id="oK9-lI-jKa"/>
                                                         <constraint firstItem="Zme-Cg-oG6" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" constant="10" id="pb7-0l-Jd6"/>
                                                         <constraint firstItem="mvu-D4-Bh4" firstAttribute="leading" secondItem="xGW-jd-6xK" secondAttribute="trailing" constant="5" id="qbL-wr-dLH"/>
+                                                        <constraint firstItem="xGW-jd-6xK" firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" multiplier="0.3" id="uHJ-mj-Lwv"/>
                                                         <constraint firstItem="0hs-4D-07K" firstAttribute="top" secondItem="EAL-L2-lwB" secondAttribute="bottom" constant="13" id="yT6-wg-2BS"/>
                                                     </constraints>
                                                 </view>
