@@ -30,6 +30,8 @@
     imageView.layer.masksToBounds = YES;
     imageView.layer.borderColor = [UIColor greenColor].CGColor;
     imageView.layer.borderWidth = .5;
+
+    
     
 //    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
 //    //self.imageView.image=[self applyFilterTo:inputImage];
