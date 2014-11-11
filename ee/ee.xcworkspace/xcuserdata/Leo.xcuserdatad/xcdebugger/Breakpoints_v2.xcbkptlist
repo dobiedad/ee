@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ProfileController.m"
-            timestampString = "437411866.772377"
+            timestampString = "437415871.100182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-tappedProfileImage"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,12 +170,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatchesCollectionViewCell.m"
-            timestampString = "437334877.241685"
+            timestampString = "437416349.609537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-cancelTapped:"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-friendButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
