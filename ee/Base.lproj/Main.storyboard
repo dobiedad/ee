@@ -538,11 +538,11 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
-                                                            <rect key="frame" x="266" y="4" width="91" height="113"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
+                                                            <rect key="frame" x="255" y="0.0" width="110" height="110"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="113"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyB-2A-wom" userLabel="friendButton">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                                     <color key="backgroundColor" red="0.18106190198173899" green="1" blue="0.13900590399842638" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                                     <state key="normal">
                                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -551,8 +551,8 @@
                                                                         <action selector="friendButtonClicked:" destination="ump-hS-F58" eventType="touchUpInside" id="Szq-Z8-2s1"/>
                                                                     </connections>
                                                                 </button>
-                                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="friends.png" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Tf-bTq" userLabel="friendImage">
-                                                                    <rect key="frame" x="29" y="41" width="33" height="33"/>
+                                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friends.png" translatesAutoresizingMaskIntoConstraints="NO" id="F4V-Tf-bTq" userLabel="friendImage">
+                                                                    <rect key="frame" x="39" y="39" width="32" height="32"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="32" id="FiL-zO-fuv"/>
                                                                         <constraint firstAttribute="height" constant="32" id="Kfr-b6-q8i"/>
@@ -561,7 +561,11 @@
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.2306754035103297" green="0.34224173433965044" blue="0.66666668653488159" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                             <constraints>
+                                                                <constraint firstItem="vyB-2A-wom" firstAttribute="leading" secondItem="JmM-zq-pfx" secondAttribute="leading" id="DOe-ab-2c9"/>
                                                                 <constraint firstAttribute="centerX" secondItem="F4V-Tf-bTq" secondAttribute="centerX" id="V1T-LJ-4Dv"/>
+                                                                <constraint firstItem="vyB-2A-wom" firstAttribute="top" secondItem="JmM-zq-pfx" secondAttribute="top" id="X9e-qM-BQ3"/>
+                                                                <constraint firstAttribute="bottom" secondItem="vyB-2A-wom" secondAttribute="bottom" id="a6T-R9-pvT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="vyB-2A-wom" secondAttribute="trailing" id="kqb-1e-tOC"/>
                                                                 <constraint firstAttribute="centerY" secondItem="F4V-Tf-bTq" secondAttribute="centerY" id="xWW-To-hZe"/>
                                                             </constraints>
                                                             <variation key="widthClass=regular" fixedFrame="YES">
@@ -614,6 +618,10 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="width" id="HBY-sG-XZ2"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="height" secondItem="tNF-Vw-dmq" secondAttribute="height" id="QjR-KJ-kNA"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" id="TLl-QS-gE1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="JmM-zq-pfx" secondAttribute="trailing" id="UIe-k3-55h"/>
+                                                        <constraint firstItem="JmM-zq-pfx" firstAttribute="width" secondItem="tNF-Vw-dmq" secondAttribute="width" id="aSL-Lu-GA1"/>
                                                         <constraint firstItem="tNF-Vw-dmq" firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" multiplier="0.3" id="zZl-k7-5Rh"/>
                                                     </constraints>
                                                 </view>
