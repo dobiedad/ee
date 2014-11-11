@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "LinkedInProfile.h"
 
-@interface ProfileController : UIViewController
+@interface ProfileController : UIViewController< UITextFieldDelegate>
 
 -(void)setProfile: (LinkedInProfile*) profile;
 

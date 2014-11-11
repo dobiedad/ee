@@ -89,6 +89,13 @@
    
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
 - (void)paralax
 {
     // Set vertical effect
