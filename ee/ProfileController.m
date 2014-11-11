@@ -49,7 +49,7 @@
     
 
     
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     
     UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
     
@@ -65,6 +65,13 @@
 - (void)profilePic {
     self.profilePicImageView.layer.cornerRadius = 100.0;
     [profilePicImageView setClipsToBounds:YES];
+    
+    
+    NSInteger imageWidth = profilePicImageView.frame.size.width;
+    profilePicImageView.layer.cornerRadius=imageWidth/2;
+    profilePicImageView.layer.masksToBounds = YES;
+    
+    
     self.profilePicImageView.layer.borderColor = [UIColor greenColor].CGColor;
     self.profilePicImageView.layer.borderWidth = 1.5;
     UITapGestureRecognizer *newTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedProfileImage)];
