@@ -26,10 +26,19 @@
 - (void)filters:(LinkedInProfile *)profile {
     
     NSInteger imageWidth = imageView.frame.size.width;
+    NSInteger buttonWidth = cancelView.frame.size.width;
+
     imageView.layer.cornerRadius=imageWidth/2;
     imageView.layer.masksToBounds = YES;
     imageView.layer.borderColor = [UIColor greenColor].CGColor;
-    imageView.layer.borderWidth = .5;
+    imageView.layer.borderWidth = 1;
+    
+    cancelView.layer.cornerRadius=buttonWidth/2;
+    cancelView.layer.masksToBounds = YES;
+
+    
+    friendView.layer.cornerRadius=buttonWidth/2;
+    friendView.layer.masksToBounds = YES;
 
     
     
