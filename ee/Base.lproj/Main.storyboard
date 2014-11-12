@@ -517,12 +517,6 @@
                                                                 <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="height" multiplier="1:1" id="ifo-Nx-3vT"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I want" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hs-4D-07K">
-                                                            <rect key="frame" x="146" y="136" width="72" height="29"/>
-                                                            <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="24"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JmM-zq-pfx" userLabel="friendView">
                                                             <rect key="frame" x="287" y="136" width="73" height="73"/>
                                                             <subviews>
@@ -642,6 +636,13 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bino.png" translatesAutoresizingMaskIntoConstraints="NO" id="kPR-Af-grc">
+                                                            <rect key="frame" x="158" y="120" width="48" height="48"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="48" id="Kal-iH-5DE"/>
+                                                                <constraint firstAttribute="height" constant="48" id="p4s-Yx-9vt"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -729,6 +730,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bino.png" width="128" height="128"/>
         <image name="building.jpg" width="750" height="1334"/>
         <image name="cancel.png" width="64" height="64"/>
         <image name="chat.png" width="32" height="32"/>
