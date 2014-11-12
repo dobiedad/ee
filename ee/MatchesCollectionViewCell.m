@@ -28,16 +28,16 @@
     NSInteger imageWidth = imageView.frame.size.width;
     NSInteger buttonWidth = cancelView.frame.size.width;
 
-    imageView.layer.cornerRadius=imageWidth/2;
+    imageView.layer.cornerRadius=1;
     imageView.layer.masksToBounds = YES;
     imageView.layer.borderColor = [UIColor greenColor].CGColor;
     imageView.layer.borderWidth = 1;
     
-    cancelView.layer.cornerRadius=buttonWidth/2;
+    cancelView.layer.cornerRadius=1;
     cancelView.layer.masksToBounds = YES;
 
     
-    friendView.layer.cornerRadius=buttonWidth/2;
+    friendView.layer.cornerRadius=1;
     friendView.layer.masksToBounds = YES;
 
     
@@ -66,7 +66,7 @@
     _profile = profile;
     jobLabel.text =  [_profile companyName], [_profile industry];
     nameLabel.text = [_profile firstName];
-    constraintsView.layer.cornerRadius=5;
+    constraintsView.layer.cornerRadius=1;
     constraintsView.layer.masksToBounds = YES;
     
     
