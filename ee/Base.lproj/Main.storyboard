@@ -508,7 +508,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-y0-fDq" userLabel="imagePanel">
                                                     <rect key="frame" x="0.0" y="0.0" width="365" height="230"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colour.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Omd-V8-phg">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colour.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dk9-no-a2X" userLabel="coverPhoto">
                                                             <rect key="frame" x="0.0" y="0.0" width="365" height="120"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="profilePic">
@@ -635,6 +635,13 @@
                                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
+                                                        <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Investment or Funding" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4p-k3-xLn">
+                                                            <rect key="frame" x="99" y="179" width="166" height="30"/>
+                                                            <color key="backgroundColor" red="0.29803921568627451" green="0.67450980392156867" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -644,10 +651,10 @@
                                                         <constraint firstItem="mvu-D4-Bh4" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" constant="16" id="3ig-Zy-AU5"/>
                                                         <constraint firstItem="uOM-AQ-y1h" firstAttribute="top" secondItem="mvu-D4-Bh4" secondAttribute="bottom" constant="8" symbolic="YES" id="68J-Kz-dah"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" constant="134" id="6Pa-Cj-g7y"/>
+                                                        <constraint firstItem="dk9-no-a2X" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" id="7Us-ho-dcW"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="leading" secondItem="hlj-kw-R6D" secondAttribute="trailing" constant="5" id="9eR-66-tGd"/>
                                                         <constraint firstAttribute="trailing" secondItem="JmM-zq-pfx" secondAttribute="trailing" constant="5" id="9kL-06-BOa"/>
                                                         <constraint firstAttribute="trailing" secondItem="RPF-sJ-X3J" secondAttribute="trailing" constant="5" id="Dcf-gk-Qfl"/>
-                                                        <constraint firstItem="Omd-V8-phg" firstAttribute="height" secondItem="CNG-y0-fDq" secondAttribute="height" multiplier="0.52" id="EBB-Oo-L83"/>
                                                         <constraint firstItem="hlj-kw-R6D" firstAttribute="top" secondItem="uOM-AQ-y1h" secondAttribute="bottom" constant="8" symbolic="YES" id="GDd-fE-P9r"/>
                                                         <constraint firstItem="tNF-Vw-dmq" firstAttribute="top" secondItem="hlj-kw-R6D" secondAttribute="bottom" constant="26" id="GZs-ci-k57"/>
                                                         <constraint firstItem="tNF-Vw-dmq" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" constant="5" id="HxD-oY-ioT"/>
@@ -658,18 +665,18 @@
                                                         <constraint firstItem="mvu-D4-Bh4" firstAttribute="centerX" secondItem="tNF-Vw-dmq" secondAttribute="centerX" id="Y1h-CG-MXZ"/>
                                                         <constraint firstItem="xGW-jd-6xK" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" constant="5" id="a0f-TK-QeM"/>
                                                         <constraint firstItem="JmM-zq-pfx" firstAttribute="width" secondItem="tNF-Vw-dmq" secondAttribute="width" id="aSL-Lu-GA1"/>
-                                                        <constraint firstItem="Omd-V8-phg" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" id="hon-zd-NMz"/>
+                                                        <constraint firstItem="dk9-no-a2X" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" id="dEU-G9-Af4"/>
+                                                        <constraint firstItem="dk9-no-a2X" firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" id="db8-eh-dhi"/>
+                                                        <constraint firstItem="dk9-no-a2X" firstAttribute="height" secondItem="CNG-y0-fDq" secondAttribute="height" multiplier="0.52" id="etw-t7-K78"/>
                                                         <constraint firstItem="hlj-kw-R6D" firstAttribute="leading" secondItem="uOM-AQ-y1h" secondAttribute="leading" id="iPp-Ec-8ws"/>
                                                         <constraint firstItem="EAL-L2-lwB" firstAttribute="height" secondItem="CNG-y0-fDq" secondAttribute="height" multiplier="0.0125" id="tCB-XY-oN4"/>
                                                         <constraint firstItem="JmM-zq-pfx" firstAttribute="centerY" secondItem="CNG-y0-fDq" secondAttribute="centerY" multiplier="1.5" id="vYz-K7-Mti"/>
                                                         <constraint firstItem="RPF-sJ-X3J" firstAttribute="top" secondItem="CNG-y0-fDq" secondAttribute="top" constant="10" id="xPI-N0-qWz"/>
-                                                        <constraint firstItem="Omd-V8-phg" firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" id="yak-2e-Qoi"/>
-                                                        <constraint firstItem="Omd-V8-phg" firstAttribute="leading" secondItem="CNG-y0-fDq" secondAttribute="leading" id="zZR-6v-7xT"/>
                                                         <constraint firstItem="tNF-Vw-dmq" firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" multiplier="0.2" id="zZl-k7-5Rh"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.49020200276243098" green="0.49020200276243098" blue="0.49020200276243098" alpha="0.64000000000000001" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="CNG-y0-fDq" firstAttribute="leading" secondItem="Hzw-yC-KXJ" secondAttribute="leading" id="E1k-Ja-7Zk"/>
                                                 <constraint firstAttribute="width" secondItem="CNG-y0-fDq" secondAttribute="width" id="GF0-5Y-IAF"/>
@@ -680,7 +687,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.84867802224610556" green="0.88065135616590384" blue="0.89084081491712708" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.95367297049867794" green="0.98916237557956055" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Hzw-yC-KXJ" secondAttribute="bottom" id="0vb-81-hXe"/>
                                     <constraint firstItem="Hzw-yC-KXJ" firstAttribute="top" secondItem="ump-hS-F58" secondAttribute="top" id="JcB-0J-d25"/>
@@ -692,6 +699,7 @@
                                 <connections>
                                     <outlet property="cancelView" destination="tNF-Vw-dmq" id="LAe-lg-Hxz"/>
                                     <outlet property="constraintsView" destination="Hzw-yC-KXJ" id="NxR-Zc-fcs"/>
+                                    <outlet property="coverPhoto" destination="dk9-no-a2X" id="ZsO-hX-FSh"/>
                                     <outlet property="friendButton" destination="vyB-2A-wom" id="Vcr-Sa-PDt"/>
                                     <outlet property="friendView" destination="JmM-zq-pfx" id="Sel-P2-82H"/>
                                     <outlet property="imagePanel" destination="CNG-y0-fDq" id="xnG-JU-0x2"/>

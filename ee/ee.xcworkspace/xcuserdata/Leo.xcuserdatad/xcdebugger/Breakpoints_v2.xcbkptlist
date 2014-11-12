@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MatchesCollectionViewCell.m"
-            timestampString = "437485768.658851"
+            timestampString = "437490805.054118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-friendButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
