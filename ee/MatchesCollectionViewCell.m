@@ -6,6 +6,10 @@
 #import <CoreVideo/CoreVideo.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import <GeoFire/GeoFire.h>
+#import "LinkedInClient.h"
+#import "LinkedInProfile.h"
+
 
 
 @implementation MatchesCollectionViewCell {
@@ -111,15 +115,15 @@
     constraintsView.layer.cornerRadius=1;
     constraintsView.layer.masksToBounds = YES;
 
-    
-    
-    
     [self filters:profile];
 
     
 
 }
-
+- (void)saveFriend: (NSDictionary*) friend withUser:(NSString*) userA andUser:(NSString*) userB {
+    Firebase *friendsFirebase = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://incandescent-inferno-9409.firebaseio.com/friends/%@/%@", userA, userB]];
+    [friendsFirebase setValue:friend];
+}
 
 - (IBAction)cancelTapped:(id)sender {
     NSLog(@"CANCEL TAPPED");
@@ -133,6 +137,11 @@
 
 - (IBAction)friendButtonClicked:(id)sender {
     
+    NSNumber *timeNow = @([[NSDate date] timeIntervalSince1970]);
+    NSString *friend = @"yes";
+    NSDictionary *match = @{ @"friend" : friend, @"time" : timeNow};
+    [self saveFriend:friend withUser:@"a" andUser:@"b"];
+
     
 }
 @end
