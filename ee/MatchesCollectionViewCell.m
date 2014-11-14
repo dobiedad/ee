@@ -42,6 +42,7 @@
     friendView.layer.masksToBounds = YES;
     [self blur];
 
+
     
 //    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
 //    //self.imageView.image=[self applyFilterTo:inputImage];
@@ -70,9 +71,9 @@
 - (void)blur {
     //[self startLocationManager];
     
-    CGRect screenRect = [[UIScreen mainScreen] bounds];
-    CGFloat screenWidth = screenRect.size.width;
-    CGFloat screenHeight = screenRect.size.height;
+    CGFloat coverWidth = coverPhoto.frame.size.width;
+    CGFloat coverHeight = coverPhoto.frame.size.height;
+
 
     
     
@@ -84,7 +85,7 @@
     UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
     UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
     [vibrancyEffectView setFrame:self.coverPhoto.bounds];
-    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    blurView.frame = CGRectMake(0, 0, coverWidth, coverHeight);
     [self.coverPhoto insertSubview:blurView atIndex:0];
     [blurView.contentView addSubview:vibrancyEffectView];
 }
@@ -114,7 +115,7 @@
     
     
     [self filters:profile];
-    
+
     
 
 }
@@ -126,6 +127,7 @@
 
 
 - (LinkedInProfile *)profile {
+    
     return _profile;
 }
 

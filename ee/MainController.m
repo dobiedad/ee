@@ -40,6 +40,7 @@
     }
     
     [self startLocationManager];
+    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
