@@ -33,7 +33,7 @@
                         <rect key="frame" x="93" y="44" width="154" height="30"/>
                         <color key="backgroundColor" red="0.54901960780000003" green="1" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                     </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-KW-wHS" userLabel="chatButtonView">
                         <rect key="frame" x="338" y="13" width="64" height="64"/>
@@ -56,7 +56,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" secondItem="EDU-6D-2e7" secondAttribute="height" id="BOe-22-Dy1"/>
                             <constraint firstAttribute="centerX" secondItem="9ja-8q-tCW" secondAttribute="centerX" id="CHR-NU-DwG"/>
