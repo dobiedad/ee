@@ -233,7 +233,6 @@
 				B3C91D491A1BB67F00BDC679 /* Matches */,
 				B3C91D481A1BB66400BDC679 /* images */,
 				B3B7808B19DD8924007ED955 /* Podfile */,
-				B3B7807219DD8913007ED955 /* Images.xcassets */,
 				B3B7807419DD8913007ED955 /* LaunchScreen.xib */,
 				B3B7806219DD8912007ED955 /* Supporting Files */,
 			);
@@ -269,6 +268,7 @@
 		B3C91D481A1BB66400BDC679 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B3B7807219DD8913007ED955 /* Images.xcassets */,
 				B3797D721A02A129004093C1 /* weed.jpg */,
 				B3797D731A02A129004093C1 /* weed@2x.jpg */,
 				B3983D2E1A013B00004D3FFA /* chat.png */,

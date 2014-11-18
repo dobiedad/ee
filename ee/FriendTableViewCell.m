@@ -5,6 +5,7 @@
 @implementation FriendTableViewCell
 @synthesize profilePic;
 @synthesize firstNameLabel;
+@synthesize chatButtonView;
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -20,7 +21,10 @@
     self.profilePic.clipsToBounds = YES;
     self.profilePic.layer.masksToBounds = YES;
     self.profilePic.image = [UIImage imageNamed:@"mrbean.png"];
-    
+    self.chatButtonView.layer.cornerRadius = 31.0;
+
+    self.chatButtonView.clipsToBounds = YES;
+    self.chatButtonView.layer.masksToBounds = YES;
     self.backgroundColor = [UIColor colorWithRed: 68.0/255.0 green: 125.0/255.0 blue: 190.0/255.0 alpha: 0.1];
 }
 - (void)awakeFromNib {
