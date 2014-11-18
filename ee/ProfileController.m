@@ -20,6 +20,8 @@
 @synthesize infoScrollView;
 @synthesize profileBackgroundView;
 @synthesize aboutMeTextView;
+@synthesize friendButtonView;
+@synthesize chatButtonView;
 
 
 
@@ -30,6 +32,7 @@
     [self paralax];
     [self blur];
     [self profilePic];
+    [self buttonBorderRadius];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -94,6 +97,12 @@
     }];
     
    
+}
+- (void)buttonBorderRadius{
+    CGFloat buttonWidth = chatButtonView.frame.size.width;
+    friendButtonView.layer.cornerRadius=buttonWidth/2;
+    chatButtonView.layer.cornerRadius=buttonWidth/2;
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
