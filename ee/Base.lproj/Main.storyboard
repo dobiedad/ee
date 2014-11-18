@@ -249,6 +249,37 @@
             </objects>
             <point key="canvasLocation" x="1269.5" y="702.5"/>
         </scene>
+        <!--Friend Controller-->
+        <scene sceneID="MPo-Jg-qak">
+            <objects>
+                <viewController id="UtE-aS-Adu" customClass="FriendController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H4B-tU-VoA"/>
+                        <viewControllerLayoutGuide type="bottom" id="YNz-gS-d5d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aS5-3g-eIa" userLabel="superView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-Yf-oXe" userLabel="friendsTable">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7w5-Yf-oXe" secondAttribute="centerX" id="6LE-NN-9uy"/>
+                            <constraint firstItem="7w5-Yf-oXe" firstAttribute="top" secondItem="H4B-tU-VoA" secondAttribute="bottom" id="ADk-US-2fQ"/>
+                            <constraint firstAttribute="width" secondItem="7w5-Yf-oXe" secondAttribute="width" id="k8h-WB-Y6y"/>
+                            <constraint firstAttribute="height" secondItem="7w5-Yf-oXe" secondAttribute="height" id="ml3-0G-aNh"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fi-72-qdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420.5" y="-1017.5"/>
+        </scene>
         <!--Sign In Controller-->
         <scene sceneID="wCS-7Y-X5U">
             <objects>
@@ -494,6 +525,12 @@
                         <rect key="frame" x="0.0" y="44" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egn-nT-5uw" userLabel="friendsContainer">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <connections>
+                                    <segue destination="UtE-aS-Adu" kind="embed" id="l74-DB-760"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Tl-Dfr" userLabel="matchesContainer">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -517,17 +554,23 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" id="3sK-OC-anj"/>
+                            <constraint firstAttribute="trailing" secondItem="Egn-nT-5uw" secondAttribute="trailing" id="5O1-jq-hzz"/>
                             <constraint firstAttribute="width" secondItem="fZh-Tl-Dfr" secondAttribute="width" id="7jp-wF-CBJ"/>
+                            <constraint firstItem="Egn-nT-5uw" firstAttribute="width" secondItem="fZh-Tl-Dfr" secondAttribute="width" id="FV1-7y-vF9"/>
                             <constraint firstItem="ajA-Hn-EBw" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" constant="10" id="HF0-3R-Pkr"/>
                             <constraint firstAttribute="centerX" secondItem="ajA-Hn-EBw" secondAttribute="centerX" id="Nr5-Bn-RRe"/>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" id="dGN-OE-gpv"/>
+                            <constraint firstItem="agB-Lp-7Wx" firstAttribute="top" secondItem="Egn-nT-5uw" secondAttribute="bottom" id="fGP-gA-zKd"/>
+                            <constraint firstItem="Egn-nT-5uw" firstAttribute="leading" secondItem="rnV-4v-KiD" secondAttribute="leading" id="mc4-Zc-QBi"/>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="leading" secondItem="rnV-4v-KiD" secondAttribute="leading" id="sFv-fI-utA"/>
                             <constraint firstAttribute="bottom" secondItem="fZh-Tl-Dfr" secondAttribute="bottom" id="vAX-4t-o4u"/>
+                            <constraint firstItem="Egn-nT-5uw" firstAttribute="height" secondItem="fZh-Tl-Dfr" secondAttribute="height" id="wVo-dn-siw"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="friendsContainer" destination="Egn-nT-5uw" id="14z-7m-5da"/>
                         <outlet property="matchesContainer" destination="fZh-Tl-Dfr" id="Q6G-jW-M1B"/>
                         <outlet property="matchesSegment" destination="ajA-Hn-EBw" id="fRF-Ls-hVw"/>
                     </connections>
@@ -790,6 +833,24 @@
             </objects>
             <point key="canvasLocation" x="1526.5" y="-190.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yuo-oj-0aI">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bkN-JZ-ABa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MpE-WG-12i"/>
+                        <viewControllerLayoutGuide type="bottom" id="sPG-MT-4nu"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZDY-e0-IG6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="feG-Cr-CgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="building.jpg" width="750" height="1334"/>
@@ -802,6 +863,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="k0A-Z4-5Ir"/>
-        <segue reference="yMJ-dR-EU2"/>
+        <segue reference="ihV-HR-4i7"/>
     </inferredMetricsTieBreakers>
 </document>

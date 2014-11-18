@@ -31,6 +31,9 @@
 		B3797D751A02A129004093C1 /* weed@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3797D731A02A129004093C1 /* weed@2x.jpg */; };
 		B38C34841A1B93420048DEE5 /* shake.png in Resources */ = {isa = PBXBuildFile; fileRef = B38C34821A1B93420048DEE5 /* shake.png */; };
 		B38C34851A1B93420048DEE5 /* shake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38C34831A1B93420048DEE5 /* shake@2x.png */; };
+		B38C34881A1B9A1A0048DEE5 /* FriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = B38C34871A1B9A1A0048DEE5 /* FriendController.m */; };
+		B38C348A1A1B9AFA0048DEE5 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38C34891A1B9AFA0048DEE5 /* FriendCell.xib */; };
+		B38C348D1A1B9B3E0048DEE5 /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B38C348C1A1B9B3E0048DEE5 /* FriendTableViewCell.m */; };
 		B3983D2F1A013B00004D3FFA /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D2E1A013B00004D3FFA /* chat.png */; };
 		B3983D341A013C9E004D3FFA /* profileFlat.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D311A013C9E004D3FFA /* profileFlat.png */; };
 		B3983D351A013C9E004D3FFA /* profileFlat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3983D321A013C9E004D3FFA /* profileFlat@2x.png */; };
@@ -104,6 +107,11 @@
 		B3797D731A02A129004093C1 /* weed@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "weed@2x.jpg"; sourceTree = "<group>"; };
 		B38C34821A1B93420048DEE5 /* shake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shake.png; sourceTree = "<group>"; };
 		B38C34831A1B93420048DEE5 /* shake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake@2x.png"; sourceTree = "<group>"; };
+		B38C34861A1B9A1A0048DEE5 /* FriendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendController.h; sourceTree = "<group>"; };
+		B38C34871A1B9A1A0048DEE5 /* FriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendController.m; sourceTree = "<group>"; };
+		B38C34891A1B9AFA0048DEE5 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		B38C348B1A1B9B3E0048DEE5 /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		B38C348C1A1B9B3E0048DEE5 /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
 		B3983D2E1A013B00004D3FFA /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
 		B3983D311A013C9E004D3FFA /* profileFlat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileFlat.png; sourceTree = "<group>"; };
 		B3983D321A013C9E004D3FFA /* profileFlat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileFlat@2x.png"; sourceTree = "<group>"; };
@@ -250,6 +258,8 @@
 				035E843919EEB9F000A34C9E /* FirebaseClient.m */,
 				B3B7808B19DD8924007ED955 /* Podfile */,
 				B3B7806F19DD8913007ED955 /* Main.storyboard */,
+				B38C34861A1B9A1A0048DEE5 /* FriendController.h */,
+				B38C34871A1B9A1A0048DEE5 /* FriendController.m */,
 				B3535B7E19FFB5220083F4E8 /* NavigationController.h */,
 				B3535B7F19FFB5220083F4E8 /* NavigationController.m */,
 				B3B7807219DD8913007ED955 /* Images.xcassets */,
@@ -260,9 +270,12 @@
 				B3983D3E1A015563004D3FFA /* SlackTableViewCell.h */,
 				B3983D3F1A015563004D3FFA /* SlackTableViewCell.m */,
 				B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */,
+				B38C348B1A1B9B3E0048DEE5 /* FriendTableViewCell.h */,
+				B38C348C1A1B9B3E0048DEE5 /* FriendTableViewCell.m */,
 				B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */,
 				B3983D451A016782004D3FFA /* ChatController.h */,
 				B3983D461A016782004D3FFA /* ChatController.m */,
+				B38C34891A1B9AFA0048DEE5 /* FriendCell.xib */,
 				B35C7E531A0A3E1F00430A60 /* ChatCell.xib */,
 				B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */,
 				B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */,
@@ -397,6 +410,7 @@
 				B36FE63F19FADAB300CA6109 /* friends.png in Resources */,
 				B3B7807119DD8913007ED955 /* Main.storyboard in Resources */,
 				B38C34841A1B93420048DEE5 /* shake.png in Resources */,
+				B38C348A1A1B9AFA0048DEE5 /* FriendCell.xib in Resources */,
 				B3983D2F1A013B00004D3FFA /* chat.png in Resources */,
 				B3304C201A1396C300CE6A19 /* bino.png in Resources */,
 				B3B7807619DD8913007ED955 /* LaunchScreen.xib in Resources */,
@@ -459,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				035E843D19EEC43300A34C9E /* LinkedInProfile.m in Sources */,
+				B38C34881A1B9A1A0048DEE5 /* FriendController.m in Sources */,
 				035E843019ED759900A34C9E /* MatchesCollectionViewCell.m in Sources */,
 				B35C7E5B1A0A567B00430A60 /* MatchesCollectionViewLayout.m in Sources */,
 				B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */,
@@ -472,6 +487,7 @@
 				B3B7806B19DD8912007ED955 /* ProfileController.m in Sources */,
 				B3B7806519DD8912007ED955 /* main.m in Sources */,
 				B3535B8019FFB5220083F4E8 /* NavigationController.m in Sources */,
+				B38C348D1A1B9B3E0048DEE5 /* FriendTableViewCell.m in Sources */,
 				B353EB751A0CF3EF00463C44 /* SegmentedController.m in Sources */,
 				035E844019EECB9200A34C9E /* MainController.m in Sources */,
 				035E843319ED836900A34C9E /* SignInController.m in Sources */,
