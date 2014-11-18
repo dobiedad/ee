@@ -1,7 +1,6 @@
-
 #import "FriendController.h"
 #import "ProfileController.h"
-#import "ChatTableViewCell.h"
+#import "FriendTableViewCell.h"
 #import "SlackController.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -10,11 +9,9 @@
 @end
 
 @implementation FriendController
-{
 
-NSArray *chatUsers;
+NSArray *friends;
 LinkedInProfile *_selectedProfile;
-}
 
 
 - (void)viewDidLoad {
@@ -28,7 +25,7 @@ LinkedInProfile *_selectedProfile;
                                                                                        @"firstName": @"Jill"
                                                                                        }];
     
-    chatUsers = [NSArray arrayWithObjects:profile1, profile2, nil];
+    friends = [NSArray arrayWithObjects:profile1, profile2, nil];
     
     // Do any additional setup after loading the view.
 }
@@ -40,20 +37,18 @@ LinkedInProfile *_selectedProfile;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [chatUsers count];
+    return [friends count];
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"FriendCell";
-    tableView.backgroundColor= [UIColor clearColor];
-    
-    
-    ChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    FriendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
         [tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle:nil] forCellReuseIdentifier:@"FriendCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"FriendCell"];
     }
-    [cell setProfile: [chatUsers objectAtIndex:indexPath.row]];
+    [cell setProfile: [friends objectAtIndex:indexPath.row]];
     return cell;
 }
 

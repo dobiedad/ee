@@ -264,6 +264,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-Yf-oXe" userLabel="friendsTable">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UtE-aS-Adu" id="ptc-7I-jnt"/>
+                                    <outlet property="delegate" destination="UtE-aS-Adu" id="ia3-p4-eAI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -511,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfZ-EQ-Udq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752.5" y="707.5"/>
+            <point key="canvasLocation" x="718.5" y="837.5"/>
         </scene>
         <!--Segmented Controller-->
         <scene sceneID="fjd-MU-nIg">
@@ -689,7 +693,6 @@
                                                                 <constraint firstItem="xsg-8e-BjZ" firstAttribute="leading" secondItem="tNF-Vw-dmq" secondAttribute="leading" id="6cI-P0-ao6"/>
                                                                 <constraint firstAttribute="centerY" secondItem="ged-oS-HLW" secondAttribute="centerY" id="Irw-3W-WLF"/>
                                                                 <constraint firstAttribute="height" secondItem="xsg-8e-BjZ" secondAttribute="height" id="M12-3F-e47"/>
-                                                                <constraint firstItem="xsg-8e-BjZ" firstAttribute="leading" secondItem="tNF-Vw-dmq" secondAttribute="leading" constant="5" id="RjP-aO-dTq"/>
                                                                 <constraint firstAttribute="height" secondItem="tNF-Vw-dmq" secondAttribute="width" multiplier="1:1" id="ZXb-3H-34E"/>
                                                                 <constraint firstAttribute="width" secondItem="xsg-8e-BjZ" secondAttribute="width" id="aMY-PG-Xyx"/>
                                                                 <constraint firstAttribute="centerX" secondItem="ged-oS-HLW" secondAttribute="centerX" id="mnw-fg-HfW"/>
@@ -832,24 +835,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VcK-Tw-G32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1526.5" y="-190.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="yuo-oj-0aI">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bkN-JZ-ABa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MpE-WG-12i"/>
-                        <viewControllerLayoutGuide type="bottom" id="sPG-MT-4nu"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ZDY-e0-IG6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="feG-Cr-CgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

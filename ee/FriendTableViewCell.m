@@ -1,23 +1,39 @@
-//
-//  FriendTableViewCell.m
-//  ee
-//
-//  Created by Leo Mdivani on 18/11/2014.
-//  Copyright (c) 2014 Dizzolve. All rights reserved.
-//
 
 #import "FriendTableViewCell.h"
+#import "LinkedInProfile.h"
 
 @implementation FriendTableViewCell
+@synthesize profilePic;
+@synthesize firstNameLabel;
 
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [self profileImage];
+   
+    
+}
+
+- (void)profileImage {
+    self.profilePic.layer.cornerRadius = 40.0;
+    self.profilePic.layer.borderColor = [UIColor greenColor].CGColor;
+    self.profilePic.layer.borderWidth = 1.5;
+    self.profilePic.clipsToBounds = YES;
+    self.profilePic.layer.masksToBounds = YES;
+    self.profilePic.image = [UIImage imageNamed:@"mrbean.png"];
+    
+    self.backgroundColor = [UIColor colorWithRed: 68.0/255.0 green: 125.0/255.0 blue: 190.0/255.0 alpha: 0.1];
+}
 - (void)awakeFromNib {
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+    
+}
 
-    // Configure the view for the selected state
+-(void)setProfile: (LinkedInProfile*) profile {
+    self.firstNameLabel.text = profile.firstName;
+
 }
 
 @end

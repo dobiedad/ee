@@ -1,13 +1,10 @@
-//
-//  FriendTableViewCell.h
-//  ee
-//
-//  Created by Leo Mdivani on 18/11/2014.
-//  Copyright (c) 2014 Dizzolve. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+#import "LinkedInProfile.h"
+
 
 @interface FriendTableViewCell : UITableViewCell
+-(void)setProfile: (LinkedInProfile*) profile;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
+@property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 
 @end
