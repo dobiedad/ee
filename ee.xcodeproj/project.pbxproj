@@ -221,66 +221,21 @@
 		B3B7806119DD8912007ED955 /* ee */ = {
 			isa = PBXGroup;
 			children = (
-				B3797D721A02A129004093C1 /* weed.jpg */,
-				B3797D731A02A129004093C1 /* weed@2x.jpg */,
-				B3983D2E1A013B00004D3FFA /* chat.png */,
-				B36B5B0519F6B39C00C3BED1 /* bg.png */,
-				B3983D311A013C9E004D3FFA /* profileFlat.png */,
-				B3983D361A013D1B004D3FFA /* chat@2x.png */,
-				B38C34821A1B93420048DEE5 /* shake.png */,
-				B38C34831A1B93420048DEE5 /* shake@2x.png */,
-				B3983D321A013C9E004D3FFA /* profileFlat@2x.png */,
-				B3983D411A015DFA004D3FFA /* building.jpg */,
-				B35C7E4A1A0A365E00430A60 /* mrbean.png */,
-				B3983D421A015DFA004D3FFA /* building@2x.jpg */,
-				B3628C2419F6E22A00389C31 /* colour.jpg */,
-				B36FE63E19FADAB300CA6109 /* friends.png */,
-				B3304C1F1A1396C300CE6A19 /* bino.png */,
-				B39FEED519F7BD7F00613416 /* cancel.png */,
-				B3628C2519F6E22A00389C31 /* colour@2x.jpg */,
 				B3B7806619DD8912007ED955 /* AppDelegate.h */,
 				B3B7806719DD8912007ED955 /* AppDelegate.m */,
-				035E843119ED836900A34C9E /* SignInController.h */,
-				035E843219ED836900A34C9E /* SignInController.m */,
-				035E843E19EECB9200A34C9E /* MainController.h */,
-				035E843F19EECB9200A34C9E /* MainController.m */,
-				B3B7806919DD8912007ED955 /* ProfileController.h */,
-				B3B7806A19DD8912007ED955 /* ProfileController.m */,
-				B3B7806C19DD8912007ED955 /* MatchesController.h */,
-				B3B7806D19DD8913007ED955 /* MatchesController.m */,
-				035E842E19ED759900A34C9E /* MatchesCollectionViewCell.h */,
-				035E842F19ED759900A34C9E /* MatchesCollectionViewCell.m */,
-				035E843519ED855A00A34C9E /* LinkedInClient.h */,
-				035E843619ED855A00A34C9E /* LinkedInClient.m */,
-				035E843B19EEC43300A34C9E /* LinkedInProfile.h */,
-				035E843C19EEC43300A34C9E /* LinkedInProfile.m */,
-				035E843819EEB9F000A34C9E /* FirebaseClient.h */,
-				035E843919EEB9F000A34C9E /* FirebaseClient.m */,
-				B3B7808B19DD8924007ED955 /* Podfile */,
 				B3B7806F19DD8913007ED955 /* Main.storyboard */,
-				B38C34861A1B9A1A0048DEE5 /* FriendController.h */,
-				B38C34871A1B9A1A0048DEE5 /* FriendController.m */,
-				B38C348B1A1B9B3E0048DEE5 /* FriendTableViewCell.h */,
-				B38C348C1A1B9B3E0048DEE5 /* FriendTableViewCell.m */,
-				B3535B7E19FFB5220083F4E8 /* NavigationController.h */,
-				B3535B7F19FFB5220083F4E8 /* NavigationController.m */,
+				B3C91D4F1A1BB77000BDC679 /* Profile */,
+				B3C91D4E1A1BB74F00BDC679 /* Navigation */,
+				B3C91D4D1A1BB73600BDC679 /* Main&SignIn */,
+				B3C91D4C1A1BB71800BDC679 /* Firebase&LinkedIn */,
+				B3C91D4B1A1BB6F700BDC679 /* Chat */,
+				B3C91D4A1A1BB6B500BDC679 /* Friends */,
+				B3C91D491A1BB67F00BDC679 /* Matches */,
+				B3C91D481A1BB66400BDC679 /* images */,
+				B3B7808B19DD8924007ED955 /* Podfile */,
 				B3B7807219DD8913007ED955 /* Images.xcassets */,
 				B3B7807419DD8913007ED955 /* LaunchScreen.xib */,
 				B3B7806219DD8912007ED955 /* Supporting Files */,
-				B3983D3E1A015563004D3FFA /* SlackTableViewCell.h */,
-				B3983D3F1A015563004D3FFA /* SlackTableViewCell.m */,
-				B3983D3C1A01521D004D3FFA /* SlackController.m */,
-				B3983D3B1A01521D004D3FFA /* SlackController.h */,
-				B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */,
-				B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */,
-				B3983D451A016782004D3FFA /* ChatController.h */,
-				B3983D461A016782004D3FFA /* ChatController.m */,
-				B38C34891A1B9AFA0048DEE5 /* FriendCell.xib */,
-				B35C7E531A0A3E1F00430A60 /* ChatCell.xib */,
-				B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */,
-				B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */,
-				B353EB731A0CF3EF00463C44 /* SegmentedController.h */,
-				B353EB741A0CF3EF00463C44 /* SegmentedController.m */,
 			);
 			path = ee;
 			sourceTree = "<group>";
@@ -309,6 +264,115 @@
 				B3B7808019DD8913007ED955 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3C91D481A1BB66400BDC679 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B3797D721A02A129004093C1 /* weed.jpg */,
+				B3797D731A02A129004093C1 /* weed@2x.jpg */,
+				B3983D2E1A013B00004D3FFA /* chat.png */,
+				B36B5B0519F6B39C00C3BED1 /* bg.png */,
+				B3983D311A013C9E004D3FFA /* profileFlat.png */,
+				B3983D361A013D1B004D3FFA /* chat@2x.png */,
+				B38C34821A1B93420048DEE5 /* shake.png */,
+				B38C34831A1B93420048DEE5 /* shake@2x.png */,
+				B3983D321A013C9E004D3FFA /* profileFlat@2x.png */,
+				B3983D411A015DFA004D3FFA /* building.jpg */,
+				B35C7E4A1A0A365E00430A60 /* mrbean.png */,
+				B3983D421A015DFA004D3FFA /* building@2x.jpg */,
+				B3628C2419F6E22A00389C31 /* colour.jpg */,
+				B36FE63E19FADAB300CA6109 /* friends.png */,
+				B3304C1F1A1396C300CE6A19 /* bino.png */,
+				B39FEED519F7BD7F00613416 /* cancel.png */,
+				B3628C2519F6E22A00389C31 /* colour@2x.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		B3C91D491A1BB67F00BDC679 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				B35C7E591A0A567B00430A60 /* MatchesCollectionViewLayout.h */,
+				B35C7E5A1A0A567B00430A60 /* MatchesCollectionViewLayout.m */,
+				B3B7806C19DD8912007ED955 /* MatchesController.h */,
+				B3B7806D19DD8913007ED955 /* MatchesController.m */,
+				035E842E19ED759900A34C9E /* MatchesCollectionViewCell.h */,
+				035E842F19ED759900A34C9E /* MatchesCollectionViewCell.m */,
+			);
+			name = Matches;
+			sourceTree = "<group>";
+		};
+		B3C91D4A1A1BB6B500BDC679 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				B38C34861A1B9A1A0048DEE5 /* FriendController.h */,
+				B38C34871A1B9A1A0048DEE5 /* FriendController.m */,
+				B38C34891A1B9AFA0048DEE5 /* FriendCell.xib */,
+				B38C348B1A1B9B3E0048DEE5 /* FriendTableViewCell.h */,
+				B38C348C1A1B9B3E0048DEE5 /* FriendTableViewCell.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		B3C91D4B1A1BB6F700BDC679 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				B35C7E531A0A3E1F00430A60 /* ChatCell.xib */,
+				B3983D3E1A015563004D3FFA /* SlackTableViewCell.h */,
+				B3983D3F1A015563004D3FFA /* SlackTableViewCell.m */,
+				B3983D3C1A01521D004D3FFA /* SlackController.m */,
+				B3983D3B1A01521D004D3FFA /* SlackController.h */,
+				B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */,
+				B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */,
+				B3983D451A016782004D3FFA /* ChatController.h */,
+				B3983D461A016782004D3FFA /* ChatController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		B3C91D4C1A1BB71800BDC679 /* Firebase&LinkedIn */ = {
+			isa = PBXGroup;
+			children = (
+				035E843519ED855A00A34C9E /* LinkedInClient.h */,
+				035E843619ED855A00A34C9E /* LinkedInClient.m */,
+				035E843B19EEC43300A34C9E /* LinkedInProfile.h */,
+				035E843C19EEC43300A34C9E /* LinkedInProfile.m */,
+				035E843819EEB9F000A34C9E /* FirebaseClient.h */,
+				035E843919EEB9F000A34C9E /* FirebaseClient.m */,
+			);
+			name = "Firebase&LinkedIn";
+			sourceTree = "<group>";
+		};
+		B3C91D4D1A1BB73600BDC679 /* Main&SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				035E843119ED836900A34C9E /* SignInController.h */,
+				035E843219ED836900A34C9E /* SignInController.m */,
+				035E843E19EECB9200A34C9E /* MainController.h */,
+				035E843F19EECB9200A34C9E /* MainController.m */,
+			);
+			name = "Main&SignIn";
+			sourceTree = "<group>";
+		};
+		B3C91D4E1A1BB74F00BDC679 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B3535B7E19FFB5220083F4E8 /* NavigationController.h */,
+				B3535B7F19FFB5220083F4E8 /* NavigationController.m */,
+				B353EB731A0CF3EF00463C44 /* SegmentedController.h */,
+				B353EB741A0CF3EF00463C44 /* SegmentedController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		B3C91D4F1A1BB77000BDC679 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B3B7806919DD8912007ED955 /* ProfileController.h */,
+				B3B7806A19DD8912007ED955 /* ProfileController.m */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

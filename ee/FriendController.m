@@ -12,7 +12,7 @@
 
 NSArray *friends;
 LinkedInProfile *_selectedProfile;
-
+@synthesize backgroundImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,6 +26,8 @@ LinkedInProfile *_selectedProfile;
                                                                                        }];
     
     friends = [NSArray arrayWithObjects:profile1, profile2, nil];
+    [self layoutBlur];
+ 
     
     // Do any additional setup after loading the view.
 }
@@ -43,6 +45,8 @@ LinkedInProfile *_selectedProfile;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"FriendCell";
+    tableView.backgroundColor= [UIColor clearColor];
+
     FriendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
         [tableView registerNib:[UINib nibWithNibName:@"FriendCell" bundle:nil] forCellReuseIdentifier:@"FriendCell"];
@@ -74,6 +78,23 @@ LinkedInProfile *_selectedProfile;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100.0;
 }
+- (void)layoutBlur {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    
+    UIVibrancyEffect *vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:effect];
+    UIVisualEffectView *vibrancyEffectView = [[UIVisualEffectView alloc] initWithEffect:vibrancyEffect];
+    [vibrancyEffectView setFrame:self.backgroundImage.bounds];
+    blurView.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    [self.backgroundImage insertSubview:blurView atIndex:0];
+    [blurView.contentView addSubview:vibrancyEffectView];
+}
+
+
 
 
 @end

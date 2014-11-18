@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="0.50980395078659058" blue="0.70980393886566162" alpha="0.52000000000000002" colorSpace="deviceRGB"/>
+                <color key="backgroundColor" red="0.0" green="0.50980395078659058" blue="0.70980393886566162" alpha="0.5" colorSpace="deviceRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="mif-Sl-5qH" secondAttribute="leading" multiplier="20" id="6SL-Z2-v0Y"/>
                     <constraint firstItem="fgg-UC-0Ea" firstAttribute="leading" secondItem="mif-Sl-5qH" secondAttribute="trailing" constant="8" id="HTC-fc-m1W"/>

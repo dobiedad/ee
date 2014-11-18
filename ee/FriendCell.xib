@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -24,14 +26,58 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abJ-Kf-eSy">
                         <rect key="frame" x="93" y="8" width="46" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Front End Developer" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-kk-yXq">
+                        <rect key="frame" x="93" y="44" width="154" height="30"/>
+                        <color key="backgroundColor" red="0.54901960780000003" green="1" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-KW-wHS" userLabel="chatButtonView">
+                        <rect key="frame" x="338" y="14" width="64" height="64"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDU-6D-2e7" userLabel="chatButton">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.70916781770000004" green="0.032165054419999999" blue="0.112714157" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="EDU-6D-2e7" secondAttribute="width" multiplier="1:1" id="FKW-gt-fTF"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat.png" translatesAutoresizingMaskIntoConstraints="NO" id="9ja-8q-tCW" userLabel="chatButtonImage">
+                                <rect key="frame" x="6" y="6" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="9ja-8q-tCW" secondAttribute="width" multiplier="1:1" id="zeu-Xk-gV4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9ja-8q-tCW" secondAttribute="centerX" id="CHR-NU-DwG"/>
+                            <constraint firstAttribute="centerY" secondItem="9ja-8q-tCW" secondAttribute="centerY" id="DHS-b0-EI7"/>
+                            <constraint firstAttribute="trailing" secondItem="EDU-6D-2e7" secondAttribute="trailing" id="P8T-Nn-sGE"/>
+                            <constraint firstItem="EDU-6D-2e7" firstAttribute="leading" secondItem="wjg-KW-wHS" secondAttribute="leading" id="PqJ-Iv-uCL"/>
+                            <constraint firstAttribute="bottom" secondItem="EDU-6D-2e7" secondAttribute="bottom" id="SJz-zi-Obm"/>
+                            <constraint firstItem="EDU-6D-2e7" firstAttribute="top" secondItem="wjg-KW-wHS" secondAttribute="top" id="bCV-Md-CAi"/>
+                            <constraint firstItem="9ja-8q-tCW" firstAttribute="width" secondItem="wjg-KW-wHS" secondAttribute="width" multiplier="0.8" id="qUD-vH-KML"/>
+                            <constraint firstItem="EDU-6D-2e7" firstAttribute="top" secondItem="wjg-KW-wHS" secondAttribute="top" id="udW-H3-FRS"/>
+                            <constraint firstItem="EDU-6D-2e7" firstAttribute="leading" secondItem="wjg-KW-wHS" secondAttribute="leading" id="zQ8-XX-oAa"/>
+                        </constraints>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" red="1" green="0.10367313702691927" blue="0.098517894310440668" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.0" green="0.50980395079999996" blue="0.70980393890000004" alpha="0.5" colorSpace="deviceRGB"/>
                 <constraints>
                     <constraint firstItem="abJ-Kf-eSy" firstAttribute="top" secondItem="OCg-6Y-veC" secondAttribute="topMargin" id="9df-EG-PcA"/>
+                    <constraint firstAttribute="centerY" secondItem="wjg-KW-wHS" secondAttribute="centerY" id="KkV-oY-MJW"/>
                     <constraint firstItem="bwg-zj-DKz" firstAttribute="leading" secondItem="OCg-6Y-veC" secondAttribute="leading" constant="5" id="LhH-kv-S6T"/>
+                    <constraint firstItem="wjg-KW-wHS" firstAttribute="width" secondItem="bwg-zj-DKz" secondAttribute="width" multiplier="0.8" id="MoT-jc-rGg"/>
+                    <constraint firstItem="mtg-kk-yXq" firstAttribute="leading" secondItem="abJ-Kf-eSy" secondAttribute="leading" id="iEH-YE-0xn"/>
+                    <constraint firstAttribute="trailing" secondItem="wjg-KW-wHS" secondAttribute="trailing" constant="10" id="ipz-aY-2bJ"/>
+                    <constraint firstItem="mtg-kk-yXq" firstAttribute="top" secondItem="abJ-Kf-eSy" secondAttribute="bottom" constant="15" id="qxm-uG-B5i"/>
                     <constraint firstAttribute="centerY" secondItem="bwg-zj-DKz" secondAttribute="centerY" id="tbf-IY-m2E"/>
                     <constraint firstItem="abJ-Kf-eSy" firstAttribute="leading" secondItem="bwg-zj-DKz" secondAttribute="trailing" constant="8" symbolic="YES" id="u9A-GT-MYM"/>
                 </constraints>
@@ -43,4 +89,7 @@
             <point key="canvasLocation" x="482" y="-171.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chat.png" width="32" height="32"/>
+    </resources>
 </document>

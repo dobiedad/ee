@@ -261,28 +261,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-Yf-oXe" userLabel="friendsTable">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colour.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="N1g-Wq-nTM" userLabel="bgImage">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7w5-Yf-oXe" userLabel="friendsTable">
+                                <rect key="frame" x="0.0" y="60" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="UtE-aS-Adu" id="ptc-7I-jnt"/>
                                     <outlet property="delegate" destination="UtE-aS-Adu" id="ia3-p4-eAI"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="7w5-Yf-oXe" secondAttribute="centerX" id="6LE-NN-9uy"/>
-                            <constraint firstItem="7w5-Yf-oXe" firstAttribute="top" secondItem="H4B-tU-VoA" secondAttribute="bottom" id="ADk-US-2fQ"/>
+                            <constraint firstItem="7w5-Yf-oXe" firstAttribute="top" secondItem="H4B-tU-VoA" secondAttribute="bottom" constant="60" id="ADk-US-2fQ"/>
+                            <constraint firstAttribute="width" secondItem="N1g-Wq-nTM" secondAttribute="width" id="hza-el-DBh"/>
                             <constraint firstAttribute="width" secondItem="7w5-Yf-oXe" secondAttribute="width" id="k8h-WB-Y6y"/>
                             <constraint firstAttribute="height" secondItem="7w5-Yf-oXe" secondAttribute="height" id="ml3-0G-aNh"/>
+                            <constraint firstItem="N1g-Wq-nTM" firstAttribute="top" secondItem="H4B-tU-VoA" secondAttribute="bottom" id="scT-1Z-sVi"/>
+                            <constraint firstItem="N1g-Wq-nTM" firstAttribute="leading" secondItem="aS5-3g-eIa" secondAttribute="leading" id="ti4-FW-KiK"/>
+                            <constraint firstAttribute="height" secondItem="N1g-Wq-nTM" secondAttribute="height" id="xwt-gh-ZKK"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="N1g-Wq-nTM" id="cRf-sY-6Dj"/>
+                        <segue destination="kTp-BM-7cN" kind="show" identifier="slack" id="659-Vp-Fca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fi-72-qdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420.5" y="-1017.5"/>
+            <point key="canvasLocation" x="949.5" y="79.5"/>
         </scene>
         <!--Sign In Controller-->
         <scene sceneID="wCS-7Y-X5U">
@@ -565,6 +577,7 @@
                             <constraint firstAttribute="centerX" secondItem="ajA-Hn-EBw" secondAttribute="centerX" id="Nr5-Bn-RRe"/>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="top" secondItem="uGu-dP-INy" secondAttribute="bottom" id="dGN-OE-gpv"/>
                             <constraint firstItem="agB-Lp-7Wx" firstAttribute="top" secondItem="Egn-nT-5uw" secondAttribute="bottom" id="fGP-gA-zKd"/>
+                            <constraint firstItem="Egn-nT-5uw" firstAttribute="top" secondItem="ajA-Hn-EBw" secondAttribute="bottom" constant="-38" id="kyG-hS-wfJ"/>
                             <constraint firstItem="Egn-nT-5uw" firstAttribute="leading" secondItem="rnV-4v-KiD" secondAttribute="leading" id="mc4-Zc-QBi"/>
                             <constraint firstItem="fZh-Tl-Dfr" firstAttribute="leading" secondItem="rnV-4v-KiD" secondAttribute="leading" id="sFv-fI-utA"/>
                             <constraint firstAttribute="bottom" secondItem="fZh-Tl-Dfr" secondAttribute="bottom" id="vAX-4t-o4u"/>
@@ -847,7 +860,7 @@
         <image name="shake.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="659-Vp-Fca"/>
         <segue reference="k0A-Z4-5Ir"/>
-        <segue reference="ihV-HR-4i7"/>
     </inferredMetricsTieBreakers>
 </document>
