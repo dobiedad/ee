@@ -319,7 +319,7 @@
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="va3-5V-eD2" userLabel="spinner">
                                 <rect key="frame" x="282" y="281" width="37" height="37"/>
-                                <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="0.18780392778513888" green="1" blue="0.069012015903085144" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shakeLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="JHp-ob-cbS">
                                 <rect key="frame" x="210" y="60" width="180" height="180"/>
@@ -327,16 +327,24 @@
                                     <constraint firstAttribute="width" secondItem="JHp-ob-cbS" secondAttribute="height" multiplier="1:1" id="SvE-Z1-nOM"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY7-Ap-F7k">
+                                <rect key="frame" x="235" y="358" width="130" height="35"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1656301614" green="0.3298932383" blue="1" alpha="0.42999999999999999" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nCe-PK-pgF" firstAttribute="centerY" secondItem="vGS-hu-5oG" secondAttribute="centerY" id="Ad1-ch-C9R"/>
+                            <constraint firstAttribute="centerY" secondItem="cY7-Ap-F7k" secondAttribute="centerY" multiplier="0.8" id="EnF-gr-AVK"/>
                             <constraint firstAttribute="centerY" secondItem="va3-5V-eD2" secondAttribute="centerY" id="F4V-Gt-Gxp"/>
                             <constraint firstAttribute="centerX" secondItem="JHp-ob-cbS" secondAttribute="centerX" id="JHQ-vS-L7M"/>
                             <constraint firstItem="JHp-ob-cbS" firstAttribute="width" secondItem="vGS-hu-5oG" secondAttribute="width" multiplier="0.3" id="bUH-Jz-ZBf"/>
                             <constraint firstAttribute="centerY" secondItem="JHp-ob-cbS" secondAttribute="centerY" multiplier="2" id="h5O-jx-Gjf"/>
                             <constraint firstAttribute="centerX" secondItem="va3-5V-eD2" secondAttribute="centerX" id="ji7-FK-kJP"/>
                             <constraint firstItem="nCe-PK-pgF" firstAttribute="centerX" secondItem="vGS-hu-5oG" secondAttribute="centerX" id="lZF-1Q-QIu"/>
+                            <constraint firstAttribute="centerX" secondItem="cY7-Ap-F7k" secondAttribute="centerX" id="py6-Vh-cyA"/>
                         </constraints>
                     </view>
                     <connections>
