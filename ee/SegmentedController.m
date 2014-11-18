@@ -45,11 +45,11 @@
             
             matchesContainer.hidden=true;
             friendsContainer.hidden=false;
-//            [UIView transitionWithView:friendsContainer
-//                              duration:0.7
-//                               options:UIViewAnimationOptionTransitionCrossDissolve
-//                            animations:NULL
-//                            completion:NULL];
+            [UIView transitionWithView:friendsContainer
+                              duration:0.7
+                               options:UIViewAnimationOptionTransitionCrossDissolve
+                            animations:NULL
+                            completion:NULL];
 
             
         }

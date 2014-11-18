@@ -304,7 +304,7 @@
                         <viewControllerLayoutGuide type="top" id="SYT-hT-7mz"/>
                         <viewControllerLayoutGuide type="bottom" id="fvn-i3-CRS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vGS-hu-5oG">
+                    <view key="view" contentMode="scaleToFill" id="vGS-hu-5oG" userLabel="superView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -321,11 +321,20 @@
                                 <rect key="frame" x="282" y="281" width="37" height="37"/>
                                 <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shakeLarge.png" translatesAutoresizingMaskIntoConstraints="NO" id="JHp-ob-cbS">
+                                <rect key="frame" x="210" y="60" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JHp-ob-cbS" secondAttribute="height" multiplier="1:1" id="SvE-Z1-nOM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1656301614" green="0.3298932383" blue="1" alpha="0.42999999999999999" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nCe-PK-pgF" firstAttribute="centerY" secondItem="vGS-hu-5oG" secondAttribute="centerY" id="Ad1-ch-C9R"/>
                             <constraint firstAttribute="centerY" secondItem="va3-5V-eD2" secondAttribute="centerY" id="F4V-Gt-Gxp"/>
+                            <constraint firstAttribute="centerX" secondItem="JHp-ob-cbS" secondAttribute="centerX" id="JHQ-vS-L7M"/>
+                            <constraint firstItem="JHp-ob-cbS" firstAttribute="width" secondItem="vGS-hu-5oG" secondAttribute="width" multiplier="0.3" id="bUH-Jz-ZBf"/>
+                            <constraint firstAttribute="centerY" secondItem="JHp-ob-cbS" secondAttribute="centerY" multiplier="2" id="h5O-jx-Gjf"/>
                             <constraint firstAttribute="centerX" secondItem="va3-5V-eD2" secondAttribute="centerX" id="ji7-FK-kJP"/>
                             <constraint firstItem="nCe-PK-pgF" firstAttribute="centerX" secondItem="vGS-hu-5oG" secondAttribute="centerX" id="lZF-1Q-QIu"/>
                         </constraints>
@@ -858,6 +867,7 @@
         <image name="first" width="30" height="30"/>
         <image name="profileFlat.png" width="32" height="32"/>
         <image name="shake.png" width="64" height="64"/>
+        <image name="shakeLarge.png" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="659-Vp-Fca"/>
