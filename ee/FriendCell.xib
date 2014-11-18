@@ -29,12 +29,6 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Front End Developer" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-kk-yXq">
-                        <rect key="frame" x="93" y="44" width="154" height="30"/>
-                        <color key="backgroundColor" red="0.54901960780000003" green="1" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                    </textField>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjg-KW-wHS" userLabel="chatButtonView">
                         <rect key="frame" x="338" y="13" width="64" height="64"/>
                         <subviews>
@@ -74,9 +68,7 @@
                     <constraint firstAttribute="centerY" secondItem="wjg-KW-wHS" secondAttribute="centerY" id="KkV-oY-MJW"/>
                     <constraint firstItem="bwg-zj-DKz" firstAttribute="leading" secondItem="OCg-6Y-veC" secondAttribute="leading" constant="5" id="LhH-kv-S6T"/>
                     <constraint firstItem="wjg-KW-wHS" firstAttribute="width" secondItem="bwg-zj-DKz" secondAttribute="width" multiplier="0.8" id="MoT-jc-rGg"/>
-                    <constraint firstItem="mtg-kk-yXq" firstAttribute="leading" secondItem="abJ-Kf-eSy" secondAttribute="leading" id="iEH-YE-0xn"/>
                     <constraint firstAttribute="trailing" secondItem="wjg-KW-wHS" secondAttribute="trailing" constant="10" id="ipz-aY-2bJ"/>
-                    <constraint firstItem="mtg-kk-yXq" firstAttribute="top" secondItem="abJ-Kf-eSy" secondAttribute="bottom" constant="15" id="qxm-uG-B5i"/>
                     <constraint firstAttribute="centerY" secondItem="bwg-zj-DKz" secondAttribute="centerY" id="tbf-IY-m2E"/>
                     <constraint firstItem="abJ-Kf-eSy" firstAttribute="leading" secondItem="bwg-zj-DKz" secondAttribute="trailing" constant="8" symbolic="YES" id="u9A-GT-MYM"/>
                 </constraints>

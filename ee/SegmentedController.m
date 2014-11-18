@@ -32,6 +32,7 @@
     {
         matchesContainer.hidden=false;
         friendsContainer.hidden=true;
+      
 
         
     }
@@ -44,6 +45,12 @@
             
             matchesContainer.hidden=true;
             friendsContainer.hidden=false;
+//            [UIView transitionWithView:friendsContainer
+//                              duration:0.7
+//                               options:UIViewAnimationOptionTransitionCrossDissolve
+//                            animations:NULL
+//                            completion:NULL];
+
             
         }
 }
