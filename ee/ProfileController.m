@@ -27,33 +27,16 @@
 @synthesize companyImage;
 
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self updateProfileDetailsInView];
     [self paralax];
     [self blur];
     [self profilePic];
     [self buttonBorderRadius];
-    [self getLogoUrl];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [aboutMeTextView endEditing:YES];
-}
-
-- (void)getLogoUrl {
-    LinkedInClient *client = [[LinkedInClient alloc] init];
-    
-    NSString *companyId = [_profile companyId];
-
-    
-    NSURL *companyUrl=[client getLogoUrlForCompanyId:companyId];
-    companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:companyUrl]];
-
-    
-    
 }
 
 - (void)blur {
@@ -176,7 +159,13 @@
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
     profileBackgroundView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
+    
+    LinkedInClient *client = [[LinkedInClient alloc] init];
+    
+    NSString *companyId = [NSString stringWithFormat:@"%tu", [_profile companyId]];
+    NSURL *companyUrl=[client getLogoUrlForCompanyId:companyId ];
+    
+    companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:companyUrl]];
 }
-
 
 @end

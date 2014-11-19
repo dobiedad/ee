@@ -18,7 +18,7 @@
 }
 
 - (NSString *)companyName {
-    return _dictionary[@"positions"][@"values"][0][@"company"][@"name"];
+    return [self company][@"name"];
 }
 
 - (NSURL *)pictureURL {
@@ -47,8 +47,15 @@
 
 - (NSUInteger)connections {
     return [_dictionary [@"numConnections"] integerValue];
+    
 }
-- (NSString *)companyId {
-    return _dictionary[@"positions"][@"values"][0][@"company"][@"id"];
+- (NSUInteger)companyId {
+    NSDictionary *company = [self company];
+    id companyId = company[@"id"];
+    return [companyId longValue];
+}
+
+-(NSDictionary *)company {
+    return _dictionary[@"positions"][@"values"][0][@"company"];
 }
 @end

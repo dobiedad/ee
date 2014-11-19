@@ -19,6 +19,7 @@
 		B3304C201A1396C300CE6A19 /* bino.png in Resources */ = {isa = PBXBuildFile; fileRef = B3304C1F1A1396C300CE6A19 /* bino.png */; };
 		B3535B8019FFB5220083F4E8 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3535B7F19FFB5220083F4E8 /* NavigationController.m */; };
 		B353EB751A0CF3EF00463C44 /* SegmentedController.m in Sources */ = {isa = PBXBuildFile; fileRef = B353EB741A0CF3EF00463C44 /* SegmentedController.m */; };
+		B358D6A71A1D097C000C4923 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B358D6A61A1D097C000C4923 /* logo.png */; };
 		B35C7E4B1A0A365E00430A60 /* mrbean.png in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E4A1A0A365E00430A60 /* mrbean.png */; };
 		B35C7E4E1A0A3AF500430A60 /* ChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */; };
 		B35C7E541A0A3E1F00430A60 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B35C7E531A0A3E1F00430A60 /* ChatCell.xib */; };
@@ -94,6 +95,7 @@
 		B3535B7F19FFB5220083F4E8 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		B353EB731A0CF3EF00463C44 /* SegmentedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedController.h; sourceTree = "<group>"; };
 		B353EB741A0CF3EF00463C44 /* SegmentedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedController.m; sourceTree = "<group>"; };
+		B358D6A61A1D097C000C4923 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		B35C7E4A1A0A365E00430A60 /* mrbean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mrbean.png; sourceTree = "<group>"; };
 		B35C7E4C1A0A3AF500430A60 /* ChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCell.h; sourceTree = "<group>"; };
 		B35C7E4D1A0A3AF500430A60 /* ChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCell.m; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		B3C91D481A1BB66400BDC679 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B358D6A61A1D097C000C4923 /* logo.png */,
 				B30899531A1BC39000AA2C4F /* shakeLarge.png */,
 				B3B7807219DD8913007ED955 /* Images.xcassets */,
 				B3797D721A02A129004093C1 /* weed.jpg */,
@@ -482,6 +485,7 @@
 				B3983D2F1A013B00004D3FFA /* chat.png in Resources */,
 				B3304C201A1396C300CE6A19 /* bino.png in Resources */,
 				B3B7807619DD8913007ED955 /* LaunchScreen.xib in Resources */,
+				B358D6A71A1D097C000C4923 /* logo.png in Resources */,
 				B39FEED619F7BD7F00613416 /* cancel.png in Resources */,
 				B35C7E4B1A0A365E00430A60 /* mrbean.png in Resources */,
 				B3628C2619F6E22A00389C31 /* colour.jpg in Resources */,

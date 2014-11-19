@@ -178,7 +178,7 @@
                                                             <constraint firstAttribute="height" secondItem="5o2-My-IbW" secondAttribute="width" multiplier="1:1" id="mo4-ea-ozE"/>
                                                         </constraints>
                                                     </view>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-8F-FOV" userLabel="companyImage">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weed.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-8F-FOV" userLabel="companyImage">
                                                         <rect key="frame" x="33" y="95" width="56" height="56"/>
                                                     </imageView>
                                                 </subviews>
@@ -326,9 +326,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCe-PK-pgF">
-                                <rect key="frame" x="276" y="285" width="48" height="30"/>
-                                <state key="normal" title="Sign In">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCe-PK-pgF">
+                                <rect key="frame" x="264" y="264" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="nCe-PK-pgF" secondAttribute="width" multiplier="1:1" id="Xs4-4Z-GYr"/>
+                                </constraints>
+                                <state key="normal" image="logo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -358,6 +361,7 @@
                             <constraint firstAttribute="centerY" secondItem="cY7-Ap-F7k" secondAttribute="centerY" multiplier="0.8" id="EnF-gr-AVK"/>
                             <constraint firstAttribute="centerY" secondItem="va3-5V-eD2" secondAttribute="centerY" id="F4V-Gt-Gxp"/>
                             <constraint firstAttribute="centerX" secondItem="JHp-ob-cbS" secondAttribute="centerX" id="JHQ-vS-L7M"/>
+                            <constraint firstItem="nCe-PK-pgF" firstAttribute="width" secondItem="JHp-ob-cbS" secondAttribute="width" multiplier="0.4" id="Z6u-jq-80X"/>
                             <constraint firstItem="JHp-ob-cbS" firstAttribute="width" secondItem="vGS-hu-5oG" secondAttribute="width" multiplier="0.3" id="bUH-Jz-ZBf"/>
                             <constraint firstAttribute="centerY" secondItem="JHp-ob-cbS" secondAttribute="centerY" multiplier="2" id="h5O-jx-Gjf"/>
                             <constraint firstAttribute="centerX" secondItem="va3-5V-eD2" secondAttribute="centerX" id="ji7-FK-kJP"/>
@@ -898,9 +902,11 @@
         <image name="chat.png" width="32" height="32"/>
         <image name="colour.jpg" width="750" height="1334"/>
         <image name="first" width="30" height="30"/>
+        <image name="logo.png" width="72" height="72"/>
         <image name="profileFlat.png" width="32" height="32"/>
         <image name="shake.png" width="64" height="64"/>
         <image name="shakeLarge.png" width="500" height="500"/>
+        <image name="weed.jpg" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="k0A-Z4-5Ir"/>
