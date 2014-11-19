@@ -62,9 +62,7 @@ LinkedInProfile *_selectedProfile;
     
     // fetch the Profile from the underlying array
     
-    // segue to slack
     
-    [self performSegueWithIdentifier:@"slack" sender:self];
 }
 
 
@@ -75,6 +73,12 @@ LinkedInProfile *_selectedProfile;
         [slackController setOtherUsersProfile:_selectedProfile];
     }
 }
+-(void)clickedChat:(LinkedInProfile *)profile{
+    _selectedProfile=profile;
+    [self performSegueWithIdentifier:@"slack" sender:self];
+
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 100.0;
 }

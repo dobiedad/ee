@@ -44,7 +44,7 @@
     
     friendView.layer.cornerRadius=buttonWidth/2;
     friendView.layer.masksToBounds = YES;
-    [self blur];
+//    [self blur];
 
 
     
@@ -55,18 +55,18 @@
 //    [self.imageView sd_setImageWithURL:[profile pictureURL]
 //                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     
-    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
+//    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
 
-    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:inputImage];
-    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
-    
-    [stillImageSource addTarget:stillImageFilter];
-    [stillImageFilter useNextFrameForImageCapture];
-    [stillImageSource processImage];
-    
-    UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
-
-    self.imageView.image=currentFilteredVideoFrame;
+//    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:inputImage];
+//    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
+//    
+//    [stillImageSource addTarget:stillImageFilter];
+//    [stillImageFilter useNextFrameForImageCapture];
+//    [stillImageSource processImage];
+//    
+//    UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
+//
+//    self.imageView.image=currentFilteredVideoFrame;
 
 
 }
@@ -96,17 +96,17 @@
 
 
 
-- (UIImage *)applyFilterTo:(UIImage *)image {
-    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:image];
-    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
-    
-    [stillImageSource addTarget:stillImageFilter];
-    [stillImageFilter useNextFrameForImageCapture];
-    [stillImageSource processImage];
-    
-    UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
-    return currentFilteredVideoFrame;
-}
+//- (UIImage *)applyFilterTo:(UIImage *)image {
+//    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:image];
+//    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
+//    
+//    [stillImageSource addTarget:stillImageFilter];
+//    [stillImageFilter useNextFrameForImageCapture];
+//    [stillImageSource processImage];
+//    
+//    UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
+//    return currentFilteredVideoFrame;
+//}
 
 - (void)loadProfile:(LinkedInProfile *)profile {
     _profile = profile;

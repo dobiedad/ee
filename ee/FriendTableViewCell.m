@@ -5,6 +5,8 @@
 @implementation FriendTableViewCell
 @synthesize profilePic;
 @synthesize firstNameLabel;
+LinkedInProfile *_profile;
+
 @synthesize chatButtonView;
 
 - (void)layoutSubviews{
@@ -34,10 +36,20 @@
     [super setSelected:selected animated:animated];
     
 }
+- (IBAction)chatButtonClicked:(id)sender {
+    [[self tableView].delegate performSelector:@selector(clickedChat:) withObject:_profile];
+}
+
+- (UITableView *)tableView
+{
+    UIView *view;
+    for (view = self.superview; ![view isKindOfClass:UITableView.class]; view = view.superview);
+    return (UITableView *)view;
+}
 
 -(void)setProfile: (LinkedInProfile*) profile {
+    _profile = profile;
     self.firstNameLabel.text = profile.firstName;
-
 }
 
 @end
