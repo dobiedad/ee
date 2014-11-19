@@ -44,4 +44,11 @@
 - (NSString *)firstName {
     return _dictionary[@"firstName"];
 }
+
+- (NSUInteger)connections {
+    return [_dictionary [@"numConnections"] integerValue];
+}
+- (NSString *)companyId {
+    return _dictionary[@"positions"][@"values"][0][@"company"][@"id"];
+}
 @end

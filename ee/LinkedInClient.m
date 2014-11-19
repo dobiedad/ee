@@ -52,7 +52,8 @@
 }
 
 - (void)requestMeWithToken:(NSString *)accessToken andCallBlockWithProfile:(void (^)(LinkedInProfile *linkedInProfile))profileBlock orWhenCancelled:(void (^)())cancelledBlock {
-    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,industry,picture-urls::(original),picture-url,id,positions:(is-current,company:(name)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
+    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/people/~:(location:(name),first-name,last-name,num-connections,industry,picture-urls::(original),picture-url,id,positions:(is-current,company:(name,id)),educations:(school-name,field-of-study,start-date,end-date,degree,activities))?oauth2_access_token=%@&format=json", accessToken];
+    // NSLog(@"%@", accessToken);
     
     [self.httpClient GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *linkedInProfileData) {
         LinkedInProfile *profile = [[LinkedInProfile alloc] initWithLinkedInApiUserData:linkedInProfileData];
@@ -64,6 +65,12 @@
         NSLog(@"failed to fetch current user %@", error);
         [self showLinkedInSignIn:profileBlock orWhenCancelled:cancelledBlock];
     }];
+}
+
+- (NSURL *)getLogoUrlForCompanyId: (NSString *)companyId {
+    NSString *accessToken = [self getSavedAccessToken];
+    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/companies/%@:(logo-url)?oauth2_access_token=%@&format=json", companyId, accessToken];
+    return [NSURL URLWithString:url];
 }
 
 - (void)saveLinkedInId:(NSString *)linkedInUserId {

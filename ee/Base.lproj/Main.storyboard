@@ -68,12 +68,20 @@
                                                     <outlet property="delegate" destination="9pv-A4-QxB" id="M2Q-7j-8oV"/>
                                                 </connections>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-oN-bO3" userLabel="Connections">
+                                                <rect key="frame" x="22" y="40" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.02" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="bfF-XQ-GiU" firstAttribute="width" secondItem="YFZ-zX-Mmz" secondAttribute="width" multiplier="0.5" id="0oY-6g-etd"/>
                                             <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="KFD-tw-MMO"/>
+                                            <constraint firstItem="bfF-XQ-GiU" firstAttribute="leading" secondItem="FFN-oN-bO3" secondAttribute="trailing" constant="30" id="V51-BI-QLs"/>
                                             <constraint firstItem="cM0-c7-EBo" firstAttribute="leading" secondItem="bfF-XQ-GiU" secondAttribute="trailing" constant="-10" id="YNX-wq-9Zx"/>
+                                            <constraint firstItem="FFN-oN-bO3" firstAttribute="top" secondItem="bfF-XQ-GiU" secondAttribute="top" id="d6Z-av-B3g"/>
                                             <constraint firstItem="bfF-XQ-GiU" firstAttribute="leading" secondItem="aTZ-yA-kYV" secondAttribute="trailing" constant="-10" id="lxt-gl-Aqc"/>
                                             <constraint firstItem="cM0-c7-EBo" firstAttribute="top" secondItem="bfF-XQ-GiU" secondAttribute="bottom" constant="-12" id="tzc-WM-TX1"/>
                                             <constraint firstItem="aTZ-yA-kYV" firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="bottom" id="uPN-AQ-4FT"/>
@@ -170,6 +178,9 @@
                                                             <constraint firstAttribute="height" secondItem="5o2-My-IbW" secondAttribute="width" multiplier="1:1" id="mo4-ea-ozE"/>
                                                         </constraints>
                                                     </view>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-8F-FOV" userLabel="companyImage">
+                                                        <rect key="frame" x="33" y="95" width="56" height="56"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -177,6 +188,7 @@
                                                     <constraint firstItem="iiV-VV-Wue" firstAttribute="width" secondItem="TQF-TN-Zmu" secondAttribute="width" multiplier="0.8" id="32g-SH-yTc"/>
                                                     <constraint firstAttribute="centerX" secondItem="JnT-D2-cW2" secondAttribute="centerX" id="7Tk-Ag-QPM"/>
                                                     <constraint firstItem="iiV-VV-Wue" firstAttribute="height" secondItem="TQF-TN-Zmu" secondAttribute="height" multiplier="0.4" id="ABG-Ij-c58"/>
+                                                    <constraint firstItem="9yn-8F-FOV" firstAttribute="top" secondItem="5o2-My-IbW" secondAttribute="bottom" constant="19" id="Afc-gu-2cS"/>
                                                     <constraint firstItem="apk-HL-rjw" firstAttribute="top" secondItem="TQF-TN-Zmu" secondAttribute="top" constant="20" id="DYZ-n7-nb7"/>
                                                     <constraint firstAttribute="centerX" secondItem="yLt-OB-uwr" secondAttribute="centerX" id="LEG-6O-Uai"/>
                                                     <constraint firstItem="E2O-qZ-7vn" firstAttribute="top" secondItem="JnT-D2-cW2" secondAttribute="bottom" constant="20" id="O8h-ST-1YG"/>
@@ -184,11 +196,14 @@
                                                     <constraint firstItem="yLt-OB-uwr" firstAttribute="top" secondItem="E2O-qZ-7vn" secondAttribute="bottom" constant="5" id="TSW-AE-Poz"/>
                                                     <constraint firstItem="itF-yP-BdX" firstAttribute="width" secondItem="5o2-My-IbW" secondAttribute="width" id="Ttk-pX-hOK"/>
                                                     <constraint firstItem="lsL-iR-9uf" firstAttribute="top" secondItem="yLt-OB-uwr" secondAttribute="bottom" constant="5" id="W6W-21-0F8"/>
+                                                    <constraint firstItem="9yn-8F-FOV" firstAttribute="width" secondItem="5o2-My-IbW" secondAttribute="width" id="Zcj-PO-Dqh"/>
+                                                    <constraint firstItem="9yn-8F-FOV" firstAttribute="leading" secondItem="5o2-My-IbW" secondAttribute="leading" id="aYb-jq-tMF"/>
                                                     <constraint firstAttribute="centerX" secondItem="lsL-iR-9uf" secondAttribute="centerX" id="avY-Q7-3MS"/>
                                                     <constraint firstItem="5o2-My-IbW" firstAttribute="top" secondItem="TQF-TN-Zmu" secondAttribute="top" constant="20" id="dhM-fS-gHn"/>
                                                     <constraint firstItem="iiV-VV-Wue" firstAttribute="top" secondItem="lsL-iR-9uf" secondAttribute="bottom" constant="20" id="eLB-Ub-Fqp"/>
                                                     <constraint firstAttribute="centerX" secondItem="iiV-VV-Wue" secondAttribute="centerX" id="fUu-FP-yJr"/>
                                                     <constraint firstAttribute="centerX" secondItem="E2O-qZ-7vn" secondAttribute="centerX" id="q57-nP-ft7"/>
+                                                    <constraint firstItem="9yn-8F-FOV" firstAttribute="height" secondItem="5o2-My-IbW" secondAttribute="height" id="qIW-ER-kTR"/>
                                                     <constraint firstAttribute="centerX" secondItem="apk-HL-rjw" secondAttribute="centerX" id="w88-SU-Ctm"/>
                                                     <constraint firstItem="itF-yP-BdX" firstAttribute="top" secondItem="TQF-TN-Zmu" secondAttribute="top" constant="20" id="wu9-jp-qeK"/>
                                                 </constraints>
@@ -233,8 +248,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf" userLabel="Profile"/>
                     <connections>
+                        <outlet property="ConnectionsLabel" destination="FFN-oN-bO3" id="key-2M-26b"/>
                         <outlet property="aboutMeTextView" destination="iiV-VV-Wue" id="egC-EO-IRr"/>
                         <outlet property="chatButtonView" destination="5o2-My-IbW" id="keW-Ke-4tz"/>
+                        <outlet property="companyImage" destination="9yn-8F-FOV" id="dyX-Un-UQ5"/>
                         <outlet property="firstNameLabel" destination="apk-HL-rjw" id="xHc-OT-OUP"/>
                         <outlet property="friendButtonView" destination="itF-yP-BdX" id="6eI-f6-eTU"/>
                         <outlet property="industryLabel" destination="E2O-qZ-7vn" id="tnQ-vc-PWb"/>
@@ -780,6 +797,12 @@
                                                             <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="21"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03s-p9-FfW" userLabel="connectionsLabel">
+                                                            <rect key="frame" x="302" y="56" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -838,6 +861,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="cancelView" destination="tNF-Vw-dmq" id="LAe-lg-Hxz"/>
+                                    <outlet property="connectionsLabel" destination="03s-p9-FfW" id="mhO-6u-WNm"/>
                                     <outlet property="constraintsView" destination="Hzw-yC-KXJ" id="NxR-Zc-fcs"/>
                                     <outlet property="coverPhoto" destination="dk9-no-a2X" id="ZsO-hX-FSh"/>
                                     <outlet property="friendButton" destination="vyB-2A-wom" id="Vcr-Sa-PDt"/>
@@ -879,7 +903,7 @@
         <image name="shakeLarge.png" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="659-Vp-Fca"/>
-        <segue reference="vR3-wE-ksE"/>
+        <segue reference="k0A-Z4-5Ir"/>
+        <segue reference="yMJ-dR-EU2"/>
     </inferredMetricsTieBreakers>
 </document>

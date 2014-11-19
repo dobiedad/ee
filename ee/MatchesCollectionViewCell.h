@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIView *constraintsView;
 @property (weak, nonatomic) IBOutlet UIImageView *coverPhoto;
 @property (weak, nonatomic) IBOutlet UIImageView *coverPhotoBottom;
+@property (weak, nonatomic) IBOutlet UILabel *connectionsLabel;
 
 
 - (void)loadProfile:(LinkedInProfile *)profile;

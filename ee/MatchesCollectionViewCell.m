@@ -24,6 +24,7 @@
 @synthesize imagePanel;
 @synthesize coverPhoto;
 @synthesize constraintsView;
+@synthesize connectionsLabel;
 - (void)layoutForSize:(CGSize *)size {
     
 }
@@ -112,6 +113,7 @@
     _profile = profile;
     jobLabel.text =  [_profile companyName], [_profile industry];
     nameLabel.text = [_profile firstName];
+    connectionsLabel.text = [NSString stringWithFormat:@"%tu", [_profile connections]];
     constraintsView.layer.cornerRadius=1;
     constraintsView.layer.masksToBounds = YES;
 

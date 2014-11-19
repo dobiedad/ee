@@ -9,5 +9,7 @@
 - (NSString *)lastSchoolName;
 - (NSString *)fieldOfStudy;
 - (NSString *)industry;
+- (NSString *)companyId;
+- (NSUInteger)connections;
 - (NSDictionary *)asDictionary;
 @end

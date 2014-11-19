@@ -1,6 +1,7 @@
 #import "ProfileController.h"
 #import <UIView+MTAnimation.h>
 #import <AudioToolbox/AudioServices.h>
+#import "LinkedInClient.h"
 
 
 
@@ -22,6 +23,8 @@
 @synthesize aboutMeTextView;
 @synthesize friendButtonView;
 @synthesize chatButtonView;
+@synthesize ConnectionsLabel;
+@synthesize companyImage;
 
 
 
@@ -33,12 +36,25 @@
     [self blur];
     [self profilePic];
     [self buttonBorderRadius];
+    [self getLogoUrl];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [aboutMeTextView endEditing:YES];
 }
 
+- (void)getLogoUrl {
+    LinkedInClient *client = [[LinkedInClient alloc] init];
+    
+    NSString *companyId = [_profile companyId];
+
+    
+    NSURL *companyUrl=[client getLogoUrlForCompanyId:companyId];
+    companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:companyUrl]];
+
+    
+    
+}
 
 - (void)blur {
     //[self startLocationManager];
@@ -64,6 +80,8 @@
     [self.profileBackgroundView insertSubview:blurView atIndex:0];
     [blurView.contentView addSubview:vibrancyEffectView];
 }
+
+
 
 - (void)profilePic {
     self.profilePicImageView.layer.cornerRadius = 100.0;
@@ -153,6 +171,8 @@
     jobLabel.text = [_profile companyName];
     uniNameLabel.text = [_profile lastSchoolName];
     uniCourseLabel.text = [_profile fieldOfStudy];
+    
+    ConnectionsLabel.text = [NSString stringWithFormat:@"%tu", [_profile connections]];
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
     profileBackgroundView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
