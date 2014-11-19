@@ -61,7 +61,9 @@ LinkedInProfile *_selectedProfile;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // fetch the Profile from the underlying array
+    [self performSegueWithIdentifier:@"showProfile" sender:self];
     
+
     
 }
 
@@ -72,6 +74,11 @@ LinkedInProfile *_selectedProfile;
         SlackController *slackController = [segue destinationViewController];
         [slackController setOtherUsersProfile:_selectedProfile];
     }
+    if ([[segue identifier] isEqualToString:@"showProfile"]) {
+        ProfileController *profileController = [segue destinationViewController];
+        [profileController setProfile:_selectedProfile];
+    }
+    
 }
 -(void)clickedChat:(LinkedInProfile *)profile{
     _selectedProfile=profile;

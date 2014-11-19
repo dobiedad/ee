@@ -290,6 +290,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="N1g-Wq-nTM" id="cRf-sY-6Dj"/>
                         <segue destination="kTp-BM-7cN" kind="show" identifier="slack" id="659-Vp-Fca"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="showProfile" id="vR3-wE-ksE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fi-72-qdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -364,7 +365,7 @@
                     <navigationBar key="navigationBar" alpha="0.80000000000000004" contentMode="scaleToFill" barStyle="blackTranslucent" id="LME-3V-tEr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.52549019607843139" green="0.62352941176470589" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="qUD-sy-zmO" kind="relationship" relationship="rootViewController" id="gBU-aq-lwm"/>
@@ -879,6 +880,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="659-Vp-Fca"/>
-        <segue reference="k0A-Z4-5Ir"/>
+        <segue reference="vR3-wE-ksE"/>
     </inferredMetricsTieBreakers>
 </document>
