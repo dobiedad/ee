@@ -365,7 +365,7 @@
                     <navigationBar key="navigationBar" alpha="0.80000000000000004" contentMode="scaleToFill" barStyle="blackTranslucent" id="LME-3V-tEr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.52549019607843139" green="0.62352941176470589" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.071463776187107905" green="0.12961694680903113" blue="0.18929126381215466" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="qUD-sy-zmO" kind="relationship" relationship="rootViewController" id="gBU-aq-lwm"/>
