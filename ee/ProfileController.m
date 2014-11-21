@@ -163,9 +163,9 @@
     LinkedInClient *client = [[LinkedInClient alloc] init];
     
     NSString *companyId = [NSString stringWithFormat:@"%tu", [_profile companyId]];
-    NSURL *companyUrl=[client getLogoUrlForCompanyId:companyId ];
-    
-    companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:companyUrl]];
+    [client getLogoUrlForCompanyId:companyId andCallBlockWithURL:^(NSURL *logoUrl) {
+        companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:logoUrl]];
+    }];
 }
 
 @end

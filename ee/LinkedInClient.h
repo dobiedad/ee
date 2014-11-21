@@ -7,6 +7,6 @@
 
 - (void)showLinkedInSignIn:(void (^)(LinkedInProfile *linkedInProfile))signedInBlock orWhenCancelled:(void (^)())cancelledBlock;
 
-- (NSURL *)getLogoUrlForCompanyId: (NSString *)companyId;
+- (void)getLogoUrlForCompanyId: (NSString *)companyId andCallBlockWithURL:(void (^)(NSURL *url))urlBlock;
 
 @end

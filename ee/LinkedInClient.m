@@ -67,10 +67,16 @@
     }];
 }
 
-- (NSURL *)getLogoUrlForCompanyId: (NSString *)companyId {
+- (void)getLogoUrlForCompanyId: (NSString *)companyId andCallBlockWithURL:(void (^)(NSURL *url))urlBlock {
     NSString *accessToken = [self getSavedAccessToken];
-    NSString *url = [NSString stringWithFormat:@"https://api.linkedin.com/v1/companies/%@:(logo-url)?oauth2_access_token=%@&format=json", companyId, accessToken];
-    return [NSURL URLWithString:url];
+    NSString *companyDetailsUrl = [NSString stringWithFormat:@"https://api.linkedin.com/v1/companies/%@:(logo-url)?oauth2_access_token=%@&format=json", companyId, accessToken];
+    
+    [self.httpClient GET:companyDetailsUrl parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *companyProfileData) {
+        NSURL *companyLogoUrl = [NSURL URLWithString:companyProfileData[@"logoUrl"]];
+        urlBlock(companyLogoUrl);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed to fetch URL for company %@", error);
+    }];
 }
 
 - (void)saveLinkedInId:(NSString *)linkedInUserId {
