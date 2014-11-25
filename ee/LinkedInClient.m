@@ -70,10 +70,13 @@
 - (void)getLogoUrlForCompanyId: (NSString *)companyId andCallBlockWithURL:(void (^)(NSURL *url))urlBlock {
     NSString *accessToken = [self getSavedAccessToken];
     NSString *companyDetailsUrl = [NSString stringWithFormat:@"https://api.linkedin.com/v1/companies/%@:(logo-url)?oauth2_access_token=%@&format=json", companyId, accessToken];
+    NSLog(@"logo url        %@", companyDetailsUrl);
+
     
     [self.httpClient GET:companyDetailsUrl parameters:nil success:^(AFHTTPRequestOperation *operation, NSDictionary *companyProfileData) {
         NSURL *companyLogoUrl = [NSURL URLWithString:companyProfileData[@"logoUrl"]];
         urlBlock(companyLogoUrl);
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed to fetch URL for company %@", error);
     }];

@@ -25,6 +25,7 @@
 @synthesize chatButtonView;
 @synthesize ConnectionsLabel;
 @synthesize companyImage;
+@synthesize profileScrollView;
 
 
 - (void)viewDidLoad {
@@ -33,12 +34,27 @@
     [self blur];
     [self profilePic];
     [self buttonBorderRadius];
+//    [self layoutScrollView];
+    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [aboutMeTextView endEditing:YES];
 }
-
+- (void)layoutScrollView {
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    
+    profileScrollView.contentSize = CGSizeMake(screenWidth,screenHeight * 1.2);
+    profileScrollView.showsHorizontalScrollIndicator = NO;
+    profileScrollView.showsVerticalScrollIndicator=YES;
+    profileScrollView.pagingEnabled = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+}
 - (void)blur {
     //[self startLocationManager];
     
@@ -155,7 +171,7 @@
     uniNameLabel.text = [_profile lastSchoolName];
     uniCourseLabel.text = [_profile fieldOfStudy];
     
-    ConnectionsLabel.text = [NSString stringWithFormat:@"%tu", [_profile connections]];
+    ConnectionsLabel.text = [NSString stringWithFormat:@"%tu connections", [_profile connections]];
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
     profileBackgroundView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];

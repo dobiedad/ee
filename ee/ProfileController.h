@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *friendButtonView;
 @property (weak, nonatomic) IBOutlet UILabel *ConnectionsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *companyImage;
+@property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
 
 @end
 
