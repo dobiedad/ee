@@ -20,10 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7o-Oi-vJl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -33,12 +29,6 @@
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
-                                                        <rect key="frame" x="94" y="27" width="188" height="188"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" secondItem="bfF-XQ-GiU" secondAttribute="width" multiplier="1:1" id="3yr-aP-e1I"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27a-wz-gRI">
                                                         <rect key="frame" x="29" y="165" width="45" height="21"/>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
@@ -71,13 +61,27 @@
                                                             <outlet property="delegate" destination="9pv-A4-QxB" id="M2Q-7j-8oV"/>
                                                         </connections>
                                                     </textField>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                                        <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
+                                                        <rect key="frame" x="94" y="39" width="188" height="188"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" secondItem="bfF-XQ-GiU" secondAttribute="width" multiplier="1:1" id="3yr-aP-e1I"/>
+                                                        </constraints>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.02" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="bfF-XQ-GiU" firstAttribute="width" secondItem="YFZ-zX-Mmz" secondAttribute="width" multiplier="0.5" id="0oY-6g-etd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="A1I-xK-0p6" secondAttribute="bottom" id="7ml-na-vs1"/>
                                                     <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="KFD-tw-MMO"/>
                                                     <constraint firstItem="cM0-c7-EBo" firstAttribute="leading" secondItem="bfF-XQ-GiU" secondAttribute="trailing" constant="-10" id="YNX-wq-9Zx"/>
+                                                    <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="YFZ-zX-Mmz" secondAttribute="leading" id="a7q-cD-3nO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="dso-u1-mkk"/>
                                                     <constraint firstItem="bfF-XQ-GiU" firstAttribute="leading" secondItem="aTZ-yA-kYV" secondAttribute="trailing" constant="-10" id="lxt-gl-Aqc"/>
+                                                    <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="YFZ-zX-Mmz" secondAttribute="top" id="suV-ZE-Ufi"/>
                                                     <constraint firstItem="cM0-c7-EBo" firstAttribute="top" secondItem="bfF-XQ-GiU" secondAttribute="bottom" constant="-12" id="tzc-WM-TX1"/>
                                                     <constraint firstItem="aTZ-yA-kYV" firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="bottom" id="uPN-AQ-4FT"/>
                                                     <constraint firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="centerY" id="wmn-B0-rUs"/>
@@ -247,14 +251,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.88" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="2cI-ZJ-ELa"/>
-                            <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="35F-AZ-ghp"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="DLb-Sc-42e"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="QCn-SR-Vxa"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="R5N-vU-9ET"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="mLa-LL-OrI"/>
-                            <constraint firstItem="A1I-xK-0p6" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="ngd-X2-Rab"/>
-                            <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="vqp-P6-4AJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf" userLabel="Profile"/>
@@ -922,7 +922,7 @@
         <image name="weed.jpg" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k0A-Z4-5Ir"/>
+        <segue reference="vR3-wE-ksE"/>
         <segue reference="yMJ-dR-EU2"/>
     </inferredMetricsTieBreakers>
 </document>
