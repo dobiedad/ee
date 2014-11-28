@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *companyImage;
 @property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
 @property (weak, nonatomic) IBOutlet RKCardView *cardView;
+@property (weak, nonatomic) IBOutlet UITextView *connectionsTextView;
 
 @end
 

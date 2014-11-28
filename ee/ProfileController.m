@@ -27,6 +27,7 @@
 @synthesize companyImage;
 @synthesize profileScrollView;
 @synthesize cardView;
+@synthesize connectionsTextView;
 
 
 
@@ -37,7 +38,7 @@
     [self blur];
     [self profilePic];
     [self buttonBorderRadius];
-    
+    [self updateProfileDetailsInView];
 }
 
 
@@ -171,12 +172,12 @@
 
     industryLabel.text = [_profile industry];
     firstNameLabel.text = [_profile firstName];
-    jobLabel.text = [_profile companyName];
+    jobLabel.text = [NSString stringWithFormat:@"@%@", [_profile companyName]];
     uniNameLabel.text = [_profile lastSchoolName];
     uniCourseLabel.text = [_profile fieldOfStudy];
 
     
-    ConnectionsLabel.text = [NSString stringWithFormat:@"%tu connections", [_profile connections]];
+    connectionsTextView.text = [NSString stringWithFormat:@"%tu Links", [_profile connections]];
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
     profileBackgroundView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
