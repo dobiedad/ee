@@ -90,6 +90,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 {
     [super viewDidLoad];
     [self layoutBlur];
+    [self registerPrefixesForAutoCompletion:@[@"#"]];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
