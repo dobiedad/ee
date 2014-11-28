@@ -28,10 +28,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                                 <subviews>
-                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
-                                                        <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </imageView>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
                                                         <rect key="frame" x="94" y="39" width="188" height="188"/>
                                                         <constraints>
@@ -44,6 +40,10 @@
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                                        <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="1" green="0.103673137" blue="0.098517894310000007" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -227,13 +227,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.88" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="7Yh-d6-XTu"/>
-                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="92G-Rj-8jx"/>
-                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="DLb-Sc-42e"/>
-                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="QCn-SR-Vxa"/>
-                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="R5N-vU-9ET"/>
+                            <constraint firstAttribute="trailing" secondItem="u7o-Oi-vJl" secondAttribute="trailing" id="1K7-ga-mog"/>
+                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="ZhP-Sj-sbz"/>
                             <constraint firstItem="uMQ-t9-wVg" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="lqr-dh-MRH"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="nku-Hx-oC9"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="u7o-Oi-vJl" secondAttribute="bottom" id="qae-C7-5KT"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="first" id="acW-dT-cKf" userLabel="Profile"/>
