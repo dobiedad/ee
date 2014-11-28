@@ -45,28 +45,28 @@
     
     friendView.layer.cornerRadius=buttonWidth/2;
     friendView.layer.masksToBounds = YES;
-    [self blur];
+//    [self blur];
 
 
     
-    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
-    //self.imageView.image=[self applyFilterTo:inputImage];
-    self.imageView.image=inputImage;
+//    UIImage *inputImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[profile pictureURL]]];
+//    //self.imageView.image=[self applyFilterTo:inputImage];
+//    self.imageView.image=inputImage;
     
-    [self.imageView sd_setImageWithURL:[profile pictureURL]
-                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-    
-
-    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:inputImage];
-    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
-    
-    [stillImageSource addTarget:stillImageFilter];
-    [stillImageFilter useNextFrameForImageCapture];
-    [stillImageSource processImage];
-    
-    UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
-
-    self.imageView.image=currentFilteredVideoFrame;
+//    [self.imageView sd_setImageWithURL:[profile pictureURL]
+//                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+//    
+//
+//    GPUImagePicture *stillImageSource = [[GPUImagePicture alloc] initWithImage:inputImage];
+//    GPUImagePolkaDotFilter *stillImageFilter = [[GPUImagePolkaDotFilter alloc] init];
+//    
+//    [stillImageSource addTarget:stillImageFilter];
+//    [stillImageFilter useNextFrameForImageCapture];
+//    [stillImageSource processImage];
+//    
+//    UIImage *currentFilteredVideoFrame = [stillImageFilter imageFromCurrentFramebuffer];
+//
+//    self.imageView.image=currentFilteredVideoFrame;
 
 
 }
