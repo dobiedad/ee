@@ -26,7 +26,29 @@
 @synthesize ConnectionsLabel;
 @synthesize companyImage;
 @synthesize profileScrollView;
+@synthesize cardView;
 
+
+- (void)cardViewLayout {
+    //    [self layoutScrollView];
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    RKCardView* customCardView= [[RKCardView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+    
+    customCardView.coverImageView.image =[UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
+    customCardView.profileImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
+    customCardView.titleLabel.text = [_profile firstName];
+    [customCardView addBlur]; // comment this out if you don't want blur
+    [customCardView addShadow];
+    [self.view addSubview:customCardView];
+    [customCardView addSubview:chatButtonView];
+
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +56,10 @@
     [self blur];
     [self profilePic];
     [self buttonBorderRadius];
-//    [self layoutScrollView];
     
 }
+
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [aboutMeTextView endEditing:YES];
@@ -170,6 +193,8 @@
     jobLabel.text = [_profile companyName];
     uniNameLabel.text = [_profile lastSchoolName];
     uniCourseLabel.text = [_profile fieldOfStudy];
+    [self cardViewLayout]; // comment this out if you don't want a shadow
+
     
     ConnectionsLabel.text = [NSString stringWithFormat:@"%tu connections", [_profile connections]];
     

@@ -1,23 +1,23 @@
 PODS:
-  - AFNetworking (2.4.1):
+  - AFNetworking (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
     - AFNetworking/UIKit
-  - AFNetworking/NSURLConnection (2.4.1):
+  - AFNetworking/NSURLConnection (2.5.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.4.1):
+  - AFNetworking/NSURLSession (2.5.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.4.1)
-  - AFNetworking/Security (2.4.1)
-  - AFNetworking/Serialization (2.4.1)
-  - AFNetworking/UIKit (2.4.1):
+  - AFNetworking/Reachability (2.5.0)
+  - AFNetworking/Security (2.5.0)
+  - AFNetworking/Serialization (2.5.0)
+  - AFNetworking/UIKit (2.5.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Firebase (1.1.12)
@@ -26,14 +26,13 @@ PODS:
     - AFNetworking (>= 2.0.0)
   - LoremIpsum (1.0.0)
   - MTAnimation (1.2.2)
+  - RKCardView (0.1.0)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.1)
   - SlackTextViewController (1.2.8):
     - SlackTextViewController/Additions
-    - SlackTextViewController/Additions
-  - SlackTextViewController/Additions (1.2.8):
-    - SlackTextViewController/Additions
+  - SlackTextViewController/Additions (1.2.8)
   - TLYShyNavBar (0.9.8)
 
 DEPENDENCIES:
@@ -42,19 +41,21 @@ DEPENDENCIES:
   - IOSLinkedInAPI
   - LoremIpsum (~> 1.0)
   - MTAnimation
+  - RKCardView
   - SDWebImage (~> 3.6)
   - SlackTextViewController
   - TLYShyNavBar
 
 SPEC CHECKSUMS:
-  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
   Firebase: 26ca966dea982f29a4685f7fa8f596d56e5487ad
   GPUImage: cecb0830bb9428f50192042e3c7b53810f51388e
   IOSLinkedInAPI: 5b400668a260a3594af94e363ade95933ce22db8
   LoremIpsum: a4d378ecaffcb08c7e40cdba3fb935dc41b2272c
   MTAnimation: eeedb417b12eb293ad2e32a02f113d9e98641ae0
+  RKCardView: bb96e9288f1ccc34468a2d52c5f83bcf58a506ee
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
-  SlackTextViewController: 61997309c7b95490d165d926c7064502eb6fad80
+  SlackTextViewController: b51b941de395848f622ec29559e23961beeb242e
   TLYShyNavBar: cf15a919cf7f6e79080ac5b95b56580a752cf64d
 
 COCOAPODS: 0.34.1

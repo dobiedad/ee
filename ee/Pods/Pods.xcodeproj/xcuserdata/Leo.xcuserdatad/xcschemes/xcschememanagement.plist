@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RKCardView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,52 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1949E0CC77EFA3051C71B9F2</key>
+		<key>2AA6983FE613EDEA2C8D2288</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1B0FC7FAC53D5A2E9E551344</key>
+		<key>4A1DCE1C4197739802C67A80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>677AA37B439635D2295E3A14</key>
+		<key>4B445D5658A6B2C50B527C9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>704EE35C08B31CB5131E635E</key>
+		<key>5F2E69EB69CF59389EAC8F1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9AE7C7CBD186E0EE37F5C9B3</key>
+		<key>662A188AABCE17FFB4EEEAF8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE5E2A21CA8948FD89D39603</key>
+		<key>78E796BF827904AA0D8979F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B0A4A3869DAFA4F72FA1398B</key>
+		<key>8246F68AFE9A8F7CCD97AFC6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C21C2E1F43F4375888009D51</key>
+		<key>C691351C557341A893C4A3B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E2E534FA0AEB545ACA9315CC</key>
+		<key>E0987E50834A7982C621783D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E73256DAEF5366987CC9E516</key>
+		<key>F5AD8A064A9B557A1763C505</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF0C6796AD2AD0AF33F4BF52</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kC0-hg-2ZE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kC0-hg-2ZE">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -24,16 +24,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7o-Oi-vJl">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7o-Oi-vJl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer" customClass="RKCardView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
                                                         <rect key="frame" x="94" y="27" width="188" height="188"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" secondItem="bfF-XQ-GiU" secondAttribute="width" multiplier="1:1" id="3yr-aP-e1I"/>
@@ -45,7 +45,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Investment" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-c7-EBo">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Investment" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-c7-EBo">
                                                         <rect key="frame" x="272" y="207" width="92" height="30"/>
                                                         <color key="backgroundColor" red="0.29803921568627451" green="0.5607843137254902" blue="0.27843137254901962" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,7 +61,7 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Developer" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-yA-kYV">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Developer" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-yA-kYV">
                                                         <rect key="frame" x="17" y="204" width="87" height="30"/>
                                                         <color key="backgroundColor" red="0.10588235294117647" green="0.18431372549019609" blue="0.58431372549019611" alpha="0.66000000000000003" colorSpace="calibratedRGB"/>
                                                         <color key="textColor" red="0.92934032938162492" green="1" blue="0.94368462266555875" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,40 +83,40 @@
                                                     <constraint firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="centerY" id="wmn-B0-rUs"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
-                                                <rect key="frame" x="0.0" y="241" width="375" height="400"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
+                                                <rect key="frame" x="0.0" y="268" width="375" height="400"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-TN-Zmu" userLabel="labelView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-TN-Zmu" userLabel="labelView">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Information Technology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information Technology" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2O-qZ-7vn" userLabel="industryLabel">
                                                                 <rect key="frame" x="97" y="89" width="182" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Economics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLt-OB-uwr" userLabel="uniCourseLabel">
                                                                 <rect key="frame" x="147" y="118" width="82" height="14"/>
                                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Featurist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-D2-cW2" userLabel="jobLabel">
                                                                 <rect key="frame" x="144" y="54" width="86" height="25"/>
                                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apk-HL-rjw" userLabel="firstNameLabel">
                                                                 <rect key="frame" x="161" y="20" width="54" height="29"/>
                                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="26"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itF-yP-BdX" userLabel="friendButtonView">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itF-yP-BdX" userLabel="friendButtonView">
                                                                 <rect key="frame" x="290" y="20" width="56" height="56"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lc-WG-qqC" userLabel="friendButton">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Lc-WG-qqC" userLabel="friendButton">
                                                                         <rect key="frame" x="11" y="11" width="34" height="34"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                         <constraints>
@@ -135,10 +135,10 @@
                                                                     <constraint firstItem="0Lc-WG-qqC" firstAttribute="width" secondItem="itF-yP-BdX" secondAttribute="width" multiplier="0.6" id="ySo-2Y-qs7"/>
                                                                 </constraints>
                                                             </view>
-                                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5o2-My-IbW" userLabel="chatButtonView">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5o2-My-IbW" userLabel="chatButtonView">
                                                                 <rect key="frame" x="33" y="20" width="56" height="56"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvq-oN-oxY" userLabel="chatButton">
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvq-oN-oxY" userLabel="chatButton">
                                                                         <rect key="frame" x="13" y="13" width="32" height="32"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                         <constraints>
@@ -159,10 +159,10 @@
                                                                     <constraint firstAttribute="height" secondItem="5o2-My-IbW" secondAttribute="width" multiplier="1:1" id="mo4-ea-ozE"/>
                                                                 </constraints>
                                                             </view>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="weed.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-8F-FOV" userLabel="companyImage">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weed.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9yn-8F-FOV" userLabel="companyImage">
                                                                 <rect key="frame" x="33" y="95" width="56" height="56"/>
                                                             </imageView>
-                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-VV-Wue" userLabel="aboutMeTextView">
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiV-VV-Wue" userLabel="aboutMeTextView">
                                                                 <rect key="frame" x="38" y="186" width="300" height="160"/>
                                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -170,13 +170,13 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                             </textView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="14 connections" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-oN-bO3" userLabel="Connections">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="14 connections" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFN-oN-bO3" userLabel="Connections">
                                                                 <rect key="frame" x="128" y="154" width="118" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Oxford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Oxford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-iR-9uf" userLabel="uniNameLabel">
                                                                 <rect key="frame" x="160" y="137" width="54" height="19"/>
                                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -251,6 +251,8 @@
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="35F-AZ-ghp"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="DLb-Sc-42e"/>
                             <constraint firstItem="u7o-Oi-vJl" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="QCn-SR-Vxa"/>
+                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="R5N-vU-9ET"/>
+                            <constraint firstItem="u7o-Oi-vJl" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="mLa-LL-OrI"/>
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="height" secondItem="tsR-hK-woN" secondAttribute="height" id="ngd-X2-Rab"/>
                             <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="vqp-P6-4AJ"/>
                         </constraints>
@@ -259,6 +261,7 @@
                     <connections>
                         <outlet property="ConnectionsLabel" destination="FFN-oN-bO3" id="key-2M-26b"/>
                         <outlet property="aboutMeTextView" destination="iiV-VV-Wue" id="egC-EO-IRr"/>
+                        <outlet property="cardView" destination="uMQ-t9-wVg" id="DHH-CV-F5l"/>
                         <outlet property="chatButtonView" destination="5o2-My-IbW" id="keW-Ke-4tz"/>
                         <outlet property="companyImage" destination="9yn-8F-FOV" id="dyX-Un-UQ5"/>
                         <outlet property="firstNameLabel" destination="apk-HL-rjw" id="xHc-OT-OUP"/>

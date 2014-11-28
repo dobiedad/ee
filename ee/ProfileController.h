@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 #import "LinkedInProfile.h"
+#import "RKCardView.h"
 
 @interface ProfileController : UIViewController< UITextFieldDelegate>
 
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ConnectionsLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *companyImage;
 @property (weak, nonatomic) IBOutlet UIScrollView *profileScrollView;
+@property (weak, nonatomic) IBOutlet RKCardView *cardView;
 
 @end
 
