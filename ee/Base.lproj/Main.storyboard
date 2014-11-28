@@ -22,41 +22,37 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u7o-Oi-vJl">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-t9-wVg" userLabel="infoContainer">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFZ-zX-Mmz" userLabel="profilePicImageView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="249"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1I-xK-0p6" userLabel="profileBackgroundView">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                                         <color key="backgroundColor" red="0.28627450980000002" green="0.89411764709999997" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="You crossed paths 2 minutes ago" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLS-WQ-fge" userLabel="crossedPaths">
-                                                        <rect key="frame" x="10" y="15" width="73" height="38"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="73" id="U3Y-cV-8xh"/>
-                                                            <constraint firstAttribute="height" constant="38" id="go9-xX-7Nz"/>
-                                                        </constraints>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="8"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mrbean.png" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
-                                                        <rect key="frame" x="94" y="39" width="188" height="188"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mrbean.png" translatesAutoresizingMaskIntoConstraints="NO" id="bfF-XQ-GiU" userLabel="profilePicImage">
+                                                        <rect key="frame" x="94" y="40" width="188" height="188"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" secondItem="bfF-XQ-GiU" secondAttribute="width" multiplier="1:1" id="3yr-aP-e1I"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="15 Links" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kET-1a-HOl" userLabel="connectionsView">
-                                                        <rect key="frame" x="290" y="15" width="73" height="38"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="15 Links" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="yHe-R2-jE0" userLabel="linksTextView">
+                                                        <rect key="frame" x="292" y="15" width="73" height="50"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <color key="textColor" red="0.25882352941176473" green="0.49803921568627452" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="15"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="You crossed paths 2 minutes ago" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLS-WQ-fge" userLabel="crossedPaths">
+                                                        <rect key="frame" x="11" y="15" width="73" height="50"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="38" id="CQx-l9-eL4"/>
-                                                            <constraint firstAttribute="width" constant="73" id="qb5-T8-zb7"/>
+                                                            <constraint firstAttribute="width" constant="73" id="U3Y-cV-8xh"/>
+                                                            <constraint firstAttribute="height" constant="50" id="go9-xX-7Nz"/>
                                                         </constraints>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="textColor" red="0.082352941176470587" green="0.13725490196078433" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="8"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
@@ -65,19 +61,21 @@
                                                 <constraints>
                                                     <constraint firstItem="bfF-XQ-GiU" firstAttribute="width" secondItem="YFZ-zX-Mmz" secondAttribute="width" multiplier="0.5" id="0oY-6g-etd"/>
                                                     <constraint firstAttribute="bottom" secondItem="A1I-xK-0p6" secondAttribute="bottom" id="7ml-na-vs1"/>
-                                                    <constraint firstItem="kET-1a-HOl" firstAttribute="top" secondItem="nLS-WQ-fge" secondAttribute="top" id="EV0-dB-lnS"/>
+                                                    <constraint firstItem="yHe-R2-jE0" firstAttribute="top" secondItem="YFZ-zX-Mmz" secondAttribute="top" constant="15" id="ACi-3a-MdU"/>
                                                     <constraint firstAttribute="centerX" secondItem="bfF-XQ-GiU" secondAttribute="centerX" id="KFD-tw-MMO"/>
+                                                    <constraint firstItem="yHe-R2-jE0" firstAttribute="leading" secondItem="bfF-XQ-GiU" secondAttribute="trailing" constant="10" id="NbY-17-HM2"/>
+                                                    <constraint firstItem="nLS-WQ-fge" firstAttribute="height" secondItem="yHe-R2-jE0" secondAttribute="height" id="TbK-9a-LxE"/>
                                                     <constraint firstItem="A1I-xK-0p6" firstAttribute="leading" secondItem="YFZ-zX-Mmz" secondAttribute="leading" id="a7q-cD-3nO"/>
                                                     <constraint firstAttribute="trailing" secondItem="A1I-xK-0p6" secondAttribute="trailing" id="dso-u1-mkk"/>
                                                     <constraint firstItem="nLS-WQ-fge" firstAttribute="top" secondItem="YFZ-zX-Mmz" secondAttribute="top" constant="15" id="ldF-K9-qj5"/>
-                                                    <constraint firstItem="bfF-XQ-GiU" firstAttribute="leading" secondItem="nLS-WQ-fge" secondAttribute="trailing" constant="11" id="rPi-RN-3Vr"/>
+                                                    <constraint firstItem="nLS-WQ-fge" firstAttribute="width" secondItem="yHe-R2-jE0" secondAttribute="width" id="m1p-Ht-wy7"/>
+                                                    <constraint firstItem="bfF-XQ-GiU" firstAttribute="leading" secondItem="nLS-WQ-fge" secondAttribute="trailing" constant="10" id="rPi-RN-3Vr"/>
                                                     <constraint firstItem="A1I-xK-0p6" firstAttribute="top" secondItem="YFZ-zX-Mmz" secondAttribute="top" id="suV-ZE-Ufi"/>
-                                                    <constraint firstItem="kET-1a-HOl" firstAttribute="leading" secondItem="bfF-XQ-GiU" secondAttribute="trailing" constant="8" symbolic="YES" id="tmj-ul-Nix"/>
                                                     <constraint firstAttribute="centerY" secondItem="bfF-XQ-GiU" secondAttribute="centerY" id="wmn-B0-rUs"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
-                                                <rect key="frame" x="0.0" y="267" width="375" height="400"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="894-qq-YmT" userLabel="infoView">
+                                                <rect key="frame" x="0.0" y="249" width="375" height="374"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQF-TN-Zmu" userLabel="labelView">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
@@ -255,10 +253,10 @@
                     <connections>
                         <outlet property="aboutMeTextView" destination="iiV-VV-Wue" id="egC-EO-IRr"/>
                         <outlet property="chatButtonView" destination="5o2-My-IbW" id="keW-Ke-4tz"/>
-                        <outlet property="connectionsTextView" destination="kET-1a-HOl" id="SP7-VU-reK"/>
                         <outlet property="firstNameLabel" destination="apk-HL-rjw" id="xHc-OT-OUP"/>
                         <outlet property="friendButtonView" destination="itF-yP-BdX" id="6eI-f6-eTU"/>
                         <outlet property="jobLabel" destination="JnT-D2-cW2" id="rHp-cR-Iyb"/>
+                        <outlet property="linksTextView" destination="yHe-R2-jE0" id="Uvm-wS-eSO"/>
                         <outlet property="profileBackgroundView" destination="A1I-xK-0p6" id="d8k-9N-XhD"/>
                         <outlet property="profilePicImageView" destination="bfF-XQ-GiU" id="K9H-XK-G7A"/>
                         <outlet property="profileScrollView" destination="u7o-Oi-vJl" id="gih-DN-bed"/>
@@ -266,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431.5" y="646.5"/>
+            <point key="canvasLocation" x="1426.5" y="647.5"/>
         </scene>
         <!--Friend Controller-->
         <scene sceneID="MPo-Jg-qak">
@@ -672,7 +670,7 @@
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="colour.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dk9-no-a2X" userLabel="coverPhoto">
                                                             <rect key="frame" x="0.0" y="0.0" width="365" height="120"/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="profilePic">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mrbean.png" translatesAutoresizingMaskIntoConstraints="NO" id="xGW-jd-6xK" userLabel="profilePic">
                                                             <rect key="frame" x="134" y="5" width="110" height="110"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="xGW-jd-6xK" secondAttribute="height" multiplier="1:1" id="ifo-Nx-3vT"/>

@@ -13,21 +13,16 @@
     LinkedInProfile *_profile;
 }
 @synthesize profilePicImageView;
-@synthesize industryLabel;
+@synthesize linksTextView;
 @synthesize jobLabel;
-@synthesize uniCourseLabel;
-@synthesize uniNameLabel;
 @synthesize firstNameLabel;
-@synthesize infoScrollView;
 @synthesize profileBackgroundView;
 @synthesize aboutMeTextView;
 @synthesize friendButtonView;
 @synthesize chatButtonView;
-@synthesize ConnectionsLabel;
-@synthesize companyImage;
+
 @synthesize profileScrollView;
-@synthesize cardView;
-@synthesize connectionsTextView;
+
 
 
 
@@ -66,9 +61,8 @@
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat screenWidth = screenRect.size.width;
     CGFloat screenHeight = screenRect.size.height;
-    infoScrollView.contentSize = CGSizeMake(.95* screenWidth, infoScrollView.contentSize.height);
+
     aboutMeTextView.layer.cornerRadius=5;
-    infoScrollView.layer.cornerRadius=5;
     
 
     
@@ -170,24 +164,24 @@
 
 - (void)updateProfileDetailsInView {
 
-    industryLabel.text = [_profile industry];
+//    industryLabel.text = [_profile industry];
     firstNameLabel.text = [_profile firstName];
     jobLabel.text = [NSString stringWithFormat:@"@%@", [_profile companyName]];
-    uniNameLabel.text = [_profile lastSchoolName];
-    uniCourseLabel.text = [_profile fieldOfStudy];
+//    uniNameLabel.text = [_profile lastSchoolName];
+//    uniCourseLabel.text = [_profile fieldOfStudy];
 
     
-    connectionsTextView.text = [NSString stringWithFormat:@"%tu Links", [_profile connections]];
+    linksTextView.text = [NSString stringWithFormat:@"%tu Links", [_profile connections]];
     
     profilePicImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
     profileBackgroundView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[_profile pictureURL]]];
     
     LinkedInClient *client = [[LinkedInClient alloc] init];
-    
-    NSString *companyId = [NSString stringWithFormat:@"%tu", [_profile companyId]];
-    [client getLogoUrlForCompanyId:companyId andCallBlockWithURL:^(NSURL *logoUrl) {
-        companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:logoUrl]];
-    }];
+//    
+//    NSString *companyId = [NSString stringWithFormat:@"%tu", [_profile companyId]];
+//    [client getLogoUrlForCompanyId:companyId andCallBlockWithURL:^(NSURL *logoUrl) {
+//        companyImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:logoUrl]];
+//    }];
 }
 
 @end
