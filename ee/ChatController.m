@@ -26,7 +26,7 @@ LinkedInProfile *_selectedProfile;
                                                                                        @"firstName": @"Jill"
                                                                                        }];
     
-    chatUsers = [NSArray arrayWithObjects:profile1, profile2, nil];
+    chatUsers = [NSArray arrayWithObjects:profile1, profile2,profile1, profile2,profile1, profile2,profile1, profile2, nil];
     [self layoutBlur];
     
     // Do any additional setup after loading the view.

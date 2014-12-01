@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -15,21 +15,21 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-UC-0Ea" userLabel="Name">
-                        <rect key="frame" x="106" y="19" width="37" height="21"/>
+                        <rect key="frame" x="106" y="20" width="37" height="21"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mif-Sl-5qH">
-                        <rect key="frame" x="18" y="11" width="80" height="80"/>
+                        <rect key="frame" x="18" y="12" width="80" height="80"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="P5S-tV-swY"/>
                             <constraint firstAttribute="height" constant="80" id="ie5-NB-LhF"/>
                         </constraints>
                     </imageView>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" delaysContentTouches="NO" canCancelContentTouches="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqA-SO-SCa" userLabel="lastMessage">
-                        <rect key="frame" x="106" y="44" width="227" height="47"/>
+                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OqA-SO-SCa" userLabel="lastMessage">
+                        <rect key="frame" x="106" y="44" width="228" height="43"/>
                         <color key="backgroundColor" white="1" alpha="0.12" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -58,7 +58,7 @@
                 <outlet property="lastMessage" destination="OqA-SO-SCa" id="DIQ-sU-Lzc"/>
                 <outlet property="profilePicImage" destination="mif-Sl-5qH" id="b1D-u1-m7R"/>
             </connections>
-            <point key="canvasLocation" x="489.5" y="118"/>
+            <point key="canvasLocation" x="489.5" y="117"/>
         </tableViewCell>
     </objects>
 </document>

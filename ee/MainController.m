@@ -55,7 +55,7 @@
     CGFloat screenHeight = screenRect.size.height;
     
     
-    scrollView.contentSize = CGSizeMake(screenWidth * 3,screenHeight);
+    scrollView.contentSize = CGSizeMake(screenWidth * 3,scrollView.contentSize.height);
     scrollView.showsHorizontalScrollIndicator = YES;
     scrollView.showsVerticalScrollIndicator=NO;
     scrollView.pagingEnabled = YES;

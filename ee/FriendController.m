@@ -13,6 +13,7 @@
 NSArray *friends;
 LinkedInProfile *_selectedProfile;
 @synthesize backgroundImage;
+@synthesize friendsTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,8 +26,18 @@ LinkedInProfile *_selectedProfile;
                                                                                        @"firstName": @"Jill"
                                                                                        }];
     
-    friends = [NSArray arrayWithObjects:profile1, profile2, nil];
+    
+    friends = [NSArray arrayWithObjects:profile1, profile2,profile1, profile2,profile1, profile2, nil];
     [self layoutBlur];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+
+    
  
     
     // Do any additional setup after loading the view.
